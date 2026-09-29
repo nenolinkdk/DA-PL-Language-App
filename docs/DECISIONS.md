@@ -18,6 +18,16 @@
 | FSM transitions | Deterministic | V1 |
 | Weighted transitions | Documented future option, not implemented initially | Nice-to-have |
 
+## 2026-09-29 — Phase 1A skeleton decisions
+
+| Area | Decision | Status |
+|---|---|---|
+| Application/package ID | `dk.nenolink.dapl` (frozen at release; approved by product owner) | V1 |
+| Language/toolchain | Kotlin 2.0 + Jetpack Compose (Material 3), AGP 8.5, JDK 17 | V1 |
+| SDK levels | minSdk 26, target/compile SDK 34 | V1 |
+| UI framework | Jetpack Compose with Material 3; compact menu aligned with Learn-FR-DA pattern | V1 |
+| Navigation | Navigation-Compose routes for all 8 top-level modules; placeholder empty states for unfilled modules | V1 |
+
 ## Still open
 
 - final Android code baseline: clean Kotlin/Compose skeleton vs direct reuse/port of reference implementation;

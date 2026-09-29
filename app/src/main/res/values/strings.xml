@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DA-PL</string>
+    <string name="menu_level1">Niveau 1</string>
+    <string name="menu_level2">Niveau 2</string>
+    <string name="menu_level3">Niveau 3</string>
+    <string name="menu_conversation">Samtaletræning</string>
+    <string name="menu_quiz">Quiz / repetition</string>
+    <string name="menu_grammar">Grammatik</string>
+    <string name="menu_children">Børn</string>
+    <string name="menu_about">Dokumentation / Om</string>
+    <string name="module_not_available">Ikke tilgængelig endnu</string>
+    <string name="module_back">Tilbage</string>
+</resources>
