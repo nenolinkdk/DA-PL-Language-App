@@ -1,5 +1,11 @@
 # FSM Dialogue Design
 
+Status markers follow the shared vocabulary in [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) (V1 / NICE-TO-HAVE / OPEN / LINGUISTIC REVIEW). **UNCERTAIN** is no longer used as a status marker.
+
+### State-ID convention
+
+Dialogue **state IDs** are stable string identifiers scoped to their scenario. They are **not** required to use the `state-...` prefixed form from DATA_MODEL.md's examples: short IDs such as `GREETING`, `ORDER`, `SIZE` are valid, as long as they are unique within the scenario and referenced consistently by `startStateId` and `nextStateId`. Scenario and choice IDs continue to follow the prefixed forms from DATA_MODEL.md (e.g. `dlg-cafe-001`, `choice-cafe-order`).
+
 ## 1. Purpose
 
 Finite-state-machine dialogues allow a learner to take part in controlled branching conversations.
@@ -167,7 +173,7 @@ Suggested categories:
 - `repair`
 - `incorrect`
 
-**UNCERTAIN:** Whether these categories should be visible to the learner in the first version.
+**OPEN:** Whether these categories should be visible to the learner in the first version. Frozen V1 decision: no learner-visible classification. Whether/when to add it remains OPEN (see OPEN_QUESTIONS.md).
 
 ## 9. Weighted transitions — later extension
 
@@ -184,7 +190,7 @@ A future version could attach weights to variants:
 
 This could create more natural replay variation.
 
-**UNCERTAIN / NOT FOR V1:** Weighted/random transitions complicate reproducibility, testing, progress and pedagogical explanation. Start with deterministic FSMs.
+**OPEN / NOT FOR V1:** Weighted/random transitions complicate reproducibility, testing, progress and pedagogical explanation. Start with deterministic FSMs.
 
 ## 10. Scoring — later extension
 
@@ -196,22 +202,21 @@ Possible scoring dimensions:
 - vocabulary coverage;
 - grammar objective coverage.
 
-**UNCERTAIN / NOT FOR FIRST PROTOTYPE:** Do not introduce a global numeric score until the pedagogical meaning is defined.
+**OPEN / NOT FOR FIRST PROTOTYPE:** Do not introduce a global numeric score until the pedagogical meaning is defined.
 
 ## 11. Persistence
 
-Options:
+Frozen V1 decision (see DECISIONS.md): **no mid-dialogue persistence.** Option A applies in V1 — restarting or leaving a dialogue always starts over from the start state. Normal course progress may still be persisted separately.
 
-A. No persistence: restarting a dialogue always starts over.
+Options, for reference:
+
+A. No persistence: restarting a dialogue always starts over. **(V1)**
 
 B. Save only completed/not completed.
 
 C. Save the full current FSM state and history.
 
-Recommended first prototype: **B**, unless implementation testing shows that resumable dialogues add clear value.
-
-**UNCERTAIN:** Final persistence behaviour.
-
+**OPEN:** whether a completed flag (option B) or resumable sessions (option C) are added after V1.
 ## 12. Relation to standard dialogues
 
 Standard linear dialogues remain useful for:

@@ -1,7 +1,9 @@
 # Roadmap
 
+This is the authoritative implementation roadmap. `PROJECT_PLAN.md` is retained as background; where the two disagree, this document wins.
+
 ## Phase 0 — Documentation baseline
-Status: IN PROGRESS
+Status: COMPLETED
 
 - architecture;
 - decisions;
@@ -11,6 +13,8 @@ Status: IN PROGRESS
 - data contracts;
 - QA/testing;
 - development workflow.
+
+Exit condition met: the Phase 0 documents exist, are internally reconciled, and frozen V1 decisions are recorded in DECISIONS.md. Remaining OPEN items are tracked in OPEN_QUESTIONS.md and do not block Phase 1.
 
 ## Phase 1 — Android skeleton
 - Gradle/project setup;

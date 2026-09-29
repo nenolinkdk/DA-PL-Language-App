@@ -17,9 +17,14 @@ DA-PL-Language-App/
 │  ├─ DATA_MODEL.md
 │  ├─ TESTING_QA.md
 │  ├─ DEVELOPMENT_WORKFLOW.md
+│  ├─ ACCEPTANCE_CRITERIA.md
 │  ├─ ROADMAP.md
 │  ├─ DECISIONS.md
-│  └─ OPEN_QUESTIONS.md
+│  ├─ OPEN_QUESTIONS.md
+│  ├─ PROJECT_PLAN.md
+│  └─ RISKS.md
+
+Document status vocabulary (V1 / NICE-TO-HAVE / OPEN / LINGUISTIC REVIEW) is defined in OPEN_QUESTIONS.md. The authoritative sources are DECISIONS.md and DEVELOPMENT_SPEC.md for frozen V1 decisions, ROADMAP.md for the implementation roadmap.
 ├─ app/
 │  └─ src/main/
 │     ├─ java/.../

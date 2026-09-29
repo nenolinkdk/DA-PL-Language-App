@@ -1,5 +1,7 @@
 # DA-PL Language App — Project Plan
 
+**Note:** This is the original project plan, kept for background. The authoritative sources are [DECISIONS.md](DECISIONS.md) and [DEVELOPMENT_SPEC.md](DECISIONS.md) for frozen V1 decisions, and [ROADMAP.md](ROADMAP.md) for the implementation roadmap and phase numbering. Where this document disagrees with them, they win.
+
 ## 1. Goal
 
 Create a Danish → Polish Android language app using the same overall Nenoling product family as Learn Portuguese 2 and Learn-FR-DA, with the newer reusable Nenoling architecture as the preferred technical baseline.
@@ -24,13 +26,9 @@ Reference structure:
 4. Children — short, age-appropriate situations
 5. Grammar — practical Polish grammar for Danish speakers
 6. Practical resources — separate external/reference content
-7. Interactive dialogues — FSM-driven dialogue practice
+7. Samtaletræning — FSM-driven dialogue practice
 
-The interactive dialogue module may be either:
-- a separate top-level module; or
-- an activity available inside ordinary lessons.
-
-**UNCERTAIN:** Do not lock this choice before the first Android prototype.
+Resolved V1 decision (see DECISIONS.md): the interactive dialogue module is a **separate top-level menu item** named **Samtaletræning**, not an activity inside ordinary lessons.
 
 ## 4. Content baseline
 
@@ -65,7 +63,7 @@ Initial candidates:
 - polite forms and address;
 - word order differences between Danish and Polish.
 
-**UNCERTAIN:** Exact grammar progression requires linguistic review before content production is frozen.
+**OPEN:** Exact grammar progression requires linguistic review before content production is frozen.
 
 ## 6. Proposed Android architecture
 
@@ -109,7 +107,7 @@ Main menu inspired by Learn-FR-DA:
 - Level 1
 - Level 2
 - Level 3
-- Interactive dialogues
+- Samtaletræning
 - Quiz / review
 - Grammar
 - Children
@@ -137,6 +135,8 @@ FSM dialogue screen:
 - progress shown as visited steps, not a misleading fixed percentage for branching dialogues.
 
 ## 8. Implementation phases
+
+> The Phases A–F below were the original planning outline. Implementation now follows the phase numbering and exit criteria in [ROADMAP.md](ROADMAP.md) (Phases 0–6), which is authoritative.
 
 ### Phase A — repository baseline
 - README and architecture docs;
