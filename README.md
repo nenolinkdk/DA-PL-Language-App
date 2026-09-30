@@ -1,46 +1,18 @@
-# DA-PL Language App
+# DA-PL-Language-App (Nenoling)
 
-Android language-learning app for **Danish → Polish**, built on the reusable Nenoling architecture.
+Lær dansk til polsk - en Android-app i Nenoling-familien.
+Dansk -> polsk sprogtræning med lektioner, quiz, grammatik og FSM-baseret samtaletræning.
 
-## Baseline
+## Struktur
+- `app/src/main/java/dk/nenoling/dapl/` - Kotlin/Compose-kode
+- `app/src/main/assets/course/level1/` - lektions-JSON (lektion 1 udført, 2-10 som skelet, `"released": false`)
+- `app/src/main/assets/dialogues/` - FSM-samtale scenarier (valideret: ingen dead-ends, præcis én terminal)
+- `app/src/test/` - enhedstests for DialogueMachine og DialogueValidator
 
-This project should follow the current Nenoling template and the Learn-FR-DA user-interface pattern rather than cloning one older app literally.
+## Byg og kør
+1. Åbn projektmappen i Android Studio (Koala eller nyere).
+2. Lad Android Studio generere Gradle-wrapperen (Settings/Project sættes op automatisk).
+3. `Build > Make Project`, derefter `Run`.
 
-Planned baseline:
-
-- Android, Kotlin/Jetpack Compose unless implementation review shows a stronger reason to reuse an existing Java layer;
-- offline-first linguistic content in JSON;
-- Danish as support language (`da-DK`);
-- Polish as target language (`pl-PL`);
-- support/target TTS;
-- Levels 1–3;
-- Children module;
-- Grammar module;
-- quizzes and progress;
-- compact menus and navigation visually aligned with Learn-FR-DA;
-- new optional FSM-based interactive dialogues.
-
-## FSM dialogue experiment
-
-DA-PL introduces a data-driven dialogue format based on finite-state machines (FSMs).
-
-A dialogue contains:
-
-- one start state;
-- dialogue states;
-- bilingual utterances;
-- learner choices;
-- transitions to the next state;
-- one or more terminal states.
-
-The FSM is content data, not Android screen-navigation logic. The Android engine renders the current dialogue state and applies the selected transition.
-
-See:
-
-- [Project plan](docs/PROJECT_PLAN.md)
-- [FSM dialogue design](docs/FSM_DIALOGUES.md)
-- [Open questions](docs/OPEN_QUESTIONS.md)
-
-## Status
-
-Initial documentation/planning stage. The repository was empty when this baseline was created.
+## Arkitektur-beslutninger
+Se `docs/DECISIONS.md`.

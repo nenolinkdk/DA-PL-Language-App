@@ -1,0 +1,42 @@
+{
+  "id": "dlg-cafe-001",
+  "title": "I caféen",
+  "description": "Bestil en kaffe og betal høfligt.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Bartenderen nikker til dig. Han siger: 'Dzień dobry! Co podać?'",
+      "expectedPhrases": ["Dzień dobry", "Proszę"],
+      "options": [
+        { "text": "Dzień dobry! Proszę kawę.", "target": "order-confirmed" },
+        { "text": "Cześć! Kawę, szybko!", "target": "rude-retry" }
+      ]
+    },
+    "rude-retry": {
+      "prompt": "Bartenderen rækker øjenbrynene. Øjeblikket er lidt akavet - prøv en høfligere hilsen.",
+      "expectedPhrases": ["Dzień dobry", "Proszę"],
+      "options": [
+        { "text": "Przepraszam. Dzień dobry, proszę kawę.", "target": "order-confirmed" }
+      ]
+    },
+    "order-confirmed": {
+      "prompt": "'Proszę pana - kawa gotowa.' Kaffen står på disken. Hvad siger du?",
+      "expectedPhrases": ["Dziękuję"],
+      "options": [
+        { "text": "Dziękuję bardzo!", "target": "pay" },
+        { "text": "(tager kaffen uden et ord)", "target": "rude-retry" }
+      ]
+    },
+    "pay": {
+      "prompt": "Du skal betale 15 zł. Bartenderen siger: 'Piętnaście złotych.'",
+      "expectedPhrases": ["Proszę", "Dziękuję"],
+      "options": [
+        { "text": "Proszę. Dziękuję!", "target": "done" }
+      ]
+    },
+    "done": {
+      "prompt": "Smacznego! Samtalen er gennemført høfligt fra start til slut.",
+      "terminal": true
+    }
+  }
+}

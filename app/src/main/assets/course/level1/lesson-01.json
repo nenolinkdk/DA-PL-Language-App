@@ -1,0 +1,30 @@
+{
+  "id": "lesson-01",
+  "moduleId": "level1",
+  "title": "Basale hilsner",
+  "order": 1,
+  "released": true,
+  "notes": [
+    "Øv 'Cześć' og 'Dzień dobry' højt - betoningen ligger på første stavelse.",
+    "Polsk 'dzień' udtales næsten som dansk 'jen' med blødt d."
+  ],
+  "items": [
+    { "id": "it-01", "type": "phrase", "danish": "Hej", "polish": "Cześć", "hint": "uformel hilsen" },
+    { "id": "it-02", "type": "phrase", "danish": "Goddag", "polish": "Dzień dobry", "hint": "høflig, hele dagen" },
+    { "id": "it-03", "type": "phrase", "danish": "Godmorgen", "polish": "Dzień dobry", "hint": "samme udtryk bruges om morgenen" },
+    { "id": "it-04", "type": "phrase", "danish": "God aften", "polish": "Dobry wieczór", "hint": "efter ca. kl. 18" },
+    { "id": "it-05", "type": "phrase", "danish": "Farvel", "polish": "Do widzenia", "hint": "høfligt farvel" },
+    { "id": "it-06", "type": "phrase", "danish": "Hej hej (uformelt farvel)", "polish": "Cześć", "hint": "samme ord som 'hej'" },
+    { "id": "it-07", "type": "phrase", "danish": "Tak", "polish": "Dziękuję", "hint": null },
+    { "id": "it-08", "type": "phrase", "danish": "Vær så venlig", "polish": "Proszę", "hint": "bruges også ved overraskelse" },
+    { "id": "it-09", "type": "phrase", "danish": "Undskyld", "polish": "Przepraszam", "hint": "også for at tiltale nogen" },
+    { "id": "it-10", "type": "phrase", "danish": "Det var så lidt", "polish": "Nie ma za co", "hint": "svar på 'dziękuję'" }
+  ],
+  "quiz": [
+    { "id": "q-01", "question": "Hvad betyder 'Dzień dobry'?", "options": ["Hej", "Goddag", "Farvel", "Undskyld"], "answerIndex": 1 },
+    { "id": "q-02", "question": "Hvad siger man høfligt farvel?", "options": ["Cześć", "Proszę", "Do widzenia", "Dziękuję"], "answerIndex": 2 },
+    { "id": "q-03", "question": "'Proszę' kan IKKE betyde ...", "options": ["Vær så venlig", "Værsågod", "Undskyld mig", "Tak, det var lækkert"], "answerIndex": 3 },
+    { "id": "q-04", "question": "Hvad svarer man på 'Dziękuję'?", "options": ["Nie ma za co", "Dobry wieczór", "Przepraszam", "Cześć"], "answerIndex": 0 },
+    { "id": "q-05", "question": "Hvilken hilsen bruges om aftenen?", "options": ["Cześć", "Dobry wieczór", "Dzień dobry", "Do widzenia"], "answerIndex": 1 }
+  ]
+}

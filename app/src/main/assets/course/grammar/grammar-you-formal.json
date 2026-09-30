@@ -1,0 +1,22 @@
+{
+  "id": "grammar-you-formal",
+  "title": "Du/di - formel og uformel",
+  "sections": [
+    {
+      "heading": "Pan / Pani",
+      "body": "Polsk har ikke et 'De' som dansk. I stedet bruges 'Pan' (herre) og 'Pani' (frue/frøken) plus verbet i 3. person. Dette er den høflige form over for fremmede, ældre og i butikker.",
+      "examples": [
+        { "danish": "Hedder du Nielsen?", "polish": "Czy pan się nazywa Nielsen?" },
+        { "danish": "Vil du have kaffe?", "polish": "Czy pani chce kawy?" }
+      ]
+    },
+    {
+      "heading": "Ty",
+      "body": "'Ty' (du) bruges over for venner, familie og unge. Verbet står i 2. person: 'Masz czas?' (har du tid?).",
+      "examples": [
+        { "danish": "Har du tid?", "polish": "Masz czas?" },
+        { "danish": "Hvor bor du?", "polish": "Gdzie mieszkasz?" }
+      ]
+    }
+  ]
+}
