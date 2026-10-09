@@ -46,7 +46,8 @@ data class LessonIndexEntry(
     val moduleId: String,
     val order: Int,
     val title: BilingualText,
-    val released: Boolean
+    val released: Boolean,
+    val hasQuiz: Boolean = false
 )
 
 data class ScenarioIndexEntry(

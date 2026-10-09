@@ -6,8 +6,13 @@ This is the target structure for implementation. Directories are created when th
 DA-PL-Language-App/
 ├─ README.md
 ├─ content/
-│  └─ course/
-│     └─ catalog.json
+│  ├─ config/
+│  │  └─ manifest.json
+│  ├─ course/
+│  │  ├─ catalog.json
+│  │  ├─ level1/
+│  │  └─ grammar/
+│  └─ dialogues/
 ├─ core/
 │  └─ src/
 ├─ docs/

@@ -43,9 +43,9 @@ See:
 
 ## Status
 
-Phase 1A skeleton is on branch `vibe/phase1a-skeleton`.
+Phase 1B reconciliation is on branch `vibe/phase1b-reconcile`.
 
-The app opens on a main menu with Niveau 1–3, Samtaletræning, Quiz / repetition, Grammatik, Børn and Dokumentation / Om. Modules without content show a clear not-yet-available state. Screen navigation is separate from the future dialogue FSM. The course index and TTS policy are in place; lessons, dialogue content and weighted transitions are not.
+The app keeps the eight-route menu and `AppNavigator`. Niveau 1 opens the imported lessons: lesson 1 is playable, with Danish and Polish speech buttons and a quiz. Lessons 2–10 stay unavailable. Samtaletræning opens two imported scenarios through `DialogueMachine`. Grammatik shows the two imported sheets. Niveau 2, Niveau 3, Børn and the top-level Quiz route stay empty. Speech never starts by itself.
 
 Open the project in Android Studio and run the `app` configuration. From the repository root:
 

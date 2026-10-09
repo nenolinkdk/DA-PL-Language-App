@@ -1,0 +1,24 @@
+{
+  "id": "grammar-hello-politeness",
+  "title": "Hilsner og høflighed",
+  "sections": [
+    {
+      "heading": "Hilsner",
+      "body": "Polsk skelner mellem 'Cześć' (uformel, som dansk 'hej') og 'Dzień dobry' (høflig, bruges hele dagen). 'Dobry wieczór' bruges om aftenen.",
+      "examples": [
+        { "danish": "Hej!", "polish": "Cześć!" },
+        { "danish": "Goddag!", "polish": "Dzień dobry!" },
+        { "danish": "God aften!", "polish": "Dobry wieczór!" }
+      ]
+    },
+    {
+      "heading": "Høflighed",
+      "body": "'Proszę' betyder både 'venligst' og 'vær så venlig' og bruges ekstremt hyppigt. 'Dziękuję' = tak. 'Przepraszam' bruges både ved undskyldning og for at få opmærksomhed.",
+      "examples": [
+        { "danish": "Vær så venlig", "polish": "Proszę" },
+        { "danish": "Tak", "polish": "Dziękuję" },
+        { "danish": "Undskyld", "polish": "Przepraszam" }
+      ]
+    }
+  ]
+}

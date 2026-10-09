@@ -1,0 +1,8 @@
+{
+  "modules": [
+    { "id": "level1", "title": "Niveau 1 - Basis", "type": "level", "order": 1 },
+    { "id": "conversation", "title": "Samtaletræning", "type": "conversation", "order": 2 },
+    { "id": "grammar", "title": "Grammatik", "type": "grammar", "order": 3 },
+    { "id": "children", "title": "Børneside", "type": "children", "order": 4 }
+  ]
+}

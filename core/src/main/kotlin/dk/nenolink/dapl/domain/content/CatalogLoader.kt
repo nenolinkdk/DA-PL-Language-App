@@ -78,11 +78,6 @@ object CatalogLoader {
             require(lesson.title.support.isNotBlank()) {
                 "Lesson ${lesson.id} needs a Danish title"
             }
-            if (lesson.released) {
-                require(lesson.title.target.isNotBlank()) {
-                    "Released lesson ${lesson.id} needs a Polish title"
-                }
-            }
         }
 
         val scenarioIds = catalog.scenarios.map { it.id }

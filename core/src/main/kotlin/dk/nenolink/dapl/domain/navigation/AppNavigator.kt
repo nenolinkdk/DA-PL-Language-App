@@ -6,8 +6,9 @@ import dk.nenolink.dapl.domain.model.CourseCatalog
 /**
  * Screen navigation for the app.
  *
- * This reducer is not the dialogue FSM. A future dialogue machine may change
- * the turn inside a scenario screen. It must not push or pop these destinations.
+ * This reducer is not the dialogue FSM in `domain.dialogue`.
+ * DialogueMachine may change the turn inside a scenario screen.
+ * It must not push or pop these destinations.
  */
 object AppNavigator {
     fun reduce(state: NavigationState, event: NavEvent, catalog: CourseCatalog): NavigationState {
@@ -17,6 +18,7 @@ object AppNavigator {
             is NavEvent.OpenModule -> openModule(state, event.route)
             is NavEvent.OpenLesson -> openLesson(state, event.lessonId, catalog)
             is NavEvent.OpenScenario -> openScenario(state, event.scenarioId, catalog)
+            is NavEvent.OpenQuiz -> openQuiz(state, event.lessonId, catalog)
         }
     }
 
@@ -52,6 +54,18 @@ object AppNavigator {
         if (catalog.scenario(scenarioId) == null) return state
         return state.push(Destination.Scenario(scenarioId))
     }
+
+    private fun openQuiz(
+        state: NavigationState,
+        lessonId: String,
+        catalog: CourseCatalog
+    ): NavigationState {
+        val current = state.current
+        if (current !is Destination.Lesson || current.lessonId != lessonId) return state
+        val lesson = catalog.lesson(lessonId) ?: return state
+        if (!lesson.released || !lesson.hasQuiz) return state
+        return state.push(Destination.LessonQuiz(lessonId))
+    }
 }
 
 data class NavigationState(val stack: List<Destination>) {
@@ -80,12 +94,14 @@ sealed interface Destination {
     data object Children : Destination
     data object About : Destination
     data class Lesson(val lessonId: String) : Destination
+    data class LessonQuiz(val lessonId: String) : Destination
     data class Scenario(val scenarioId: String) : Destination
 }
 
 sealed interface NavEvent {
     data class OpenModule(val route: AppRoute) : NavEvent
     data class OpenLesson(val lessonId: String) : NavEvent
+    data class OpenQuiz(val lessonId: String) : NavEvent
     data class OpenScenario(val scenarioId: String) : NavEvent
     data object Back : NavEvent
 }

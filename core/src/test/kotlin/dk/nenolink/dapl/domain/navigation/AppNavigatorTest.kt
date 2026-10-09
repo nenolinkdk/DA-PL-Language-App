@@ -1,6 +1,6 @@
 package dk.nenolink.dapl.domain.navigation
 
-import dk.nenolink.dapl.domain.content.CatalogLoader
+import dk.nenolink.dapl.domain.content.CourseLibraryLoader
 import dk.nenolink.dapl.domain.model.AppRoute
 import dk.nenolink.dapl.domain.model.BilingualText
 import dk.nenolink.dapl.domain.model.ScenarioIndexEntry
@@ -9,7 +9,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class AppNavigatorTest {
-    private val catalog = CatalogLoader.loadBundled()
+    private val catalog = CourseLibraryLoader.loadBundled().catalog
 
     @Test
     fun everyMenuRouteOpensFromHomeAndBackReturnsHome() {
@@ -91,7 +91,7 @@ class AppNavigatorTest {
     }
 
     @Test
-    fun emptyScenarioListRejectsScenarioNavigation() {
+    fun unknownScenarioDoesNotOpen() {
         val conversation = AppNavigator.reduce(
             NavigationState.home(),
             NavEvent.OpenModule(AppRoute.CONVERSATION),
@@ -99,11 +99,10 @@ class AppNavigatorTest {
         )
         val next = AppNavigator.reduce(
             conversation,
-            NavEvent.OpenScenario("dlg-cafe-001"),
+            NavEvent.OpenScenario("dlg-missing"),
             catalog
         )
         assertEquals(Destination.Conversation, next.current)
-        assertTrue(catalog.scenarios.isEmpty())
     }
 
     @Test
@@ -137,5 +136,35 @@ class AppNavigatorTest {
         val back = AppNavigator.reduce(scenario, NavEvent.Back, withScenario)
         assertEquals(Destination.Conversation, back.current)
         assertEquals(listOf(Destination.Home, Destination.Conversation), back.stack)
+    }
+
+    @Test
+    fun quizOpensOnlyFromTheReleasedLessonAndBackReturnsThere() {
+        assertTrue(catalog.lesson("lesson-01")!!.hasQuiz)
+        val level = AppNavigator.reduce(
+            NavigationState.home(),
+            NavEvent.OpenModule(AppRoute.LEVEL1),
+            catalog
+        )
+        val rejectedFromLevel = AppNavigator.reduce(level, NavEvent.OpenQuiz("lesson-01"), catalog)
+        assertEquals(Destination.Level1, rejectedFromLevel.current)
+
+        val lesson = AppNavigator.reduce(level, NavEvent.OpenLesson("lesson-01"), catalog)
+        val quiz = AppNavigator.reduce(lesson, NavEvent.OpenQuiz("lesson-01"), catalog)
+        assertEquals(Destination.LessonQuiz("lesson-01"), quiz.current)
+        val back = AppNavigator.reduce(quiz, NavEvent.Back, catalog)
+        assertEquals(Destination.Lesson("lesson-01"), back.current)
+    }
+
+    @Test
+    fun unreleasedLessonDoesNotOpenAQuiz() {
+        val level = AppNavigator.reduce(
+            NavigationState.home(),
+            NavEvent.OpenModule(AppRoute.LEVEL1),
+            catalog
+        )
+        val lesson = AppNavigator.reduce(level, NavEvent.OpenLesson("lesson-02"), catalog)
+        val quiz = AppNavigator.reduce(lesson, NavEvent.OpenQuiz("lesson-02"), catalog)
+        assertEquals(Destination.Lesson("lesson-02"), quiz.current)
     }
 }

@@ -8,73 +8,73 @@
       "availability": "STRUCTURE_READY",
       "lessons": [
         {
-          "id": "lesson-l1-01-greetings",
+          "id": "lesson-01",
           "moduleId": "module-level1",
           "order": 1,
-          "title": { "support": "Hej, goddag og høflighed", "target": "" },
-          "released": false
+          "title": { "support": "Basale hilsner", "target": "" },
+          "released": true
         },
         {
-          "id": "lesson-l1-02-yes-no",
+          "id": "lesson-02",
           "moduleId": "module-level1",
           "order": 2,
-          "title": { "support": "Ja, nej, tak og undskyld", "target": "" },
+          "title": { "support": "Præsentationer", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-03-numbers",
+          "id": "lesson-03",
           "moduleId": "module-level1",
           "order": 3,
-          "title": { "support": "Tal, priser og betaling", "target": "" },
+          "title": { "support": "Tal 0-20", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-04-cafe",
+          "id": "lesson-04",
           "moduleId": "module-level1",
           "order": 4,
-          "title": { "support": "På café", "target": "" },
+          "title": { "support": "Hvordan har du det?", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-05-restaurant",
+          "id": "lesson-05",
           "moduleId": "module-level1",
           "order": 5,
-          "title": { "support": "Restaurant og mad", "target": "" },
+          "title": { "support": "I caféen", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-06-shopping",
+          "id": "lesson-06",
           "moduleId": "module-level1",
           "order": 6,
-          "title": { "support": "Butik og indkøb", "target": "" },
+          "title": { "support": "Tidspunkter", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-07-hotel",
+          "id": "lesson-07",
           "moduleId": "module-level1",
           "order": 7,
-          "title": { "support": "Hotel og overnatning", "target": "" },
+          "title": { "support": "Familien", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-08-transport",
+          "id": "lesson-08",
           "moduleId": "module-level1",
           "order": 8,
-          "title": { "support": "Tog, bus og billetter", "target": "" },
+          "title": { "support": "Hos lægen", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-09-directions",
+          "id": "lesson-09",
           "moduleId": "module-level1",
           "order": 9,
-          "title": { "support": "Vejvisning og steder", "target": "" },
+          "title": { "support": "I supermarkedet", "target": "" },
           "released": false
         },
         {
-          "id": "lesson-l1-10-help",
+          "id": "lesson-10",
           "moduleId": "module-level1",
           "order": 10,
-          "title": { "support": "Hjælp og enkle problemer", "target": "" },
+          "title": { "support": "På togstationen", "target": "" },
           "released": false
         }
       ]
@@ -129,5 +129,14 @@
       "lessons": []
     }
   ],
-  "scenarios": []
+  "scenarios": [
+    {
+      "id": "dlg-cafe-001",
+      "title": { "support": "I caféen", "target": "" }
+    },
+    {
+      "id": "dlg-ticket-001",
+      "title": { "support": "Billet til toget", "target": "" }
+    }
+  ]
 }

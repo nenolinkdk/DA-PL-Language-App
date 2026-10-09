@@ -51,6 +51,8 @@ core/src/main/kotlin/.../
   domain/model/          course index and identity
   domain/content/        catalog loader and empty-state copy
   domain/navigation/     app-screen navigator (not the dialogue FSM)
+  domain/dialogue/        deterministic dialogue machine and validator
+  domain/progress/       completed-flag contract
   tts/                   speech policy and gateway interface
 content/course/          catalog.json shared by core tests and app assets
 app/src/main/java/.../
@@ -63,7 +65,7 @@ app/src/main/java/.../
 
 Application ID for this skeleton: `dk.nenolink.dapl`.
 
-Dialogue loading, progress and validation packages are intentionally absent until a later phase.
+Dialogue loading and validation now live in `:core`. Progress storage is an app adapter over the completed-flag contract. Weighted transitions are not implemented.
 
 ## Core architectural rule
 

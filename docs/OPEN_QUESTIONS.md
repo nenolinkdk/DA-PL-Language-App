@@ -19,33 +19,32 @@ Do not use **UNCERTAIN** as a status marker; replace it with the closest marker 
 
 ## Technology
 
-1. **Implementation baseline:** Phase 1A on `vibe/phase1a-skeleton` is a new Kotlin/Compose app (`dk.nenolink.dapl`). `origin/main` still contains a different Android tree. The product baseline is not frozen until those trees are reconciled.
-2. **FSM schema location:** one JSON file per scenario or grouped by lesson/module?
-3. **Validation:** Kotlin-only validation, build-time script validation, or both?
-4. **Mermaid:** keep diagrams as documentation only; do not make Android depend on Mermaid. (Currently treated as settled practice; kept here until recorded in DECISIONS.md.)
-5. **Content-source split:** Phase 1A keeps one catalog index at `content/course/catalog.json`, read by core tests and app assets. The `content/production` pipeline for real lessons is still deferred until the first vertical slice (see REPOSITORY_STRUCTURE.md).
+1. **FSM schema location:** one JSON file per scenario or grouped by lesson/module? The two imported scenarios are one file each. Whether that stays the rule for later scenarios is still open.
+2. **Validation:** Kotlin-only validation, build-time script validation, or both?
+3. **Mermaid:** keep diagrams as documentation only; do not make Android depend on Mermaid. (Currently treated as settled practice; kept here until recorded in DECISIONS.md.)
+4. **Content-source split:** Imported lessons, grammar and dialogues now live under `content/` and are packaged as app assets from that directory. A separate `content/production` generation step is still open (see REPOSITORY_STRUCTURE.md).
 
 ## Pedagogy
 
-6. **Response evaluation:** preferred / acceptable / repair / incorrect — which categories should be learner-visible? (V1 has no learner-visible classification; the question is whether/when to add one.)
-7. **Incorrect choices:** allow realistic wrong paths, or immediately give feedback and retry?
-8. **Grammar correction:** explain immediately, after scenario completion, or both?
-9. **Number of choices:** normally 2, 3 or variable?
-10. **Branch depth:** how long should one scenario be before it becomes cumbersome on a phone?
-11. **Support-reveal scope:** whether Danish support reveal is per turn or remembered during the current scenario.
+5. **Response evaluation:** preferred / acceptable / repair / incorrect — which categories should be learner-visible? (V1 has no learner-visible classification; the question is whether/when to add one.)
+6. **Incorrect choices:** allow realistic wrong paths, or immediately give feedback and retry?
+7. **Grammar correction:** explain immediately, after scenario completion, or both?
+8. **Number of choices:** normally 2, 3 or variable?
+9. **Branch depth:** how long should one scenario be before it becomes cumbersome on a phone?
+10. **Support-reveal scope:** whether Danish support reveal is per turn or remembered during the current scenario.
 
 ## Polish linguistic design
 
-12. Exact order of Polish cases.
-13. How early verbal aspect should be introduced.
-14. How much formal/informal address distinction belongs in Level 1.
-15. Whether pronunciation notes should use IPA, simplified Danish guidance, audio/TTS only, or a combination.
-16. Which Polish regional/cultural variants need explicit treatment.
+11. Exact order of Polish cases.
+12. How early verbal aspect should be introduced.
+13. How much formal/informal address distinction belongs in Level 1.
+14. Whether pronunciation notes should use IPA, simplified Danish guidance, audio/TTS only, or a combination.
+15. Which Polish regional/cultural variants need explicit treatment.
 
 ## Scope
 
-17. Children module in first public release or later?
-18. Level 3 business content in first public release or later?
-19. Offline-only V1, except external resources, or optional online enrichment later?
+16. Children module in first public release or later?
+17. Level 3 business content in first public release or later?
+18. Offline-only V1, except external resources, or optional online enrichment later?
 
 These are not blockers for creating the Android skeleton. They should be resolved incrementally and recorded as decisions.

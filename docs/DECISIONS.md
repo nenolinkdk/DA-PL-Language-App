@@ -42,11 +42,25 @@ Supersedes the toolchain and SDK rows from 2026-09-29. Application ID `dk.nenoli
 | TTS | `TtsPolicy` allows speech only after an explicit request. No screen autoplays. | V1 |
 | Dialogue engine | Not in Phase 1A. No weighted transitions. | V1 |
 
-`origin/main` contains a separate Android tree (`dk.nenoling.dapl`, lessons and dialogue code). This branch does not replace that tree. Which tree is the product baseline remains open until the two are reconciled.
+`origin/main` still contains the earlier Android tree (`dk.nenoling.dapl`). This branch does not delete it. The reconciled app lives here, under `dk.nenolink.dapl`.
+
+## 2026-10-09 — Phase 1B reconciliation
+
+The canonical app is the Phase 1A codebase plus the lesson, grammar and dialogue files imported from `main` at `b846beb`. Those files are copied unchanged.
+
+| Area | Decision | Status |
+|---|---|---|
+| Package | `dk.nenolink.dapl` remains the application ID. `dk.nenoling.dapl` is not used. | V1 |
+| Content files | `content/course/level1`, `content/course/grammar` and `content/dialogues` keep the imported Danish and Polish text. | V1 |
+| Lesson index | The catalog uses the imported ids and titles (`lesson-01` “Basale hilsner” through `lesson-10`). The course-plan titles in COURSE_STRUCTURE.md stay documentation until the content is rewritten. | V1 |
+| File module id | Lesson files keep `"moduleId": "level1"`. The catalog module id remains `module-level1`. | V1 |
+| Dialogue | `DialogueMachine` and `DialogueValidator` live in `:core`. They are deterministic and have no weights. Leaving a scenario drops the machine. | V1 |
+| Progress | Completed lesson and dialogue ids are stored in SharedPreferences. An unfinished dialogue turn is not stored. | V1 |
+| TTS | Speech still requires `TtsPolicy`. Buttons pass `requestedByUser = true`. If da-DK or pl-PL is missing, the gateway falls back to US English only after that call. | V1 |
+| Empty modules | Level 2, Level 3, Children and the top-level Quiz route stay unavailable. Lessons 02–10 stay unreleased. | V1 |
+| Preserved manifest | `content/config/manifest.json` is kept and is not the menu source. | V1 |
 
 ## Still open
-
-- final Android code baseline: this branch is a new Kotlin/Compose skeleton; `origin/main` has a different Android tree that has not been chosen or discarded;
 - exact Level 2 case sequence;
 - final scope of Children for first public release;
 - final Level 3 content scope;

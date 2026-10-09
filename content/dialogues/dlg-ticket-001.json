@@ -1,0 +1,41 @@
+{
+  "id": "dlg-ticket-001",
+  "title": "Billet til toget",
+  "description": "Køb en togbillet på stationen.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Du står ved billetlugen. Ekspedenten siger: 'Dzień dobry, co podać?'",
+      "expectedPhrases": ["Dzień dobry"],
+      "options": [
+        { "text": "Dzień dobry! Bilet do Gdańska, proszę.", "target": "choose-ticket" }
+      ]
+    },
+    "choose-ticket": {
+      "prompt": "'Normalny czy z ulgą?' spørger ekspedenten (normalbillet eller rabat?).",
+      "expectedPhrases": ["normalny"],
+      "options": [
+        { "text": "Normalny, proszę.", "target": "pay" },
+        { "text": "Uh, nie wiem...", "target": "help" }
+      ]
+    },
+    "help": {
+      "prompt": "Ekspedenten smiler og forklarer langsomt: 'Normalny - bez rabatu.' Nu ved du det.",
+      "expectedPhrases": ["normalny"],
+      "options": [
+        { "text": "Aha - normalny, proszę.", "target": "pay" }
+      ]
+    },
+    "pay": {
+      "prompt": "'Dwadzieścia złotych.' Hun rækker dig billetten.",
+      "expectedPhrases": ["Dziękuję"],
+      "options": [
+        { "text": "Proszę. Dziękuję bardzo!", "target": "done" }
+      ]
+    },
+    "done": {
+      "prompt": "Billetten er din - og samtalen klappe fint. Udowa życzenia!",
+      "terminal": true
+    }
+  }
+}
