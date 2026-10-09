@@ -1,93 +1,115 @@
 package dk.nenolink.dapl.ui.navigation
 
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.remember
+import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import dk.nenolink.dapl.domain.content.menuEntries
+import dk.nenolink.dapl.domain.content.screenFor
+import dk.nenolink.dapl.domain.model.AppRoute
+import dk.nenolink.dapl.domain.model.CourseCatalog
+import dk.nenolink.dapl.domain.navigation.AppNavigator
+import dk.nenolink.dapl.domain.navigation.Destination
+import dk.nenolink.dapl.domain.navigation.NavEvent
+import dk.nenolink.dapl.domain.navigation.NavigationState
+import dk.nenolink.dapl.domain.navigation.toDestination
+import dk.nenolink.dapl.ui.common.ModuleScreen
 import dk.nenolink.dapl.ui.menu.MainMenuScreen
-import dk.nenolink.dapl.ui.module.ModulePlaceholderScreen
 
-object Routes {
+object NavRoutes {
     const val HOME = "home"
-    const val LEVEL1 = "level1"
-    const val LEVEL2 = "level2"
-    const val LEVEL3 = "level3"
-    const val CONVERSATION = "conversation"
-    const val QUIZ = "quiz"
-    const val GRAMMAR = "grammar"
-    const val CHILDREN = "children"
-    const val ABOUT = "about"
+    const val LESSON = "lesson/{lessonId}"
+    const val SCENARIO = "scenario/{scenarioId}"
+
+    fun lesson(lessonId: String): String = "lesson/$lessonId"
+
+    fun scenario(scenarioId: String): String = "scenario/$scenarioId"
 }
 
 @Composable
-fun DaplApp() {
+fun DaplApp(catalog: CourseCatalog) {
     val navController = rememberNavController()
-
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+    NavHost(
+        navController = navController,
+        startDestination = NavRoutes.HOME
     ) {
-        NavHost(
-            navController = navController,
-            startDestination = Routes.HOME
-        ) {
-            composable(Routes.HOME) {
-                MainMenuScreen(
-                    onModuleSelected = { navController.navigate(it) }
-                )
-            }
-            composable(Routes.LEVEL1) {
-                ModulePlaceholderScreen(
-                    title = "Niveau 1",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.LEVEL2) {
-                ModulePlaceholderScreen(
-                    title = "Niveau 2",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.LEVEL3) {
-                ModulePlaceholderScreen(
-                    title = "Niveau 3",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.CONVERSATION) {
-                ModulePlaceholderScreen(
-                    title = "Samtaletræning",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.QUIZ) {
-                ModulePlaceholderScreen(
-                    title = "Quiz / repetition",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.GRAMMAR) {
-                ModulePlaceholderScreen(
-                    title = "Grammatik",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.CHILDREN) {
-                ModulePlaceholderScreen(
-                    title = "Børn",
-                    onBack = { navController.popBackStack() }
-                )
-            }
-            composable(Routes.ABOUT) {
-                ModulePlaceholderScreen(
-                    title = "Dokumentation / Om",
-                    onBack = { navController.popBackStack() }
+        composable(NavRoutes.HOME) {
+            MainMenuScreen(
+                entries = catalog.menuEntries(),
+                onOpen = { route ->
+                    openIfAllowed(
+                        navController = navController,
+                        catalog = catalog,
+                        from = NavigationState.home(),
+                        event = NavEvent.OpenModule(route),
+                        route = route.wire
+                    )
+                }
+            )
+        }
+        AppRoute.menuOrder.forEach { route ->
+            composable(route.wire) {
+                val destination = route.toDestination()
+                ModuleScreen(
+                    model = catalog.screenFor(destination),
+                    onBack = { navController.popBackStack() },
+                    onLesson = { lessonId ->
+                        openIfAllowed(
+                            navController = navController,
+                            catalog = catalog,
+                            from = NavigationState.home().push(destination),
+                            event = NavEvent.OpenLesson(lessonId),
+                            route = NavRoutes.lesson(lessonId)
+                        )
+                    },
+                    onScenario = { scenarioId ->
+                        openIfAllowed(
+                            navController = navController,
+                            catalog = catalog,
+                            from = NavigationState.home().push(destination),
+                            event = NavEvent.OpenScenario(scenarioId),
+                            route = NavRoutes.scenario(scenarioId)
+                        )
+                    }
                 )
             }
         }
+        composable(
+            route = NavRoutes.LESSON,
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) { entry ->
+            val lessonId = entry.arguments?.getString("lessonId").orEmpty()
+            ModuleScreen(
+                model = remember(lessonId) { catalog.screenFor(Destination.Lesson(lessonId)) },
+                onBack = { navController.popBackStack() }
+            )
+        }
+        composable(
+            route = NavRoutes.SCENARIO,
+            arguments = listOf(navArgument("scenarioId") { type = NavType.StringType })
+        ) { entry ->
+            val scenarioId = entry.arguments?.getString("scenarioId").orEmpty()
+            ModuleScreen(
+                model = remember(scenarioId) { catalog.screenFor(Destination.Scenario(scenarioId)) },
+                onBack = { navController.popBackStack() }
+            )
+        }
+    }
+}
+
+private fun openIfAllowed(
+    navController: NavHostController,
+    catalog: CourseCatalog,
+    from: NavigationState,
+    event: NavEvent,
+    route: String
+) {
+    val next = AppNavigator.reduce(from, event, catalog)
+    if (next != from) {
+        navController.navigate(route)
     }
 }

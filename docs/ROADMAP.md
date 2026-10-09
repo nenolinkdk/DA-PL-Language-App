@@ -20,11 +20,18 @@ Exit condition met: the Phase 0 documents exist, are internally reconciled, and 
 Status: IN PROGRESS
 
 - Gradle/project setup;
-- package identity;
+- package identity `dk.nenolink.dapl`;
 - Compose theme;
 - FR-DA-inspired menu;
 - all top-level module routes;
-- clean empty-state handling.
+- clean empty-state handling;
+- course-index JSON and an explicit-only TTS boundary.
+
+Implemented on `vibe/phase1a-skeleton`. Not done yet:
+
+- install and click-through on a device or emulator;
+- reconciliation with the separate Android tree on `origin/main`;
+- lesson content, dialogue FSM and weighted transitions (later phases).
 
 Exit: app installs and every structural menu route is safe.
 

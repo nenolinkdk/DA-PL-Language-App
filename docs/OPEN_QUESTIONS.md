@@ -19,11 +19,11 @@ Do not use **UNCERTAIN** as a status marker; replace it with the closest marker 
 
 ## Technology
 
-1. **Implementation baseline:** start a new Kotlin/Compose app from the Nenoling template, or port an existing Learn-FR-DA Android codebase first?
+1. **Implementation baseline:** Phase 1A on `vibe/phase1a-skeleton` is a new Kotlin/Compose app (`dk.nenolink.dapl`). `origin/main` still contains a different Android tree. The product baseline is not frozen until those trees are reconciled.
 2. **FSM schema location:** one JSON file per scenario or grouped by lesson/module?
 3. **Validation:** Kotlin-only validation, build-time script validation, or both?
 4. **Mermaid:** keep diagrams as documentation only; do not make Android depend on Mermaid. (Currently treated as settled practice; kept here until recorded in DECISIONS.md.)
-5. **Content-source split:** implement the `content/production` pipeline split immediately or after the first vertical slice (see REPOSITORY_STRUCTURE.md).
+5. **Content-source split:** Phase 1A keeps one catalog index at `content/course/catalog.json`, read by core tests and app assets. The `content/production` pipeline for real lessons is still deferred until the first vertical slice (see REPOSITORY_STRUCTURE.md).
 
 ## Pedagogy
 

@@ -5,6 +5,11 @@ This is the target structure for implementation. Directories are created when th
 ```text
 DA-PL-Language-App/
 ├─ README.md
+├─ content/
+│  └─ course/
+│     └─ catalog.json
+├─ core/
+│  └─ src/
 ├─ docs/
 │  ├─ README.md
 │  ├─ DEVELOPMENT_SPEC.md

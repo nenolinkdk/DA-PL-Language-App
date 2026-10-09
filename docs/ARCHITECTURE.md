@@ -44,29 +44,26 @@ flowchart TD
 
 ## Suggested package structure
 
+Phase 1A splits testable code from Android:
+
 ```text
+core/src/main/kotlin/.../
+  domain/model/          course index and identity
+  domain/content/        catalog loader and empty-state copy
+  domain/navigation/     app-screen navigator (not the dialogue FSM)
+  tts/                   speech policy and gateway interface
+content/course/          catalog.json shared by core tests and app assets
 app/src/main/java/.../
-  data/
-    content/
-    dialogue/
-    progress/
-  domain/
-    model/
-    dialogue/
-  ui/
-    navigation/
-    menu/
-    lesson/
-    dialogue/
-    quiz/
-    grammar/
-    children/
-    about/
-  tts/
-  validation/
+  data/content/          asset repository
+  tts/                   Android TTS adapter
+  ui/navigation/         Navigation-Compose host
+  ui/menu/
+  ui/common/
 ```
 
-**OPEN:** final package/application ID.
+Application ID for this skeleton: `dk.nenolink.dapl`.
+
+Dialogue loading, progress and validation packages are intentionally absent until a later phase.
 
 ## Core architectural rule
 

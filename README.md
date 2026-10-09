@@ -43,4 +43,14 @@ See:
 
 ## Status
 
-Initial documentation/planning stage. The repository was empty when this baseline was created.
+Phase 1A skeleton is on branch `vibe/phase1a-skeleton`.
+
+The app opens on a main menu with Niveau 1–3, Samtaletræning, Quiz / repetition, Grammatik, Børn and Dokumentation / Om. Modules without content show a clear not-yet-available state. Screen navigation is separate from the future dialogue FSM. The course index and TTS policy are in place; lessons, dialogue content and weighted transitions are not.
+
+Open the project in Android Studio and run the `app` configuration. From the repository root:
+
+```text
+gradlew.bat :core:test :app:assembleDebug :app:testDebugUnitTest
+```
+
+Create `local.properties` with `sdk.dir` pointing at the Android SDK. JDK 17 or newer is required; this skeleton is set up for Gradle 9.1 and AGP 9.0.1 so it can run on JDK 25.

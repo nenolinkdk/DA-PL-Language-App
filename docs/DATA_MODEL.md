@@ -28,6 +28,18 @@ choice-cafe-order
 
 Support = Danish. Target = Polish.
 
+## Phase 1A catalog index
+
+`content/course/catalog.json` is an index, not production lesson or dialogue content.
+
+- `schemaVersion` is `1`.
+- Each top-level module has a stable `id`, a navigation `route`, `order`, and `availability` of `STRUCTURE_READY` or `NOT_YET_FILLED`.
+- A module marked `NOT_YET_FILLED` has no lessons.
+- Lesson entries carry stable ids, Danish titles and `released: false` until real Polish content exists. Target text stays empty while unreleased.
+- `scenarios` stays empty until a dialogue phase adds scenario documents. The index does not store states, choices or weights.
+
+The lesson and dialogue minimum models below still apply when those documents are added. They are not implemented by the catalog index.
+
 ## Course skeleton
 
 ```text

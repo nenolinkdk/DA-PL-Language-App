@@ -23,14 +23,30 @@
 | Area | Decision | Status |
 |---|---|---|
 | Application/package ID | `dk.nenolink.dapl` (frozen at release; approved by product owner) | V1 |
-| Language/toolchain | Kotlin 2.0 + Jetpack Compose (Material 3), AGP 8.5, JDK 17 | V1 |
-| SDK levels | minSdk 26, target/compile SDK 34 | V1 |
+| Language/toolchain | Kotlin 2.0 + Jetpack Compose (Material 3), AGP 8.5, JDK 17 | Superseded 2026-10-09 |
+| SDK levels | minSdk 26, target/compile SDK 34 | Superseded 2026-10-09 |
 | UI framework | Jetpack Compose with Material 3; compact menu aligned with Learn-FR-DA pattern | V1 |
 | Navigation | Navigation-Compose routes for all 8 top-level modules; placeholder empty states for unfilled modules | V1 |
 
+## 2026-10-09 — Phase 1A toolchain and boundaries
+
+Supersedes the toolchain and SDK rows from 2026-09-29. Application ID `dk.nenolink.dapl` is unchanged.
+
+| Area | Decision | Status |
+|---|---|---|
+| Toolchain | AGP 9.0.1, Gradle 9.1, Kotlin 2.2.10, Compose Material 3. Required so the project can run on JDK 25. | V1 |
+| SDK levels | minSdk 26, compileSdk/targetSdk 36. Platform 34 is not installed in the current SDK. | V1 |
+| Course index | `content/course/catalog.json` names modules and Level 1 lessons. It is not lesson or dialogue content. | V1 |
+| Navigation | `AppNavigator` owns screen changes. It is separate from any future dialogue FSM. Navigation-Compose renders the same routes. | V1 |
+| Empty modules | Level 2, Level 3 and Children stay not-yet-filled. Unreleased lessons open a safe placeholder. | V1 |
+| TTS | `TtsPolicy` allows speech only after an explicit request. No screen autoplays. | V1 |
+| Dialogue engine | Not in Phase 1A. No weighted transitions. | V1 |
+
+`origin/main` contains a separate Android tree (`dk.nenoling.dapl`, lessons and dialogue code). This branch does not replace that tree. Which tree is the product baseline remains open until the two are reconciled.
+
 ## Still open
 
-- final Android code baseline: clean Kotlin/Compose skeleton vs direct reuse/port of reference implementation;
+- final Android code baseline: this branch is a new Kotlin/Compose skeleton; `origin/main` has a different Android tree that has not been chosen or discarded;
 - exact Level 2 case sequence;
 - final scope of Children for first public release;
 - final Level 3 content scope;
