@@ -12,7 +12,8 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class CatalogAndEmptyStateTest {
-    private val catalog = CatalogLoader.loadBundled()
+    private val library = CourseLibraryLoader.loadBundled()
+    private val catalog = library.catalog
 
     @Test
     fun applicationIdAndLocalesStayOnTheFrozenContract() {
@@ -23,23 +24,26 @@ class CatalogAndEmptyStateTest {
 
     @Test
     fun menuListsTheEightStructuralModulesInOrder() {
-        val entries = catalog.menuEntries()
+        val entries = library.menuEntries()
         assertEquals(AppRoute.menuOrder, entries.map { it.route })
         assertTrue(entries.all { it.label.isNotBlank() && it.detail.isNotBlank() })
     }
 
     @Test
-    fun level1IndexesTenUnreleasedLessonsWithoutPolishPhrases() {
+    fun level1IndexesTheImportedLessonsAndOnlyLessonOneIsReleased() {
         val level1 = catalog.module(AppRoute.LEVEL1)!!
         assertEquals(ModuleAvailability.STRUCTURE_READY, level1.availability)
         assertEquals(10, level1.lessons.size)
-        assertTrue(level1.lessons.all { !it.released })
-        assertTrue(level1.lessons.all { it.title.support.isNotBlank() && it.title.target.isBlank() })
+        assertEquals("lesson-01", level1.lessons.first().id)
+        assertEquals("Basale hilsner", level1.lessons.first().title.support)
+        assertTrue(level1.lessons.first().released)
+        assertTrue(level1.lessons.drop(1).all { !it.released && it.title.target.isBlank() })
 
-        val screen = catalog.screenFor(Destination.Level1)
+        val screen = library.screenFor(Destination.Level1)
         assertEquals(ScreenKind.LESSON_LIST, screen.kind)
         assertEquals(level1.lessons.map { it.id }, screen.lessons.map { it.id })
-        assertTrue(screen.lessons.all { !it.released && it.statusLabel == "Ikke udgivet endnu" })
+        assertEquals("Klar", screen.lessons.first().statusLabel)
+        assertTrue(screen.lessons.drop(1).all { !it.released && it.statusLabel == "Ikke udgivet endnu" })
         assertTrue(screen.body.isNotBlank())
     }
 
@@ -49,7 +53,7 @@ class CatalogAndEmptyStateTest {
             val module = catalog.module(route)!!
             assertEquals(ModuleAvailability.NOT_YET_FILLED, module.availability)
             assertTrue(module.lessons.isEmpty())
-            val screen = catalog.screenFor(route.toDestination())
+            val screen = library.screenFor(route.toDestination())
             assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
             assertTrue(screen.title.isNotBlank())
             assertTrue(screen.body.isNotBlank())
@@ -60,35 +64,36 @@ class CatalogAndEmptyStateTest {
 
     @Test
     fun unreleasedLessonScreenIsASafePlaceholder() {
-        val lessonId = "lesson-l1-01-greetings"
-        val screen = catalog.screenFor(Destination.Lesson(lessonId))
+        val lessonId = "lesson-02"
+        val screen = library.screenFor(Destination.Lesson(lessonId))
         assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
-        assertEquals("Hej, goddag og høflighed", screen.title)
+        assertEquals("Præsentationer", screen.title)
         assertTrue(screen.body.contains("ikke udgivet"))
         assertTrue(screen.lessons.isEmpty())
     }
 
     @Test
     fun missingLessonScreenIsStillSafe() {
-        val screen = catalog.screenFor(Destination.Lesson("lesson-missing"))
+        val screen = library.screenFor(Destination.Lesson("lesson-missing"))
         assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
         assertTrue(screen.body.isNotBlank())
     }
 
     @Test
     fun conversationQuizGrammarChildrenAndAboutHaveExplicitEmptyOrInfoCopy() {
-        val conversation = catalog.screenFor(Destination.Conversation)
+        val conversation = library.screenFor(Destination.Conversation)
         assertEquals(ScreenKind.CONVERSATION, conversation.kind)
-        assertTrue(conversation.scenarios.isEmpty())
-        assertTrue(conversation.body.isNotBlank())
+        assertEquals(listOf("dlg-cafe-001", "dlg-ticket-001"), conversation.scenarios.map { it.id })
+        assertTrue(conversation.body.contains("gemmes ikke"))
 
-        listOf(Destination.Quiz, Destination.Grammar, Destination.Children).forEach { destination ->
-            val screen = catalog.screenFor(destination)
-            assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
-            assertTrue(screen.body.isNotBlank())
-        }
+        val quiz = library.screenFor(Destination.Quiz)
+        assertEquals(ScreenKind.UNAVAILABLE, quiz.kind)
+        val children = library.screenFor(Destination.Children)
+        assertEquals(ScreenKind.UNAVAILABLE, children.kind)
+        val grammar = library.screenFor(Destination.Grammar)
+        assertEquals(ScreenKind.GRAMMAR, grammar.kind)
 
-        val about = catalog.screenFor(Destination.About)
+        val about = library.screenFor(Destination.About)
         assertEquals(ScreenKind.ABOUT, about.kind)
         assertTrue(about.body.contains("da-DK"))
         assertTrue(about.body.contains("pl-PL"))
@@ -174,8 +179,9 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun bundledCatalogHasNoDialogueScenarios() {
-        assertTrue(catalog.scenarios.isEmpty())
-        assertFalse(catalog.modules.flatMap { it.lessons }.any { it.released })
+    fun bundledCatalogReleasesOnlyLessonOneAndKeepsTwoScenarios() {
+        assertEquals(listOf("dlg-cafe-001", "dlg-ticket-001"), catalog.scenarios.map { it.id })
+        val released = catalog.modules.flatMap { it.lessons }.filter { it.released }.map { it.id }
+        assertEquals(listOf("lesson-01"), released)
     }
 }

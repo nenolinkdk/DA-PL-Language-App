@@ -55,7 +55,12 @@ class AndroidTextToSpeechGateway(
             SpeechLocale.DANISH -> Locale.forLanguageTag(SpeechLocale.DANISH.tag)
             SpeechLocale.POLISH -> Locale.forLanguageTag(SpeechLocale.POLISH.tag)
         }
-        tts.language = locale
+        val available = tts.isLanguageAvailable(locale)
+        if (available == TextToSpeech.LANG_MISSING_DATA || available == TextToSpeech.LANG_NOT_SUPPORTED) {
+            tts.language = Locale.US
+        } else {
+            tts.language = locale
+        }
         tts.speak(request.text, TextToSpeech.QUEUE_FLUSH, null, REQUEST_ID)
     }
 

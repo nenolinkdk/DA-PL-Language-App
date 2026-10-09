@@ -27,11 +27,14 @@ Status: IN PROGRESS
 - clean empty-state handling;
 - course-index JSON and an explicit-only TTS boundary.
 
-Implemented on `vibe/phase1a-skeleton`. Not done yet:
+Implemented on `vibe/phase1b-reconcile`, on top of the Phase 1A skeleton. The imported lesson, grammar and dialogue files from `main` are loaded. Lesson 1, its quiz, two grammar sheets and two deterministic scenarios are reachable. Level 2, Level 3, Children, top-level Quiz and lessons 02–10 stay unavailable.
+
+Not done yet:
 
 - install and click-through on a device or emulator;
-- reconciliation with the separate Android tree on `origin/main`;
-- lesson content, dialogue FSM and weighted transitions (later phases).
+- hidden Danish support inside a dialogue turn;
+- rewriting lesson titles to the course-plan outline;
+- weighted transitions.
 
 Exit: app installs and every structural menu route is safe.
 
