@@ -1,1 +1,194 @@
-{ "id": "lesson-09", "moduleId": "level1", "title": "I supermarkedet", "order": 9, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-09",
+  "moduleId": "level1",
+  "title": "Vejvisning og steder",
+  "order": 9,
+  "released": true,
+  "notes": [
+    "Jak dojść do ...? spørger om vej til fods. Efter do står en bøjet form: do dworca.",
+    "Prosto er ligeud, w lewo er til venstre, og w prawo er til højre.",
+    "Przy dworcu betyder ved banegården. Dworzec bliver dworcu efter przy."
+  ],
+  "items": [
+    {
+      "id": "lesson-09-v01",
+      "type": "vocabulary",
+      "danish": "gade",
+      "polish": "ulica",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-v02",
+      "type": "vocabulary",
+      "danish": "banegård",
+      "polish": "dworzec",
+      "hint": "do dworca, przy dworcu"
+    },
+    {
+      "id": "lesson-09-v03",
+      "type": "vocabulary",
+      "danish": "centrum",
+      "polish": "centrum",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-v04",
+      "type": "vocabulary",
+      "danish": "hjørne",
+      "polish": "róg",
+      "hint": "na rogu"
+    },
+    {
+      "id": "lesson-09-p01",
+      "type": "phrase",
+      "danish": "Undskyld, hvor er banegården?",
+      "polish": "Przepraszam, gdzie jest dworzec?",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p02",
+      "type": "phrase",
+      "danish": "Hvordan kommer jeg til centrum?",
+      "polish": "Jak dojść do centrum?",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p03",
+      "type": "phrase",
+      "danish": "Ligeud.",
+      "polish": "Prosto.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p04",
+      "type": "phrase",
+      "danish": "Til venstre.",
+      "polish": "W lewo.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p05",
+      "type": "phrase",
+      "danish": "Til højre.",
+      "polish": "W prawo.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p06",
+      "type": "phrase",
+      "danish": "Er det langt?",
+      "polish": "Czy to daleko?",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p07",
+      "type": "phrase",
+      "danish": "Det er tæt på.",
+      "polish": "To blisko.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p08",
+      "type": "phrase",
+      "danish": "Det er langt væk.",
+      "polish": "To daleko.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p09",
+      "type": "phrase",
+      "danish": "På hjørnet.",
+      "polish": "Na rogu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p10",
+      "type": "phrase",
+      "danish": "Første gade til højre.",
+      "polish": "Pierwsza ulica w prawo.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p11",
+      "type": "phrase",
+      "danish": "Ved banegården.",
+      "polish": "Przy dworcu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-09-p12",
+      "type": "phrase",
+      "danish": "Tak for hjælpen.",
+      "polish": "Dziękuję za pomoc.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-09-q01",
+      "question": "Hvad betyder 'Prosto'?",
+      "options": [
+        "Til venstre",
+        "Til højre",
+        "Ligeud",
+        "Langt væk"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-09-q02",
+      "question": "Hvad betyder 'W lewo'?",
+      "options": [
+        "Til venstre",
+        "Til højre",
+        "Ligeud",
+        "På hjørnet"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-09-q03",
+      "question": "Hvordan spørger man om vej til centrum?",
+      "options": [
+        "Gdzie jest dworzec?",
+        "Jak dojść do centrum?",
+        "Czy to daleko?",
+        "Na rogu"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-09-q04",
+      "question": "Hvad betyder 'To blisko'?",
+      "options": [
+        "Det er langt væk",
+        "Det er tæt på",
+        "Første gade",
+        "Tak for hjælpen"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-09-q05",
+      "question": "Hvilken frase betyder ved banegården?",
+      "options": [
+        "Do dworca",
+        "Przy dworcu",
+        "Na rogu",
+        "W prawo"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-09-q06",
+      "question": "Hvad betyder 'Dziękuję za pomoc'?",
+      "options": [
+        "Er det langt?",
+        "Undskyld",
+        "Tak for hjælpen",
+        "Ligeud"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

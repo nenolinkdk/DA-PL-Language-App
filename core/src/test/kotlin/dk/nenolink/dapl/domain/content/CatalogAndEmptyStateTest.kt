@@ -30,20 +30,18 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun level1IndexesTheImportedLessonsAndOnlyLessonOneIsReleased() {
+    fun level1ListsTenReleasedLessons() {
         val level1 = catalog.module(AppRoute.LEVEL1)!!
         assertEquals(ModuleAvailability.STRUCTURE_READY, level1.availability)
         assertEquals(10, level1.lessons.size)
         assertEquals("lesson-01", level1.lessons.first().id)
-        assertEquals("Basale hilsner", level1.lessons.first().title.support)
-        assertTrue(level1.lessons.first().released)
-        assertTrue(level1.lessons.drop(1).all { !it.released && it.title.target.isBlank() })
+        assertEquals("Hej, goddag og høflighed", level1.lessons.first().title.support)
+        assertTrue(level1.lessons.all { it.released && it.title.target.isBlank() && it.hasQuiz })
 
         val screen = library.screenFor(Destination.Level1)
         assertEquals(ScreenKind.LESSON_LIST, screen.kind)
         assertEquals(level1.lessons.map { it.id }, screen.lessons.map { it.id })
-        assertEquals("Klar", screen.lessons.first().statusLabel)
-        assertTrue(screen.lessons.drop(1).all { !it.released && it.statusLabel == "Ikke udgivet endnu" })
+        assertTrue(screen.lessons.all { it.released && it.statusLabel == "Klar" })
         assertTrue(screen.body.isNotBlank())
     }
 
@@ -63,13 +61,10 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun unreleasedLessonScreenIsASafePlaceholder() {
-        val lessonId = "lesson-02"
-        val screen = library.screenFor(Destination.Lesson(lessonId))
-        assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
-        assertEquals("Præsentationer", screen.title)
-        assertTrue(screen.body.contains("ikke udgivet"))
-        assertTrue(screen.lessons.isEmpty())
+    fun releasedLevel1LessonOpensAsAPlayer() {
+        val screen = library.screenFor(Destination.Lesson("lesson-02"))
+        assertEquals(ScreenKind.LESSON_PLAYER, screen.kind)
+        assertEquals("Ja, nej, tak og undskyld", screen.title)
     }
 
     @Test
@@ -179,9 +174,9 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun bundledCatalogReleasesOnlyLessonOneAndKeepsTwoScenarios() {
+    fun bundledCatalogReleasesLevel1AndKeepsTwoScenarios() {
         assertEquals(listOf("dlg-cafe-001", "dlg-ticket-001"), catalog.scenarios.map { it.id })
         val released = catalog.modules.flatMap { it.lessons }.filter { it.released }.map { it.id }
-        assertEquals(listOf("lesson-01"), released)
+        assertEquals((1..10).map { "lesson-${it.toString().padStart(2, '0')}" }, released)
     }
 }

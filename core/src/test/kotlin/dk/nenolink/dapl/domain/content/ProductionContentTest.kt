@@ -10,42 +10,33 @@ class ProductionContentTest {
     private val library = CourseLibraryLoader.loadBundled()
 
     @Test
-    fun lessonOneKeepsTheImportedPhrases() {
-        val lesson = library.lesson("lesson-01")!!
-        assertTrue(lesson.released)
-        assertEquals("level1", lesson.moduleId)
-        assertEquals("Basale hilsner", lesson.title)
-        assertEquals(
-            listOf(
-                "Cześć",
-                "Dzień dobry",
-                "Dzień dobry",
-                "Dobry wieczór",
-                "Do widzenia",
-                "Cześć",
-                "Dziękuję",
-                "Proszę",
-                "Przepraszam",
-                "Nie ma za co"
-            ),
-            lesson.items.map { it.polish }
+    fun level1LessonsAreReleasedWithPhrasesQuizAndNotes() {
+        val titles = listOf(
+            "Hej, goddag og høflighed",
+            "Ja, nej, tak og undskyld",
+            "Tal, priser og betaling",
+            "På café",
+            "Restaurant og mad",
+            "Butik og indkøb",
+            "Hotel og overnatning",
+            "Tog, bus og billetter",
+            "Vejvisning og steder",
+            "Hjælp og enkle problemer"
         )
-        assertEquals(5, lesson.quiz.size)
-        assertTrue(library.catalog.lesson("lesson-01")!!.hasQuiz)
-    }
-
-    @Test
-    fun lessonsTwoThroughTenStayUnreleasedAndEmpty() {
-        (2..10).forEach { index ->
-            val id = "lesson-${index.toString().padStart(2, '0')}"
+        titles.forEachIndexed { index, title ->
+            val id = "lesson-${(index + 1).toString().padStart(2, '0')}"
             val lesson = library.lesson(id)!!
-            assertFalse(lesson.released)
-            assertTrue(lesson.items.isEmpty())
-            assertTrue(lesson.quiz.isEmpty())
-            assertFalse(library.catalog.lesson(id)!!.hasQuiz)
-            val screen = library.screenFor(dk.nenolink.dapl.domain.navigation.Destination.Lesson(id))
-            assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
+            assertEquals("level1", lesson.moduleId)
+            assertEquals(title, lesson.title)
+            assertTrue(lesson.released)
+            assertTrue(LessonRules.errors(lesson).isEmpty())
+            assertTrue(library.catalog.lesson(id)!!.hasQuiz)
+            assertEquals(
+                ScreenKind.LESSON_PLAYER,
+                library.screenFor(dk.nenolink.dapl.domain.navigation.Destination.Lesson(id)).kind
+            )
         }
+        assertEquals("Cześć", library.lesson("lesson-01")!!.items.first { it.type == "phrase" }.polish)
     }
 
     @Test

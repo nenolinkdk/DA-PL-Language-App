@@ -126,10 +126,9 @@ object CourseLibraryLoader {
         require(document.released == entry.released) {
             "Lesson ${document.id} released flag does not match the catalog"
         }
-        if (!document.released) {
-            require(document.items.isEmpty() && document.quiz.isEmpty()) {
-                "Unreleased lesson ${document.id} must not carry phrase or quiz content"
-            }
+        val problems = LessonRules.errors(document)
+        require(problems.isEmpty()) {
+            problems.joinToString("; ")
         }
         return entry.copy(hasQuiz = document.released && document.quiz.isNotEmpty())
     }

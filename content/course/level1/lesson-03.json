@@ -1,1 +1,208 @@
-{ "id": "lesson-03", "moduleId": "level1", "title": "Tal 0-20", "order": 3, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-03",
+  "moduleId": "level1",
+  "title": "Tal, priser og betaling",
+  "order": 3,
+  "released": true,
+  "notes": [
+    "Złoty bøjes efter tallet: 1 złoty, 2–4 złote, 5–21 złotych. 22–24 hedder igen złote.",
+    "Ile to kosztuje? spørger om prisen. Svaret begynder ofte med To kosztuje.",
+    "Karta er betalingskort. Gotówka er kontanter."
+  ],
+  "items": [
+    {
+      "id": "lesson-03-v01",
+      "type": "vocabulary",
+      "danish": "en",
+      "polish": "jeden",
+      "hint": "1 złoty"
+    },
+    {
+      "id": "lesson-03-v02",
+      "type": "vocabulary",
+      "danish": "to",
+      "polish": "dwa",
+      "hint": "2 złote"
+    },
+    {
+      "id": "lesson-03-v03",
+      "type": "vocabulary",
+      "danish": "fem",
+      "polish": "pięć",
+      "hint": "5 złotych"
+    },
+    {
+      "id": "lesson-03-v04",
+      "type": "vocabulary",
+      "danish": "ti",
+      "polish": "dziesięć",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-v05",
+      "type": "vocabulary",
+      "danish": "tyve",
+      "polish": "dwadzieścia",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-v06",
+      "type": "vocabulary",
+      "danish": "hundrede",
+      "polish": "sto",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p01",
+      "type": "phrase",
+      "danish": "Hvad koster det?",
+      "polish": "Ile to kosztuje?",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p02",
+      "type": "phrase",
+      "danish": "Det koster ti zloty.",
+      "polish": "To kosztuje dziesięć złotych.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p03",
+      "type": "phrase",
+      "danish": "Det koster to zloty.",
+      "polish": "To kosztuje dwa złote.",
+      "hint": "2–4 bruger złote"
+    },
+    {
+      "id": "lesson-03-p04",
+      "type": "phrase",
+      "danish": "Det koster en zloty.",
+      "polish": "To kosztuje jeden złoty.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p05",
+      "type": "phrase",
+      "danish": "Må jeg bede om regningen.",
+      "polish": "Poproszę rachunek.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p06",
+      "type": "phrase",
+      "danish": "Kan jeg betale med kort?",
+      "polish": "Czy mogę zapłacić kartą?",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p07",
+      "type": "phrase",
+      "danish": "Kontant, tak.",
+      "polish": "Gotówką, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p08",
+      "type": "phrase",
+      "danish": "Med kort, tak.",
+      "polish": "Kartą, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p09",
+      "type": "phrase",
+      "danish": "Må jeg få byttepenge.",
+      "polish": "Poproszę o resztę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p10",
+      "type": "phrase",
+      "danish": "For dyrt.",
+      "polish": "Za drogo.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p11",
+      "type": "phrase",
+      "danish": "Jeg har kun tyve zloty.",
+      "polish": "Mam tylko dwadzieścia złotych.",
+      "hint": null
+    },
+    {
+      "id": "lesson-03-p12",
+      "type": "phrase",
+      "danish": "Er det inkluderet?",
+      "polish": "Czy to jest w cenie?",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-03-q01",
+      "question": "Hvad betyder 'Ile to kosztuje?'",
+      "options": [
+        "Hvor er kassen?",
+        "Hvad koster det?",
+        "Må jeg få byttepenge?",
+        "For dyrt."
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-03-q02",
+      "question": "Hvilken sætning koster to zloty?",
+      "options": [
+        "To kosztuje dwa złote.",
+        "To kosztuje dwa złotych.",
+        "To kosztuje dziesięć złotych.",
+        "Za drogo."
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-03-q03",
+      "question": "Hvordan beder man om regningen?",
+      "options": [
+        "Kartą, proszę",
+        "Poproszę rachunek",
+        "Gotówką, proszę",
+        "Sto"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-03-q04",
+      "question": "Hvad betyder 'Czy mogę zapłacić kartą?'",
+      "options": [
+        "Kan jeg betale med kort?",
+        "Har I byttepenge?",
+        "Er det for dyrt?",
+        "Jeg har tyve zloty."
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-03-q05",
+      "question": "Hvad betyder 'Za drogo'?",
+      "options": [
+        "Kontant",
+        "For dyrt",
+        "Regningen",
+        "Hundrede"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-03-q06",
+      "question": "Hvilket tal er tyve?",
+      "options": [
+        "Pięć",
+        "Dziesięć",
+        "Dwadzieścia",
+        "Sto"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

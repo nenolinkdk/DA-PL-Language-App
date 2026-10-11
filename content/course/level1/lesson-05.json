@@ -1,1 +1,194 @@
-{ "id": "lesson-05", "moduleId": "level1", "title": "I caféen", "order": 5, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-05",
+  "moduleId": "level1",
+  "title": "Restaurant og mad",
+  "order": 5,
+  "released": true,
+  "notes": [
+    "Co pan poleca? spørger du en mandlig tjener. Co pani poleca? spørger du en kvindelig.",
+    "En mand siger Jestem wegetarianinem. En kvinde siger Jestem wegetarianką.",
+    "Zupa bliver zupę, når du bestiller den."
+  ],
+  "items": [
+    {
+      "id": "lesson-05-v01",
+      "type": "vocabulary",
+      "danish": "suppe",
+      "polish": "zupa",
+      "hint": "zupa → zupę"
+    },
+    {
+      "id": "lesson-05-v02",
+      "type": "vocabulary",
+      "danish": "kød",
+      "polish": "mięso",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-v03",
+      "type": "vocabulary",
+      "danish": "ret",
+      "polish": "danie",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-v04",
+      "type": "vocabulary",
+      "danish": "bord",
+      "polish": "stolik",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p01",
+      "type": "phrase",
+      "danish": "Et bord til to, tak.",
+      "polish": "Stolik dla dwóch osób, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p02",
+      "type": "phrase",
+      "danish": "Menuen, tak.",
+      "polish": "Menu, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p03",
+      "type": "phrase",
+      "danish": "Hvad anbefaler De?",
+      "polish": "Co pan poleca?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-05-p04",
+      "type": "phrase",
+      "danish": "Hvad anbefaler De?",
+      "polish": "Co pani poleca?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-05-p05",
+      "type": "phrase",
+      "danish": "Suppen, tak.",
+      "polish": "Poproszę zupę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p06",
+      "type": "phrase",
+      "danish": "Kyllingen, tak.",
+      "polish": "Poproszę kurczaka.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p07",
+      "type": "phrase",
+      "danish": "Uden kød, tak.",
+      "polish": "Bez mięsa, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p08",
+      "type": "phrase",
+      "danish": "Jeg er vegetar.",
+      "polish": "Jestem wegetarianinem.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-05-p09",
+      "type": "phrase",
+      "danish": "Jeg er vegetar.",
+      "polish": "Jestem wegetarianką.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-05-p10",
+      "type": "phrase",
+      "danish": "Kan vi betale hver for sig?",
+      "polish": "Czy można płacić osobno?",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p11",
+      "type": "phrase",
+      "danish": "Må jeg bede om regningen.",
+      "polish": "Poproszę rachunek.",
+      "hint": null
+    },
+    {
+      "id": "lesson-05-p12",
+      "type": "phrase",
+      "danish": "Det var meget godt.",
+      "polish": "Było bardzo dobre.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-05-q01",
+      "question": "Hvordan beder man om et bord til to?",
+      "options": [
+        "Menu, proszę",
+        "Stolik dla dwóch osób, proszę",
+        "Bez mięsa, proszę",
+        "Poproszę zupę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-05-q02",
+      "question": "Hvad spørger man en kvindelig tjener om en anbefaling?",
+      "options": [
+        "Co pan poleca?",
+        "Co pani poleca?",
+        "Poproszę kurczaka",
+        "Było bardzo dobre"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-05-q03",
+      "question": "Hvilken sætning siger en kvinde, der er vegetar?",
+      "options": [
+        "Jestem wegetarianinem",
+        "Jestem wegetarianką",
+        "Bez mięsa, proszę",
+        "Poproszę zupę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-05-q04",
+      "question": "Hvad betyder 'Bez mięsa, proszę'?",
+      "options": [
+        "Suppen, tak",
+        "Uden kød, tak",
+        "Regningen, tak",
+        "Menuen, tak"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-05-q05",
+      "question": "Hvad betyder 'Czy można płacić osobno?'",
+      "options": [
+        "Var det godt?",
+        "Kan vi betale hver for sig?",
+        "Et bord til to?",
+        "Hvad anbefaler De?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-05-q06",
+      "question": "Hvilken form bestiller suppe?",
+      "options": [
+        "Zupa",
+        "Zupę",
+        "Zupy",
+        "Zupą"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

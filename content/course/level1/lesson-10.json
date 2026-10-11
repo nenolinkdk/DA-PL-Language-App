@@ -1,1 +1,194 @@
-{ "id": "lesson-10", "moduleId": "level1", "title": "På togstationen", "order": 10, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-10",
+  "moduleId": "level1",
+  "title": "Hjælp og enkle problemer",
+  "order": 10,
+  "released": true,
+  "notes": [
+    "En mand siger Zgubiłem się. En kvinde siger Zgubiłam się. Endelsen viser, hvem der taler.",
+    "Czy może mi pan pomóc? er til en mand. Czy może mi pani pomóc? er til en kvinde.",
+    "Proszę plus navnemåde er en høflig anmodning: Proszę powtórzyć, Proszę mówić wolniej."
+  ],
+  "items": [
+    {
+      "id": "lesson-10-v01",
+      "type": "vocabulary",
+      "danish": "hjælp",
+      "polish": "pomoc",
+      "hint": "potrzebuję pomocy"
+    },
+    {
+      "id": "lesson-10-v02",
+      "type": "vocabulary",
+      "danish": "toilet",
+      "polish": "toaleta",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-v03",
+      "type": "vocabulary",
+      "danish": "taske",
+      "polish": "torba",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-v04",
+      "type": "vocabulary",
+      "danish": "langsommere",
+      "polish": "wolniej",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p01",
+      "type": "phrase",
+      "danish": "Jeg forstår ikke.",
+      "polish": "Nie rozumiem.",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p02",
+      "type": "phrase",
+      "danish": "Vil De gentage det?",
+      "polish": "Proszę powtórzyć.",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p03",
+      "type": "phrase",
+      "danish": "Vil De tale langsommere?",
+      "polish": "Proszę mówić wolniej.",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p04",
+      "type": "phrase",
+      "danish": "Taler De engelsk?",
+      "polish": "Czy mówi pan po angielsku?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-10-p05",
+      "type": "phrase",
+      "danish": "Taler De engelsk?",
+      "polish": "Czy mówi pani po angielsku?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-10-p06",
+      "type": "phrase",
+      "danish": "Jeg har brug for hjælp.",
+      "polish": "Potrzebuję pomocy.",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p07",
+      "type": "phrase",
+      "danish": "Kan De hjælpe mig?",
+      "polish": "Czy może mi pan pomóc?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-10-p08",
+      "type": "phrase",
+      "danish": "Kan De hjælpe mig?",
+      "polish": "Czy może mi pani pomóc?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-10-p09",
+      "type": "phrase",
+      "danish": "Jeg er faret vild.",
+      "polish": "Zgubiłem się.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-10-p10",
+      "type": "phrase",
+      "danish": "Jeg er faret vild.",
+      "polish": "Zgubiłam się.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-10-p11",
+      "type": "phrase",
+      "danish": "Hvor er toilettet?",
+      "polish": "Gdzie jest toaleta?",
+      "hint": null
+    },
+    {
+      "id": "lesson-10-p12",
+      "type": "phrase",
+      "danish": "Min taske er væk.",
+      "polish": "Moja torba zginęła.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-10-q01",
+      "question": "Hvad siger en kvinde, der er faret vild?",
+      "options": [
+        "Zgubiłem się",
+        "Zgubiłam się",
+        "Nie rozumiem",
+        "Proszę powtórzyć"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-10-q02",
+      "question": "Hvad betyder 'Proszę mówić wolniej'?",
+      "options": [
+        "Taler De engelsk?",
+        "Vil De tale langsommere?",
+        "Hvor er toilettet?",
+        "Min taske er væk"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-10-q03",
+      "question": "Hvilken frase er til en kvinde?",
+      "options": [
+        "Czy mówi pan po angielsku?",
+        "Czy mówi pani po angielsku?",
+        "Zgubiłem się",
+        "Czy może mi pan pomóc?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-10-q04",
+      "question": "Hvad betyder 'Potrzebuję pomocy'?",
+      "options": [
+        "Jeg forstår ikke",
+        "Jeg har brug for hjælp",
+        "Vil De gentage det?",
+        "Min taske er væk"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-10-q05",
+      "question": "Hvad betyder 'Gdzie jest toaleta?'",
+      "options": [
+        "Hvor er toilettet?",
+        "Kan De hjælpe mig?",
+        "Jeg er faret vild",
+        "Taler De engelsk?"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-10-q06",
+      "question": "Hvad betyder 'Moja torba zginęła'?",
+      "options": [
+        "Jeg har brug for hjælp",
+        "Min taske er væk",
+        "Vil De tale langsommere?",
+        "Hvor er toilettet?"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}
