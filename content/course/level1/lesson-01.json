@@ -1,30 +1,194 @@
 {
   "id": "lesson-01",
   "moduleId": "level1",
-  "title": "Basale hilsner",
+  "title": "Hej, goddag og høflighed",
   "order": 1,
   "released": true,
   "notes": [
-    "Øv 'Cześć' og 'Dzień dobry' højt - betoningen ligger på første stavelse.",
-    "Polsk 'dzień' udtales næsten som dansk 'jen' med blødt d."
+    "Cześć er uformelt. Dzień dobry bruges hele dagen, også om morgenen.",
+    "Pan er den høflige tiltale til en mand, pani til en kvinde. I hilsenen hedder det Dzień dobry panu.",
+    "Betoningen ligger næsten altid på næstsidste stavelse: do-wi-dze-nia."
   ],
   "items": [
-    { "id": "it-01", "type": "phrase", "danish": "Hej", "polish": "Cześć", "hint": "uformel hilsen" },
-    { "id": "it-02", "type": "phrase", "danish": "Goddag", "polish": "Dzień dobry", "hint": "høflig, hele dagen" },
-    { "id": "it-03", "type": "phrase", "danish": "Godmorgen", "polish": "Dzień dobry", "hint": "samme udtryk bruges om morgenen" },
-    { "id": "it-04", "type": "phrase", "danish": "God aften", "polish": "Dobry wieczór", "hint": "efter ca. kl. 18" },
-    { "id": "it-05", "type": "phrase", "danish": "Farvel", "polish": "Do widzenia", "hint": "høfligt farvel" },
-    { "id": "it-06", "type": "phrase", "danish": "Hej hej (uformelt farvel)", "polish": "Cześć", "hint": "samme ord som 'hej'" },
-    { "id": "it-07", "type": "phrase", "danish": "Tak", "polish": "Dziękuję", "hint": null },
-    { "id": "it-08", "type": "phrase", "danish": "Vær så venlig", "polish": "Proszę", "hint": "bruges også ved overraskelse" },
-    { "id": "it-09", "type": "phrase", "danish": "Undskyld", "polish": "Przepraszam", "hint": "også for at tiltale nogen" },
-    { "id": "it-10", "type": "phrase", "danish": "Det var så lidt", "polish": "Nie ma za co", "hint": "svar på 'dziękuję'" }
+    {
+      "id": "lesson-01-v01",
+      "type": "vocabulary",
+      "danish": "herre, De (til en mand)",
+      "polish": "pan",
+      "hint": "høflig tiltale"
+    },
+    {
+      "id": "lesson-01-v02",
+      "type": "vocabulary",
+      "danish": "frue, De (til en kvinde)",
+      "polish": "pani",
+      "hint": "høflig tiltale"
+    },
+    {
+      "id": "lesson-01-v03",
+      "type": "vocabulary",
+      "danish": "dag",
+      "polish": "dzień",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-v04",
+      "type": "vocabulary",
+      "danish": "aften",
+      "polish": "wieczór",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p01",
+      "type": "phrase",
+      "danish": "Hej",
+      "polish": "Cześć",
+      "hint": "uformel hilsen"
+    },
+    {
+      "id": "lesson-01-p02",
+      "type": "phrase",
+      "danish": "Goddag",
+      "polish": "Dzień dobry",
+      "hint": "hele dagen"
+    },
+    {
+      "id": "lesson-01-p03",
+      "type": "phrase",
+      "danish": "Goddag (til en mand)",
+      "polish": "Dzień dobry panu",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p04",
+      "type": "phrase",
+      "danish": "Goddag (til en kvinde)",
+      "polish": "Dzień dobry pani",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p05",
+      "type": "phrase",
+      "danish": "God aften",
+      "polish": "Dobry wieczór",
+      "hint": "efter ca. kl. 18"
+    },
+    {
+      "id": "lesson-01-p06",
+      "type": "phrase",
+      "danish": "Godnat",
+      "polish": "Dobranoc",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p07",
+      "type": "phrase",
+      "danish": "Farvel",
+      "polish": "Do widzenia",
+      "hint": "høfligt farvel"
+    },
+    {
+      "id": "lesson-01-p08",
+      "type": "phrase",
+      "danish": "Vi ses",
+      "polish": "Do zobaczenia",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p09",
+      "type": "phrase",
+      "danish": "Vi ses lige om lidt",
+      "polish": "Na razie",
+      "hint": "uformelt"
+    },
+    {
+      "id": "lesson-01-p10",
+      "type": "phrase",
+      "danish": "Hav en god dag",
+      "polish": "Miłego dnia",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p11",
+      "type": "phrase",
+      "danish": "Hav en god aften",
+      "polish": "Miłego wieczoru",
+      "hint": null
+    },
+    {
+      "id": "lesson-01-p12",
+      "type": "phrase",
+      "danish": "Værsgo",
+      "polish": "Proszę",
+      "hint": "også: vær så venlig"
+    }
   ],
   "quiz": [
-    { "id": "q-01", "question": "Hvad betyder 'Dzień dobry'?", "options": ["Hej", "Goddag", "Farvel", "Undskyld"], "answerIndex": 1 },
-    { "id": "q-02", "question": "Hvad siger man høfligt farvel?", "options": ["Cześć", "Proszę", "Do widzenia", "Dziękuję"], "answerIndex": 2 },
-    { "id": "q-03", "question": "'Proszę' kan IKKE betyde ...", "options": ["Vær så venlig", "Værsågod", "Undskyld mig", "Tak, det var lækkert"], "answerIndex": 3 },
-    { "id": "q-04", "question": "Hvad svarer man på 'Dziękuję'?", "options": ["Nie ma za co", "Dobry wieczór", "Przepraszam", "Cześć"], "answerIndex": 0 },
-    { "id": "q-05", "question": "Hvilken hilsen bruges om aftenen?", "options": ["Cześć", "Dobry wieczór", "Dzień dobry", "Do widzenia"], "answerIndex": 1 }
+    {
+      "id": "lesson-01-q01",
+      "question": "Hvad siger man høfligt om dagen?",
+      "options": [
+        "Cześć",
+        "Dzień dobry",
+        "Dobranoc",
+        "Na razie"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-01-q02",
+      "question": "Hvad betyder 'Dobry wieczór'?",
+      "options": [
+        "Godnat",
+        "God aften",
+        "Farvel",
+        "Hej"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-01-q03",
+      "question": "Hvilken frase er et høfligt farvel?",
+      "options": [
+        "Cześć",
+        "Proszę",
+        "Do widzenia",
+        "Dzień dobry"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-01-q04",
+      "question": "Hvilken hilsen er uformel?",
+      "options": [
+        "Dzień dobry pani",
+        "Do widzenia",
+        "Cześć",
+        "Dobry wieczór"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-01-q05",
+      "question": "Hvad betyder 'Miłego dnia'?",
+      "options": [
+        "Godnat",
+        "Undskyld",
+        "Hav en god dag",
+        "Vi ses"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-01-q06",
+      "question": "Hvad siger man til en kvinde om dagen?",
+      "options": [
+        "Dzień dobry panu",
+        "Dzień dobry pani",
+        "Dobranoc",
+        "Na razie"
+      ],
+      "answerIndex": 1
+    }
   ]
 }

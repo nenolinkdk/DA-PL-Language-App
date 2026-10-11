@@ -1,0 +1,68 @@
+{
+  "id": "dlg-way-001",
+  "title": "Spørg om vej",
+  "description": "Spørg en forbipasserende om vej til torvet.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Słucham?",
+      "polish": "Słucham?",
+      "support": "Ja?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Przepraszam, jak dojść do rynku?",
+          "support": "Undskyld, hvordan kommer jeg til torvet?",
+          "target": "directions"
+        },
+        {
+          "text": "Gdzie jest rynek?",
+          "support": "Hvor er torvet?",
+          "target": "directions"
+        }
+      ],
+      "terminal": false
+    },
+    "directions": {
+      "prompt": "Prosto, a potem w lewo.",
+      "polish": "Prosto, a potem w lewo.",
+      "support": "Ligeud, og så til venstre.",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Czy to daleko?",
+          "support": "Er det langt?",
+          "target": "near"
+        },
+        {
+          "text": "Dziękuję bardzo!",
+          "support": "Mange tak!",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "near": {
+      "prompt": "Nie, to blisko.",
+      "polish": "Nie, to blisko.",
+      "support": "Nej, det er tæt på.",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Dziękuję za pomoc!",
+          "support": "Tak for hjælpen!",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "done": {
+      "prompt": "Nie ma za co.",
+      "polish": "Nie ma za co.",
+      "support": "Det var så lidt.",
+      "expectedPhrases": [],
+      "options": [],
+      "terminal": true
+    }
+  }
+}

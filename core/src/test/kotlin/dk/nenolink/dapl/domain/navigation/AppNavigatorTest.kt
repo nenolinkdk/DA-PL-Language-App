@@ -3,6 +3,7 @@ package dk.nenolink.dapl.domain.navigation
 import dk.nenolink.dapl.domain.content.CourseLibraryLoader
 import dk.nenolink.dapl.domain.model.AppRoute
 import dk.nenolink.dapl.domain.model.BilingualText
+import dk.nenolink.dapl.domain.model.CourseCatalog
 import dk.nenolink.dapl.domain.model.ScenarioIndexEntry
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -158,13 +159,44 @@ class AppNavigatorTest {
 
     @Test
     fun unreleasedLessonDoesNotOpenAQuiz() {
+        val blocked = catalog.withLessonReleased("lesson-02", released = false)
         val level = AppNavigator.reduce(
             NavigationState.home(),
             NavEvent.OpenModule(AppRoute.LEVEL1),
+            blocked
+        )
+        val lesson = AppNavigator.reduce(level, NavEvent.OpenLesson("lesson-02"), blocked)
+        val quiz = AppNavigator.reduce(lesson, NavEvent.OpenQuiz("lesson-02"), blocked)
+        assertEquals(Destination.Lesson("lesson-02"), quiz.current)
+    }
+
+    @Test
+    fun level2LessonOpensFromLevel2AndItsQuizReturnsThere() {
+        val lessonId = "lesson-l2-01-routine"
+        val level = AppNavigator.reduce(
+            NavigationState.home(),
+            NavEvent.OpenModule(AppRoute.LEVEL2),
             catalog
         )
-        val lesson = AppNavigator.reduce(level, NavEvent.OpenLesson("lesson-02"), catalog)
-        val quiz = AppNavigator.reduce(lesson, NavEvent.OpenQuiz("lesson-02"), catalog)
-        assertEquals(Destination.Lesson("lesson-02"), quiz.current)
+        val lesson = AppNavigator.reduce(level, NavEvent.OpenLesson(lessonId), catalog)
+        assertEquals(Destination.Lesson(lessonId), lesson.current)
+        val quiz = AppNavigator.reduce(lesson, NavEvent.OpenQuiz(lessonId), catalog)
+        assertEquals(Destination.LessonQuiz(lessonId), quiz.current)
+        val backToLesson = AppNavigator.reduce(quiz, NavEvent.Back, catalog)
+        assertEquals(Destination.Lesson(lessonId), backToLesson.current)
+        val backToLevel = AppNavigator.reduce(backToLesson, NavEvent.Back, catalog)
+        assertEquals(Destination.Level2, backToLevel.current)
+    }
+
+    private fun CourseCatalog.withLessonReleased(lessonId: String, released: Boolean): CourseCatalog {
+        return copy(
+            modules = modules.map { module ->
+                module.copy(
+                    lessons = module.lessons.map { lesson ->
+                        if (lesson.id == lessonId) lesson.copy(released = released) else lesson
+                    }
+                )
+            }
+        )
     }
 }

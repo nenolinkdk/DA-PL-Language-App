@@ -1,0 +1,54 @@
+{
+  "id": "dlg-shop-001",
+  "title": "I butikken",
+  "description": "Køb en bolle, eller sig at du bare kigger.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Dzień dobry, czym mogę służyć?",
+      "polish": "Dzień dobry, czym mogę służyć?",
+      "support": "Goddag, hvad kan jeg hjælpe med?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Poproszę tę bułkę.",
+          "support": "Den bolle, tak.",
+          "target": "price"
+        },
+        {
+          "text": "Tylko oglądam, dziękuję.",
+          "support": "Jeg kigger bare, tak.",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "price": {
+      "prompt": "Pięć złotych.",
+      "polish": "Pięć złotych.",
+      "support": "Fem zloty.",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Poproszę. Kartą, proszę.",
+          "support": "Ja tak. Med kort, tak.",
+          "target": "done"
+        },
+        {
+          "text": "Za drogo. Dziękuję.",
+          "support": "For dyrt. Tak.",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "done": {
+      "prompt": "Dziękuję, do widzenia!",
+      "polish": "Dziękuję, do widzenia!",
+      "support": "Tak, farvel.",
+      "expectedPhrases": [],
+      "options": [],
+      "terminal": true
+    }
+  }
+}

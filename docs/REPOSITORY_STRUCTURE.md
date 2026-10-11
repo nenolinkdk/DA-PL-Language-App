@@ -11,6 +11,7 @@ DA-PL-Language-App/
 │  ├─ course/
 │  │  ├─ catalog.json
 │  │  ├─ level1/
+│  │  ├─ level2/
 │  │  └─ grammar/
 │  └─ dialogues/
 ├─ core/

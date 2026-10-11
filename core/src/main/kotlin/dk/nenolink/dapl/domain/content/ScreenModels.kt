@@ -54,13 +54,17 @@ fun CourseLibrary.screenFor(
 ): ScreenModel = when (destination) {
     Destination.Home -> error("Home is rendered by the menu, not as a module screen")
     Destination.Level1 -> lessonList(AppRoute.LEVEL1, completed)
-    Destination.Level2 -> unavailable(
-        title = "Niveau 2",
-        body = "Niveau 2 er ikke klar endnu. Modulet er med i menuen, så kursusstrukturen er på plads. Der er endnu ingen lektioner at åbne."
+    Destination.Level2 -> levelScreen(
+        route = AppRoute.LEVEL2,
+        completed = completed,
+        emptyTitle = "Niveau 2",
+        emptyBody = "Niveau 2 er ikke klar endnu. Modulet er med i menuen, så kursusstrukturen er på plads. Der er endnu ingen lektioner at åbne."
     )
-    Destination.Level3 -> unavailable(
-        title = "Niveau 3",
-        body = "Niveau 3 er ikke klar endnu. Modulet er reserveret i navigationen. Der er endnu ingen lektioner at åbne."
+    Destination.Level3 -> levelScreen(
+        route = AppRoute.LEVEL3,
+        completed = completed,
+        emptyTitle = "Niveau 3",
+        emptyBody = "Niveau 3 er ikke klar endnu. Modulet er reserveret i navigationen. Der er endnu ingen lektioner at åbne."
     )
     Destination.Conversation -> ScreenModel(
         title = AppRoute.CONVERSATION.menuLabel,
@@ -92,7 +96,7 @@ fun CourseLibrary.screenFor(
 
             Oplæsning starter ikke af sig selv. Tekst læses kun op efter et tryk.
 
-            Niveau 1 har én udgivet lektion. Samtaletræning har to scenarier. Niveau 2, Niveau 3 og Børn har endnu ikke indhold.
+            ${aboutProgress()}
         """.trimIndent(),
         kind = ScreenKind.ABOUT
     )
@@ -102,12 +106,8 @@ fun CourseLibrary.screenFor(
 }
 
 private fun CourseLibrary.menuDetail(route: AppRoute): String = when (route) {
-    AppRoute.LEVEL1 -> {
-        val lessons = catalog.module(route)?.lessons.orEmpty()
-        val released = lessons.count { it.released }
-        "${lessons.size} lektioner · $released udgivet"
-    }
-    AppRoute.LEVEL2, AppRoute.LEVEL3, AppRoute.CHILDREN ->
+    AppRoute.LEVEL1, AppRoute.LEVEL2 -> lessonCountDetail(route)
+    AppRoute.LEVEL3, AppRoute.CHILDREN ->
         "Strukturen findes · indhold er ikke klar"
     AppRoute.CONVERSATION ->
         if (catalog.scenarios.isEmpty()) "Ingen scenarier endnu" else "${catalog.scenarios.size} scenarier"
@@ -116,6 +116,30 @@ private fun CourseLibrary.menuDetail(route: AppRoute): String = when (route) {
         if (grammarSheets.isEmpty()) "Opslag · ikke klar endnu" else "${grammarSheets.size} opslag"
     AppRoute.ABOUT -> "Om appen og sprogene"
     AppRoute.HOME -> ""
+}
+
+private fun CourseLibrary.lessonCountDetail(route: AppRoute): String {
+    val lessons = catalog.module(route)?.lessons.orEmpty()
+    if (lessons.isEmpty()) return "Strukturen findes · indhold er ikke klar"
+    val released = lessons.count { it.released }
+    return "${lessons.size} lektioner · $released udgivet"
+}
+
+private fun CourseLibrary.aboutProgress(): String {
+    val released = catalog.modules.flatMap { it.lessons }.count { it.released }
+    val scenarios = catalog.scenarios.size
+    return "Der er $released udgivne lektioner og $scenarios samtalescenarier. Niveau 3 og Børn har endnu ikke indhold."
+}
+
+private fun CourseLibrary.levelScreen(
+    route: AppRoute,
+    completed: Set<String>,
+    emptyTitle: String,
+    emptyBody: String
+): ScreenModel {
+    val lessons = catalog.module(route)?.lessons.orEmpty()
+    if (lessons.isEmpty()) return unavailable(emptyTitle, emptyBody)
+    return lessonList(route, completed)
 }
 
 private fun CourseLibrary.lessonList(route: AppRoute, completed: Set<String>): ScreenModel {

@@ -21,6 +21,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dk.nenolink.dapl.domain.model.LessonDocument
+import dk.nenolink.dapl.domain.progress.QuizScoring
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,7 +52,7 @@ fun QuizScreen(
             if (questions.isEmpty()) {
                 Text("Denne lektion har ikke en quiz.")
             } else if (index >= questions.size) {
-                val passed = correct * 2 >= questions.size
+                val passed = QuizScoring.passed(correct, questions.size)
                 Text("Resultat: $correct / ${questions.size}")
                 Text(if (passed) "Gennemført." else "Prøv igen.")
                 Button(onClick = { onFinished(passed) }, modifier = Modifier.fillMaxWidth()) {

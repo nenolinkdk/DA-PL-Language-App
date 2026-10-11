@@ -5,36 +5,81 @@
   "startState": "start",
   "states": {
     "start": {
-      "prompt": "Du står ved billetlugen. Ekspedenten siger: 'Dzień dobry, co podać?'",
-      "expectedPhrases": ["Dzień dobry"],
+      "prompt": "Dzień dobry, w czym mogę pomóc?",
+      "polish": "Dzień dobry, w czym mogę pomóc?",
+      "support": "Goddag, hvad kan jeg hjælpe med?",
+      "expectedPhrases": [
+        "Dzień dobry",
+        "bilet"
+      ],
       "options": [
-        { "text": "Dzień dobry! Bilet do Gdańska, proszę.", "target": "choose-ticket" }
-      ]
+        {
+          "text": "Dzień dobry! Bilet do Gdańska, proszę.",
+          "support": "Goddag! En billet til Gdańsk, tak.",
+          "target": "choose-ticket"
+        }
+      ],
+      "terminal": false
     },
     "choose-ticket": {
-      "prompt": "'Normalny czy z ulgą?' spørger ekspedenten (normalbillet eller rabat?).",
-      "expectedPhrases": ["normalny"],
+      "prompt": "Normalny czy z ulgą?",
+      "polish": "Normalny czy z ulgą?",
+      "support": "Normalbillet eller med rabat?",
+      "expectedPhrases": [
+        "normalny"
+      ],
       "options": [
-        { "text": "Normalny, proszę.", "target": "pay" },
-        { "text": "Uh, nie wiem...", "target": "help" }
-      ]
+        {
+          "text": "Normalny, proszę.",
+          "support": "En normalbillet, tak.",
+          "target": "pay"
+        },
+        {
+          "text": "Nie rozumiem.",
+          "support": "Jeg forstår ikke.",
+          "target": "help"
+        }
+      ],
+      "terminal": false
     },
     "help": {
-      "prompt": "Ekspedenten smiler og forklarer langsomt: 'Normalny - bez rabatu.' Nu ved du det.",
-      "expectedPhrases": ["normalny"],
+      "prompt": "Normalny, czyli bez rabatu.",
+      "polish": "Normalny, czyli bez rabatu.",
+      "support": "Normalny betyder uden rabat.",
+      "expectedPhrases": [
+        "normalny"
+      ],
       "options": [
-        { "text": "Aha - normalny, proszę.", "target": "pay" }
-      ]
+        {
+          "text": "Aha, normalny, proszę.",
+          "support": "Nå, en normalbillet, tak.",
+          "target": "pay"
+        }
+      ],
+      "terminal": false
     },
     "pay": {
-      "prompt": "'Dwadzieścia złotych.' Hun rækker dig billetten.",
-      "expectedPhrases": ["Dziękuję"],
+      "prompt": "Dwadzieścia złotych.",
+      "polish": "Dwadzieścia złotych.",
+      "support": "Tyve zloty.",
+      "expectedPhrases": [
+        "Dziękuję"
+      ],
       "options": [
-        { "text": "Proszę. Dziękuję bardzo!", "target": "done" }
-      ]
+        {
+          "text": "Proszę. Dziękuję bardzo!",
+          "support": "Værsgo. Mange tak!",
+          "target": "done"
+        }
+      ],
+      "terminal": false
     },
     "done": {
-      "prompt": "Billetten er din - og samtalen klappe fint. Udowa życzenia!",
+      "prompt": "Miłej podróży!",
+      "polish": "Miłej podróży!",
+      "support": "God rejse.",
+      "expectedPhrases": [],
+      "options": [],
       "terminal": true
     }
   }

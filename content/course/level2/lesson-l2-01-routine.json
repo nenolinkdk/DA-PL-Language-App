@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-01-routine",
+  "moduleId": "level2",
+  "title": "En almindelig dag",
+  "order": 1,
+  "released": true,
+  "notes": [
+    "Jestem betyder jeg er. Jesteś er du er, uformelt. Jest er han, hun eller det er.",
+    "Mam betyder jeg har. Masz er du har. Ma er han eller hun har.",
+    "Ja, ty, on og ona er jeg, du, han og hun. I høflig tale bruger du pan eller pani i stedet for ty."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-01-routine-v01",
+      "type": "vocabulary",
+      "danish": "jeg",
+      "polish": "ja",
+      "hint": "jestem"
+    },
+    {
+      "id": "lesson-l2-01-routine-v02",
+      "type": "vocabulary",
+      "danish": "du",
+      "polish": "ty",
+      "hint": "uformelt"
+    },
+    {
+      "id": "lesson-l2-01-routine-v03",
+      "type": "vocabulary",
+      "danish": "han",
+      "polish": "on",
+      "hint": "jest"
+    },
+    {
+      "id": "lesson-l2-01-routine-v04",
+      "type": "vocabulary",
+      "danish": "hun",
+      "polish": "ona",
+      "hint": "jest"
+    },
+    {
+      "id": "lesson-l2-01-routine-p01",
+      "type": "phrase",
+      "danish": "Jeg er fra Danmark.",
+      "polish": "Jestem z Danii.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p02",
+      "type": "phrase",
+      "danish": "Jeg bor i Danmark.",
+      "polish": "Mieszkam w Danii.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p03",
+      "type": "phrase",
+      "danish": "Jeg hedder Anna.",
+      "polish": "Mam na imię Anna.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p04",
+      "type": "phrase",
+      "danish": "Jeg er på hotellet.",
+      "polish": "Jestem w hotelu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p05",
+      "type": "phrase",
+      "danish": "Jeg har tid.",
+      "polish": "Mam czas.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p06",
+      "type": "phrase",
+      "danish": "Jeg har ikke tid.",
+      "polish": "Nie mam czasu.",
+      "hint": "czas bliver czasu efter nie mam"
+    },
+    {
+      "id": "lesson-l2-01-routine-p07",
+      "type": "phrase",
+      "danish": "Han er på arbejde.",
+      "polish": "On jest w pracy.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p08",
+      "type": "phrase",
+      "danish": "Hun er hjemme.",
+      "polish": "Ona jest w domu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p09",
+      "type": "phrase",
+      "danish": "Jeg er træt.",
+      "polish": "Jestem zmęczony.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-l2-01-routine-p10",
+      "type": "phrase",
+      "danish": "Jeg er træt.",
+      "polish": "Jestem zmęczona.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-l2-01-routine-p11",
+      "type": "phrase",
+      "danish": "Hvordan går det?",
+      "polish": "Co słychać?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-01-routine-p12",
+      "type": "phrase",
+      "danish": "Tak, det går godt.",
+      "polish": "Dziękuję, dobrze.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-01-routine-q01",
+      "question": "Hvad betyder 'Jestem z Danii'?",
+      "options": [
+        "Jeg bor i Danmark",
+        "Jeg er fra Danmark",
+        "Jeg har tid",
+        "Hun er hjemme"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-01-routine-q02",
+      "question": "Hvilken frase betyder jeg har ikke tid?",
+      "options": [
+        "Mam czas",
+        "Nie mam czasu",
+        "Jestem w hotelu",
+        "Co słychać?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-01-routine-q03",
+      "question": "Hvad siger en kvinde, der er træt?",
+      "options": [
+        "Jestem zmęczony",
+        "Jestem zmęczona",
+        "On jest w pracy",
+        "Mam na imię Anna"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-01-routine-q04",
+      "question": "Hvad betyder 'Ona jest w domu'?",
+      "options": [
+        "Han er på arbejde",
+        "Hun er hjemme",
+        "Jeg er på hotellet",
+        "Tak, det går godt"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-01-routine-q05",
+      "question": "Hvilket ord er 'jeg'?",
+      "options": [
+        "Ty",
+        "On",
+        "Ja",
+        "Ona"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-l2-01-routine-q06",
+      "question": "Hvad betyder 'Co słychać?'",
+      "options": [
+        "Jeg hedder Anna",
+        "Hvordan går det?",
+        "Jeg har tid",
+        "Han er hun"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

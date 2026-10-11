@@ -1,1 +1,194 @@
-{ "id": "lesson-06", "moduleId": "level1", "title": "Tidspunkter", "order": 6, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-06",
+  "moduleId": "level1",
+  "title": "Butik og indkøb",
+  "order": 6,
+  "released": true,
+  "notes": [
+    "Tylko oglądam betyder, at du bare kigger. Sig det, når nogen tilbyder hjælp.",
+    "Za duże er for stort. Za małe er for lille.",
+    "Paragon er bonen. Kasa er kassen."
+  ],
+  "items": [
+    {
+      "id": "lesson-06-v01",
+      "type": "vocabulary",
+      "danish": "kasse",
+      "polish": "kasa",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-v02",
+      "type": "vocabulary",
+      "danish": "størrelse",
+      "polish": "rozmiar",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-v03",
+      "type": "vocabulary",
+      "danish": "bon",
+      "polish": "paragon",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-v04",
+      "type": "vocabulary",
+      "danish": "farve",
+      "polish": "kolor",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p01",
+      "type": "phrase",
+      "danish": "Hvad koster det?",
+      "polish": "Ile to kosztuje?",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p02",
+      "type": "phrase",
+      "danish": "Den her, tak.",
+      "polish": "Poproszę to.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p03",
+      "type": "phrase",
+      "danish": "Den der, tak.",
+      "polish": "Poproszę tamto.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p04",
+      "type": "phrase",
+      "danish": "Må jeg prøve den?",
+      "polish": "Czy mogę to przymierzyć?",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p05",
+      "type": "phrase",
+      "danish": "For stort.",
+      "polish": "Za duże.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p06",
+      "type": "phrase",
+      "danish": "For lille.",
+      "polish": "Za małe.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p07",
+      "type": "phrase",
+      "danish": "Jeg tager den.",
+      "polish": "Biorę to.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p08",
+      "type": "phrase",
+      "danish": "Jeg kigger bare, tak.",
+      "polish": "Tylko oglądam, dziękuję.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p09",
+      "type": "phrase",
+      "danish": "Hvor er kassen?",
+      "polish": "Gdzie jest kasa?",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p10",
+      "type": "phrase",
+      "danish": "Har I den i en anden farve?",
+      "polish": "Macie to w innym kolorze?",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p11",
+      "type": "phrase",
+      "danish": "En bon, tak.",
+      "polish": "Paragon, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-06-p12",
+      "type": "phrase",
+      "danish": "En pose, tak.",
+      "polish": "Poproszę torbę.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-06-q01",
+      "question": "Hvad siger man, hvis man bare kigger?",
+      "options": [
+        "Biorę to",
+        "Tylko oglądam, dziękuję",
+        "Za duże",
+        "Paragon, proszę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-06-q02",
+      "question": "Hvad betyder 'Czy mogę to przymierzyć?'",
+      "options": [
+        "Hvor er kassen?",
+        "Må jeg prøve den?",
+        "Har I en anden farve?",
+        "En pose, tak"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-06-q03",
+      "question": "Hvad betyder 'Za małe'?",
+      "options": [
+        "For lille",
+        "For stort",
+        "Jeg tager den",
+        "Bonnen"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-06-q04",
+      "question": "Hvordan beder man om en pose?",
+      "options": [
+        "Gdzie jest kasa?",
+        "Poproszę torbę",
+        "Poproszę to",
+        "Rozmiar"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-06-q05",
+      "question": "Hvad er 'paragon'?",
+      "options": [
+        "Kassen",
+        "Størrelsen",
+        "Bonen",
+        "Farven"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-06-q06",
+      "question": "Hvad betyder 'Macie to w innym kolorze?'",
+      "options": [
+        "Den der, tak",
+        "Har I den i en anden farve?",
+        "For stort",
+        "Jeg kigger bare"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

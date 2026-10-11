@@ -19,7 +19,7 @@ Do not use **UNCERTAIN** as a status marker; replace it with the closest marker 
 
 ## Technology
 
-1. **FSM schema location:** one JSON file per scenario or grouped by lesson/module? The two imported scenarios are one file each. Whether that stays the rule for later scenarios is still open.
+1. **FSM schema location:** one JSON file per scenario or grouped by lesson/module? The six current scenarios are one file each. Whether that stays the rule for later scenarios is still open.
 2. **Validation:** Kotlin-only validation, build-time script validation, or both?
 3. **Mermaid:** keep diagrams as documentation only; do not make Android depend on Mermaid. (Currently treated as settled practice; kept here until recorded in DECISIONS.md.)
 4. **Content-source split:** Imported lessons, grammar and dialogues now live under `content/` and are packaged as app assets from that directory. A separate `content/production` generation step is still open (see REPOSITORY_STRUCTURE.md).
@@ -31,7 +31,7 @@ Do not use **UNCERTAIN** as a status marker; replace it with the closest marker 
 7. **Grammar correction:** explain immediately, after scenario completion, or both?
 8. **Number of choices:** normally 2, 3 or variable?
 9. **Branch depth:** how long should one scenario be before it becomes cumbersome on a phone?
-10. **Support-reveal scope:** whether Danish support reveal is per turn or remembered during the current scenario.
+10. **Support-reveal scope:** decided in Phase 1C. Danish support stays hidden until the learner asks, then remains visible for that visit, including a restart. Leaving the scenario drops it.
 
 ## Polish linguistic design
 

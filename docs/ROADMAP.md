@@ -27,13 +27,12 @@ Status: IN PROGRESS
 - clean empty-state handling;
 - course-index JSON and an explicit-only TTS boundary.
 
-Implemented on `vibe/phase1b-reconcile`, on top of the Phase 1A skeleton. The imported lesson, grammar and dialogue files from `main` are loaded. Lesson 1, its quiz, two grammar sheets and two deterministic scenarios are reachable. Level 2, Level 3, Children, top-level Quiz and lessons 02–10 stay unavailable.
+Implemented on `vibe/phase1c-levels`, on top of the Phase 1B reconciliation. Niveau 1 and Niveau 2 each have ten released lessons with quizzes. Samtaletræning has six deterministic scenarios. Danish support in a dialogue stays hidden until the learner asks for it. Level 3, Children and the top-level Quiz route stay empty. There are no weighted transitions.
 
 Not done yet:
 
 - install and click-through on a device or emulator;
-- hidden Danish support inside a dialogue turn;
-- rewriting lesson titles to the course-plan outline;
+- linguistic review of the Polish and Danish course text;
 - weighted transitions.
 
 Exit: app installs and every structural menu route is safe.

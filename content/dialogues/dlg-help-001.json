@@ -1,0 +1,63 @@
+{
+  "id": "dlg-help-001",
+  "title": "Bed om at få det gentaget",
+  "description": "Du forstår ikke billetvalget. Bed om hjælp.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Normalny czy ulgowy?",
+      "polish": "Normalny czy ulgowy?",
+      "support": "Normalbillet eller rabatbillet?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Nie rozumiem. Proszę powtórzyć.",
+          "support": "Jeg forstår ikke. Vil De gentage det?",
+          "target": "repeat"
+        },
+        {
+          "text": "Proszę mówić wolniej.",
+          "support": "Vil De tale langsommere?",
+          "target": "slow"
+        }
+      ],
+      "terminal": false
+    },
+    "repeat": {
+      "prompt": "Normalny czy ulgowy?",
+      "polish": "Normalny czy ulgowy?",
+      "support": "Normalbillet eller rabatbillet?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Normalny, proszę.",
+          "support": "En normalbillet, tak.",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "slow": {
+      "prompt": "Normalny.",
+      "polish": "Normalny.",
+      "support": "Normalbillet.",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Dziękuję. Normalny, proszę.",
+          "support": "Tak. En normalbillet, tak.",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "done": {
+      "prompt": "Proszę bardzo.",
+      "polish": "Proszę bardzo.",
+      "support": "Værsgo.",
+      "expectedPhrases": [],
+      "options": [],
+      "terminal": true
+    }
+  }
+}

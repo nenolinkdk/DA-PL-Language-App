@@ -1,1 +1,201 @@
-{ "id": "lesson-08", "moduleId": "level1", "title": "Hos lægen", "order": 8, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-08",
+  "moduleId": "level1",
+  "title": "Tog, bus og billetter",
+  "order": 8,
+  "released": true,
+  "notes": [
+    "Retning mod en by bøjer bynavnet: do Krakowa, do Warszawy, do Gdańska.",
+    "W jedną stronę er enkelt. W obie strony er retur.",
+    "Peron er spor. Przystanek er stoppested."
+  ],
+  "items": [
+    {
+      "id": "lesson-08-v01",
+      "type": "vocabulary",
+      "danish": "billet",
+      "polish": "bilet",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-v02",
+      "type": "vocabulary",
+      "danish": "tog",
+      "polish": "pociąg",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-v03",
+      "type": "vocabulary",
+      "danish": "bus",
+      "polish": "autobus",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-v04",
+      "type": "vocabulary",
+      "danish": "spor",
+      "polish": "peron",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-v05",
+      "type": "vocabulary",
+      "danish": "stoppested",
+      "polish": "przystanek",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p01",
+      "type": "phrase",
+      "danish": "En billet til Kraków, tak.",
+      "polish": "Bilet do Krakowa, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p02",
+      "type": "phrase",
+      "danish": "Enkelt.",
+      "polish": "W jedną stronę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p03",
+      "type": "phrase",
+      "danish": "Retur.",
+      "polish": "W obie strony.",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p04",
+      "type": "phrase",
+      "danish": "Hvilket spor?",
+      "polish": "Który peron?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p05",
+      "type": "phrase",
+      "danish": "Hvornår kører toget?",
+      "polish": "O której odjeżdża pociąg?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p06",
+      "type": "phrase",
+      "danish": "En busbillet, tak.",
+      "polish": "Poproszę bilet autobusowy.",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p07",
+      "type": "phrase",
+      "danish": "Hvor er stoppestedet?",
+      "polish": "Gdzie jest przystanek?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p08",
+      "type": "phrase",
+      "danish": "Hvilken bus kører til centrum?",
+      "polish": "Którym autobusem do centrum?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p09",
+      "type": "phrase",
+      "danish": "Er pladsen ledig?",
+      "polish": "Czy to miejsce jest wolne?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p10",
+      "type": "phrase",
+      "danish": "Næste stop, tak.",
+      "polish": "Następny przystanek, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p11",
+      "type": "phrase",
+      "danish": "Kører den her bus til centrum?",
+      "polish": "Czy ten autobus jedzie do centrum?",
+      "hint": null
+    },
+    {
+      "id": "lesson-08-p12",
+      "type": "phrase",
+      "danish": "Toget er forsinket.",
+      "polish": "Pociąg jest spóźniony.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-08-q01",
+      "question": "Hvilken form bruger man i 'billet til Kraków'?",
+      "options": [
+        "do Kraków",
+        "do Krakowa",
+        "w Krakowie",
+        "na Kraków"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-08-q02",
+      "question": "Hvad betyder 'W obie strony'?",
+      "options": [
+        "Enkelt",
+        "Retur",
+        "Næste stop",
+        "Forsinket"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-08-q03",
+      "question": "Hvad betyder 'Który peron?'",
+      "options": [
+        "Hvilket spor?",
+        "Hvor er bussen?",
+        "Er pladsen ledig?",
+        "Hvornår kører toget?"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-08-q04",
+      "question": "Hvordan spørger man, om pladsen er ledig?",
+      "options": [
+        "Pociąg jest spóźniony",
+        "Czy to miejsce jest wolne?",
+        "Gdzie jest przystanek?",
+        "W jedną stronę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-08-q05",
+      "question": "Hvad betyder 'Pociąg jest spóźniony'?",
+      "options": [
+        "Bussen kører til centrum",
+        "Toget er forsinket",
+        "Næste stop",
+        "En busbillet"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-08-q06",
+      "question": "Hvad er 'przystanek'?",
+      "options": [
+        "Billetten",
+        "Sporet",
+        "Stoppestedet",
+        "Toget"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

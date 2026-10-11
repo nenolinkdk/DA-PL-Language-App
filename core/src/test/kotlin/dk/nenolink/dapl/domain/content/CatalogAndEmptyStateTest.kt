@@ -4,7 +4,6 @@ import dk.nenolink.dapl.domain.model.AppIdentity
 import dk.nenolink.dapl.domain.model.AppRoute
 import dk.nenolink.dapl.domain.model.ModuleAvailability
 import dk.nenolink.dapl.domain.navigation.Destination
-import dk.nenolink.dapl.domain.navigation.toDestination
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertThrows
@@ -30,46 +29,44 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun level1IndexesTheImportedLessonsAndOnlyLessonOneIsReleased() {
+    fun level1ListsTenReleasedLessons() {
         val level1 = catalog.module(AppRoute.LEVEL1)!!
         assertEquals(ModuleAvailability.STRUCTURE_READY, level1.availability)
         assertEquals(10, level1.lessons.size)
         assertEquals("lesson-01", level1.lessons.first().id)
-        assertEquals("Basale hilsner", level1.lessons.first().title.support)
-        assertTrue(level1.lessons.first().released)
-        assertTrue(level1.lessons.drop(1).all { !it.released && it.title.target.isBlank() })
+        assertEquals("Hej, goddag og høflighed", level1.lessons.first().title.support)
+        assertTrue(level1.lessons.all { it.released && it.title.target.isBlank() && it.hasQuiz })
 
         val screen = library.screenFor(Destination.Level1)
         assertEquals(ScreenKind.LESSON_LIST, screen.kind)
         assertEquals(level1.lessons.map { it.id }, screen.lessons.map { it.id })
-        assertEquals("Klar", screen.lessons.first().statusLabel)
-        assertTrue(screen.lessons.drop(1).all { !it.released && it.statusLabel == "Ikke udgivet endnu" })
+        assertTrue(screen.lessons.all { it.released && it.statusLabel == "Klar" })
         assertTrue(screen.body.isNotBlank())
     }
 
     @Test
-    fun level2AndLevel3AreNotYetFilledAndDoNotCrash() {
-        listOf(AppRoute.LEVEL2, AppRoute.LEVEL3).forEach { route ->
-            val module = catalog.module(route)!!
-            assertEquals(ModuleAvailability.NOT_YET_FILLED, module.availability)
-            assertTrue(module.lessons.isEmpty())
-            val screen = library.screenFor(route.toDestination())
-            assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
-            assertTrue(screen.title.isNotBlank())
-            assertTrue(screen.body.isNotBlank())
-            assertTrue(screen.lessons.isEmpty())
-            assertTrue(screen.scenarios.isEmpty())
-        }
+    fun level2ListsReleasedLessonsAndLevel3StaysEmpty() {
+        val level2 = catalog.module(AppRoute.LEVEL2)!!
+        assertEquals(ModuleAvailability.STRUCTURE_READY, level2.availability)
+        assertEquals(10, level2.lessons.size)
+        assertTrue(level2.lessons.all { it.released && it.hasQuiz })
+        val screen = library.screenFor(Destination.Level2)
+        assertEquals(ScreenKind.LESSON_LIST, screen.kind)
+        assertEquals(level2.lessons.map { it.id }, screen.lessons.map { it.id })
+
+        val level3 = catalog.module(AppRoute.LEVEL3)!!
+        assertEquals(ModuleAvailability.NOT_YET_FILLED, level3.availability)
+        assertTrue(level3.lessons.isEmpty())
+        val empty = library.screenFor(Destination.Level3)
+        assertEquals(ScreenKind.UNAVAILABLE, empty.kind)
+        assertTrue(empty.body.isNotBlank())
     }
 
     @Test
-    fun unreleasedLessonScreenIsASafePlaceholder() {
-        val lessonId = "lesson-02"
-        val screen = library.screenFor(Destination.Lesson(lessonId))
-        assertEquals(ScreenKind.UNAVAILABLE, screen.kind)
-        assertEquals("Præsentationer", screen.title)
-        assertTrue(screen.body.contains("ikke udgivet"))
-        assertTrue(screen.lessons.isEmpty())
+    fun releasedLevel1LessonOpensAsAPlayer() {
+        val screen = library.screenFor(Destination.Lesson("lesson-02"))
+        assertEquals(ScreenKind.LESSON_PLAYER, screen.kind)
+        assertEquals("Ja, nej, tak og undskyld", screen.title)
     }
 
     @Test
@@ -83,7 +80,17 @@ class CatalogAndEmptyStateTest {
     fun conversationQuizGrammarChildrenAndAboutHaveExplicitEmptyOrInfoCopy() {
         val conversation = library.screenFor(Destination.Conversation)
         assertEquals(ScreenKind.CONVERSATION, conversation.kind)
-        assertEquals(listOf("dlg-cafe-001", "dlg-ticket-001"), conversation.scenarios.map { it.id })
+        assertEquals(
+            listOf(
+                "dlg-cafe-001",
+                "dlg-ticket-001",
+                "dlg-way-001",
+                "dlg-hotel-001",
+                "dlg-shop-001",
+                "dlg-help-001"
+            ),
+            conversation.scenarios.map { it.id }
+        )
         assertTrue(conversation.body.contains("gemmes ikke"))
 
         val quiz = library.screenFor(Destination.Quiz)
@@ -179,9 +186,20 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
-    fun bundledCatalogReleasesOnlyLessonOneAndKeepsTwoScenarios() {
-        assertEquals(listOf("dlg-cafe-001", "dlg-ticket-001"), catalog.scenarios.map { it.id })
-        val released = catalog.modules.flatMap { it.lessons }.filter { it.released }.map { it.id }
-        assertEquals(listOf("lesson-01"), released)
+    fun bundledCatalogReleasesBothLevelsAndSixScenarios() {
+        assertEquals(
+            listOf(
+                "dlg-cafe-001",
+                "dlg-ticket-001",
+                "dlg-way-001",
+                "dlg-hotel-001",
+                "dlg-shop-001",
+                "dlg-help-001"
+            ),
+            catalog.scenarios.map { it.id }
+        )
+        val released = catalog.modules.flatMap { it.lessons }.filter { it.released }
+        assertEquals(20, released.size)
+        assertTrue(released.all { it.hasQuiz })
     }
 }

@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-07-travel",
+  "moduleId": "level2",
+  "title": "På farten",
+  "order": 7,
+  "released": true,
+  "notes": [
+    "Do bruges om retning mod et sted: jadę do Krakowa. Bynavnet bøjes.",
+    "Na dworzec er hen til stationen. Na dworcu er på stationen.",
+    "W betyder inde i eller i: jestem w hotelu, mieszkam w Krakowie."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-07-travel-v01",
+      "type": "vocabulary",
+      "danish": "til, hen til",
+      "polish": "do",
+      "hint": "do Krakowa"
+    },
+    {
+      "id": "lesson-l2-07-travel-v02",
+      "type": "vocabulary",
+      "danish": "på, hen på",
+      "polish": "na",
+      "hint": "na dworzec / na dworcu"
+    },
+    {
+      "id": "lesson-l2-07-travel-v03",
+      "type": "vocabulary",
+      "danish": "i",
+      "polish": "w",
+      "hint": "w hotelu"
+    },
+    {
+      "id": "lesson-l2-07-travel-v04",
+      "type": "vocabulary",
+      "danish": "station",
+      "polish": "dworzec",
+      "hint": "na dworzec"
+    },
+    {
+      "id": "lesson-l2-07-travel-p01",
+      "type": "phrase",
+      "danish": "Jeg tager til Warszawa.",
+      "polish": "Jadę do Warszawy.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p02",
+      "type": "phrase",
+      "danish": "Jeg tager til Kraków.",
+      "polish": "Jadę do Krakowa.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p03",
+      "type": "phrase",
+      "danish": "Jeg går hen til stationen.",
+      "polish": "Idę na dworzec.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p04",
+      "type": "phrase",
+      "danish": "Jeg går hen på torvet.",
+      "polish": "Idę na rynek.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p05",
+      "type": "phrase",
+      "danish": "Jeg er på hotellet.",
+      "polish": "Jestem w hotelu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p06",
+      "type": "phrase",
+      "danish": "Jeg er på stationen.",
+      "polish": "Jestem na dworcu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p07",
+      "type": "phrase",
+      "danish": "Jeg bor i Kraków.",
+      "polish": "Mieszkam w Krakowie.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p08",
+      "type": "phrase",
+      "danish": "Bussen kører til centrum.",
+      "polish": "Autobus jedzie do centrum.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p09",
+      "type": "phrase",
+      "danish": "Jeg står af ved næste stop.",
+      "polish": "Wysiadam na następnym przystanku.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p10",
+      "type": "phrase",
+      "danish": "Hvorfra kører toget?",
+      "polish": "Skąd odjeżdża pociąg?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p11",
+      "type": "phrase",
+      "danish": "Hvor længe kører toget?",
+      "polish": "Jak długo jedzie ten pociąg?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-07-travel-p12",
+      "type": "phrase",
+      "danish": "Jeg skifter i Warszawa.",
+      "polish": "Przesiadam się w Warszawie.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-07-travel-q01",
+      "question": "Hvad betyder 'Jadę do Krakowa'?",
+      "options": [
+        "Jeg bor i Kraków",
+        "Jeg tager til Kraków",
+        "Jeg er på stationen",
+        "Jeg skifter i Warszawa"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-07-travel-q02",
+      "question": "Hvilken frase betyder hen til stationen?",
+      "options": [
+        "Jestem na dworcu",
+        "Idę na dworzec",
+        "Jestem w hotelu",
+        "Idę na rynek"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-07-travel-q03",
+      "question": "Hvad betyder 'Jestem na dworcu'?",
+      "options": [
+        "Jeg går hen til stationen",
+        "Jeg er på stationen",
+        "Bussen kører til centrum",
+        "Hvorfra kører toget?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-07-travel-q04",
+      "question": "Hvad betyder 'Mieszkam w Krakowie'?",
+      "options": [
+        "Jeg tager til Kraków",
+        "Jeg bor i Kraków",
+        "Jeg står af",
+        "Jeg er på hotellet"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-07-travel-q05",
+      "question": "Hvad betyder 'Przesiadam się w Warszawie'?",
+      "options": [
+        "Jeg skifter i Warszawa",
+        "Hvor længe kører toget?",
+        "Jeg går hen på torvet",
+        "Jeg er på stationen"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-07-travel-q06",
+      "question": "Hvilket lille ord bruges om retning mod en by?",
+      "options": [
+        "W",
+        "Na",
+        "Do",
+        "Od"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

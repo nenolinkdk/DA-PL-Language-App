@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-10-plans",
+  "moduleId": "level2",
+  "title": "Planer for weekenden",
+  "order": 10,
+  "released": true,
+  "notes": [
+    "Efter w bøjes ugedagen: w sobotę, w niedzielę, w poniedziałek.",
+    "Może pójdziemy na kawę? er et forslag. Det betyder skal vi gå ud og få en kaffe?",
+    "Przed betyder foran. Kawiarnia bliver kawiarnią: przed kawiarnią."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-10-plans-v01",
+      "type": "vocabulary",
+      "danish": "lørdag",
+      "polish": "sobota",
+      "hint": "w sobotę"
+    },
+    {
+      "id": "lesson-l2-10-plans-v02",
+      "type": "vocabulary",
+      "danish": "søndag",
+      "polish": "niedziela",
+      "hint": "w niedzielę"
+    },
+    {
+      "id": "lesson-l2-10-plans-v03",
+      "type": "vocabulary",
+      "danish": "weekend",
+      "polish": "weekend",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-v04",
+      "type": "vocabulary",
+      "danish": "plan",
+      "polish": "plan",
+      "hint": "jaki masz plan?"
+    },
+    {
+      "id": "lesson-l2-10-plans-p01",
+      "type": "phrase",
+      "danish": "Hvad laver du i weekenden?",
+      "polish": "Co robisz w weekend?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p02",
+      "type": "phrase",
+      "danish": "På lørdag går jeg på torvet.",
+      "polish": "W sobotę idę na rynek.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p03",
+      "type": "phrase",
+      "danish": "På søndag holder jeg fri.",
+      "polish": "W niedzielę odpoczywam.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p04",
+      "type": "phrase",
+      "danish": "Skal vi gå ud og få en kaffe?",
+      "polish": "Może pójdziemy na kawę?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p05",
+      "type": "phrase",
+      "danish": "God idé.",
+      "polish": "Dobry pomysł.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p06",
+      "type": "phrase",
+      "danish": "Hvornår?",
+      "polish": "O której?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p07",
+      "type": "phrase",
+      "danish": "Klokken elleve.",
+      "polish": "O jedenastej.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p08",
+      "type": "phrase",
+      "danish": "Hvor mødes vi?",
+      "polish": "Gdzie się spotykamy?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p09",
+      "type": "phrase",
+      "danish": "Foran caféen.",
+      "polish": "Przed kawiarnią.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p10",
+      "type": "phrase",
+      "danish": "Jeg kan ikke på lørdag.",
+      "polish": "Nie mogę w sobotę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p11",
+      "type": "phrase",
+      "danish": "Hvad med søndag?",
+      "polish": "Może w niedzielę?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-10-plans-p12",
+      "type": "phrase",
+      "danish": "Vi ses på lørdag!",
+      "polish": "Do zobaczenia w sobotę!",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-10-plans-q01",
+      "question": "Hvad betyder 'W sobotę idę na rynek'?",
+      "options": [
+        "På søndag holder jeg fri",
+        "På lørdag går jeg på torvet",
+        "Vi ses på lørdag",
+        "Klokken elleve"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-10-plans-q02",
+      "question": "Hvad betyder 'Może pójdziemy na kawę?'",
+      "options": [
+        "God idé",
+        "Skal vi gå ud og få en kaffe?",
+        "Jeg kan ikke på lørdag",
+        "Hvor mødes vi?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-10-plans-q03",
+      "question": "Hvad betyder 'Przed kawiarnią'?",
+      "options": [
+        "Inde i caféen",
+        "Foran caféen",
+        "På torvet",
+        "I weekenden"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-10-plans-q04",
+      "question": "Hvad betyder 'O jedenastej'?",
+      "options": [
+        "Klokken ti",
+        "Klokken elleve",
+        "På søndag",
+        "Hvornår?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-10-plans-q05",
+      "question": "Hvilken frase udskyder til søndag?",
+      "options": [
+        "Nie mogę w sobotę",
+        "Może w niedzielę?",
+        "Dobry pomysł",
+        "O której?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-10-plans-q06",
+      "question": "Hvad betyder 'W niedzielę odpoczywam'?",
+      "options": [
+        "På søndag holder jeg fri",
+        "På lørdag går jeg på torvet",
+        "Vi ses på lørdag",
+        "God idé"
+      ],
+      "answerIndex": 0
+    }
+  ]
+}

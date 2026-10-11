@@ -20,6 +20,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -40,7 +41,9 @@ fun DialogueScreen(
 ) {
     val machine = remember(scenario.id) { DialogueMachine(scenario) }
     var revision by remember(scenario.id) { mutableIntStateOf(0) }
+    var showSupport by remember(scenario.id) { mutableStateOf(false) }
     val state = machine.state.also { revision }
+    val polishLine = state.spokenPolish()
 
     Scaffold(
         topBar = {
@@ -63,16 +66,37 @@ fun DialogueScreen(
             }
             ElevatedCard(modifier = Modifier.fillMaxWidth()) {
                 Column(modifier = Modifier.padding(12.dp)) {
-                    Text(state.prompt)
-                    TextButton(onClick = {
-                        speech.speak(
-                            SpeechRequest(
-                                text = state.prompt,
-                                locale = SpeechLocale.POLISH,
-                                requestedByUser = true
+                    Text(polishLine)
+                    if (showSupport && state.support.isNotBlank()) {
+                        Text(state.support, style = MaterialTheme.typography.bodyMedium)
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        TextButton(onClick = {
+                            speech.speak(
+                                SpeechRequest(
+                                    text = polishLine,
+                                    locale = SpeechLocale.POLISH,
+                                    requestedByUser = true
+                                )
                             )
-                        )
-                    }) { Text("Hør") }
+                        }) { Text("Hør") }
+                        if (state.support.isNotBlank()) {
+                            TextButton(onClick = { showSupport = !showSupport }) {
+                                Text(if (showSupport) "Skjul dansk" else "Vis dansk")
+                            }
+                        }
+                        if (showSupport && state.support.isNotBlank()) {
+                            TextButton(onClick = {
+                                speech.speak(
+                                    SpeechRequest(
+                                        text = state.support,
+                                        locale = SpeechLocale.DANISH,
+                                        requestedByUser = true
+                                    )
+                                )
+                            }) { Text("Hør dansk") }
+                        }
+                    }
                 }
             }
             if (machine.isTerminal) {
@@ -92,7 +116,14 @@ fun DialogueScreen(
                             revision++
                         },
                         modifier = Modifier.fillMaxWidth()
-                    ) { Text(option.text) }
+                    ) {
+                        Column {
+                            Text(option.text)
+                            if (showSupport && option.support.isNotBlank()) {
+                                Text(option.support, style = MaterialTheme.typography.bodySmall)
+                            }
+                        }
+                    }
                 }
             }
         }

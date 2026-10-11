@@ -23,6 +23,8 @@ Each lesson should eventually contain practical bilingual items, TTS and a small
 
 Niveau 1 should optimize for recognition and usable phrases rather than grammatical completeness.
 
+Phase 1C drafts all ten lessons in `content/course/level1`. The Polish and Danish text needs linguistic review before it is treated as final.
+
 ## Niveau 2 — everyday Polish + grammar in small steps
 
 Structure exists from the beginning; production content follows Niveau 1.
@@ -39,9 +41,9 @@ Themes may include:
 - time/date;
 - practical digital communication.
 
-Polish cases are introduced explicitly here, gradually and contextually.
+Polish cases are introduced explicitly here, gradually and contextually. Phase 1C drafts ten lessons in `content/course/level2`. The examples introduce pronouns, present tense, gender, accusative, `do`/`na`/`w`, polite requests, and a few past and future phrases. This order is not frozen.
 
-**LINGUISTIC REVIEW REQUIRED:** final order of cases and their scope.
+**LINGUISTIC REVIEW REQUIRED:** final order of cases and their scope, and the draft wording in both levels.
 
 ## Niveau 3 — extended/professional use
 
@@ -59,7 +61,7 @@ Reserved structure for:
 
 Separate top-level module.
 
-Initial scenarios should overlap with Level 1 vocabulary so the learner practices known material:
+Initial scenarios overlap with Level 1 and Level 2 vocabulary:
 - café;
 - buying a ticket;
 - asking the way;
@@ -67,7 +69,7 @@ Initial scenarios should overlap with Level 1 vocabulary so the learner practice
 - simple shop purchase;
 - asking for repetition/help.
 
-FSM scenarios must remain short enough for phone use.
+Those six scenarios are in `content/dialogues`. Danish support is hidden until the learner asks. FSM scenarios must remain short enough for phone use. There are no weighted transitions.
 
 ## Grammar
 

@@ -14,7 +14,7 @@ class AssetContentRepository(context: Context) {
     fun loadLibrary(): CourseLibrary {
         return CourseLibraryLoader.load(
             catalogJson = read("course/catalog.json"),
-            lessonJson = readDirectory("course/level1"),
+            lessonJson = readDirectory("course/level1") + readDirectory("course/level2"),
             grammarJson = readDirectory("course/grammar"),
             dialogueJson = readDirectory("dialogues")
         )

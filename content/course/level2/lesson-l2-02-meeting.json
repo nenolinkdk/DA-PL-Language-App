@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-02-meeting",
+  "moduleId": "level2",
+  "title": "At præsentere sig",
+  "order": 2,
+  "released": true,
+  "notes": [
+    "Nazywam się bruges med efternavn. Mam na imię bruges med fornavn.",
+    "Miło mi pana poznać siger du til en mand. Miło mi panią poznać siger du til en kvinde.",
+    "To jest præsenterer en person: To jest mój kolega, To jest moja koleżanka."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-02-meeting-v01",
+      "type": "vocabulary",
+      "danish": "fornavn",
+      "polish": "imię",
+      "hint": "mam na imię"
+    },
+    {
+      "id": "lesson-l2-02-meeting-v02",
+      "type": "vocabulary",
+      "danish": "efternavn",
+      "polish": "nazwisko",
+      "hint": "nazywam się"
+    },
+    {
+      "id": "lesson-l2-02-meeting-v03",
+      "type": "vocabulary",
+      "danish": "kollega (mand)",
+      "polish": "kolega",
+      "hint": "mój kolega"
+    },
+    {
+      "id": "lesson-l2-02-meeting-v04",
+      "type": "vocabulary",
+      "danish": "kollega (kvinde)",
+      "polish": "koleżanka",
+      "hint": "moja koleżanka"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p01",
+      "type": "phrase",
+      "danish": "Jeg hedder Jensen.",
+      "polish": "Nazywam się Jensen.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-02-meeting-p02",
+      "type": "phrase",
+      "danish": "Jeg hedder Anna.",
+      "polish": "Mam na imię Anna.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-02-meeting-p03",
+      "type": "phrase",
+      "danish": "Rart at møde Dem.",
+      "polish": "Miło mi pana poznać.",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p04",
+      "type": "phrase",
+      "danish": "Rart at møde Dem.",
+      "polish": "Miło mi panią poznać.",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p05",
+      "type": "phrase",
+      "danish": "Det er min kollega.",
+      "polish": "To jest mój kolega.",
+      "hint": "om en mand"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p06",
+      "type": "phrase",
+      "danish": "Det er min kollega.",
+      "polish": "To jest moja koleżanka.",
+      "hint": "om en kvinde"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p07",
+      "type": "phrase",
+      "danish": "Hvor er De fra?",
+      "polish": "Skąd pan jest?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p08",
+      "type": "phrase",
+      "danish": "Hvor er De fra?",
+      "polish": "Skąd pani jest?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-02-meeting-p09",
+      "type": "phrase",
+      "danish": "Jeg bor i København.",
+      "polish": "Mieszkam w Kopenhadze.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-02-meeting-p10",
+      "type": "phrase",
+      "danish": "Jeg arbejder på et kontor.",
+      "polish": "Pracuję w biurze.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-02-meeting-p11",
+      "type": "phrase",
+      "danish": "Jeg taler ikke godt polsk.",
+      "polish": "Nie mówię dobrze po polsku.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-02-meeting-p12",
+      "type": "phrase",
+      "danish": "Det er Anna.",
+      "polish": "To jest Anna.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-02-meeting-q01",
+      "question": "Hvornår bruger man 'Nazywam się'?",
+      "options": [
+        "Til et fornavn",
+        "Til et efternavn",
+        "Til en by",
+        "Til et ja"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-02-meeting-q02",
+      "question": "Hvad siger man til en kvinde, man lige har mødt?",
+      "options": [
+        "Miło mi pana poznać",
+        "Miło mi panią poznać",
+        "Skąd pan jest?",
+        "To jest mój kolega"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-02-meeting-q03",
+      "question": "Hvad betyder 'To jest moja koleżanka'?",
+      "options": [
+        "Det er min kollega (kvinde)",
+        "Det er min kollega (mand)",
+        "Jeg bor i København",
+        "Jeg hedder Anna"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-02-meeting-q04",
+      "question": "Hvad betyder 'Mieszkam w Kopenhadze'?",
+      "options": [
+        "Jeg arbejder på et kontor",
+        "Jeg bor i København",
+        "Hvor er De fra?",
+        "Jeg taler ikke godt polsk"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-02-meeting-q05",
+      "question": "Hvilken frase spørger en kvinde, hvor hun er fra?",
+      "options": [
+        "Skąd pan jest?",
+        "Skąd pani jest?",
+        "Nazywam się Jensen",
+        "Pracuję w biurze"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-02-meeting-q06",
+      "question": "Hvad betyder 'Nie mówię dobrze po polsku'?",
+      "options": [
+        "Det er Anna",
+        "Jeg taler ikke godt polsk",
+        "Rart at møde Dem",
+        "Jeg hedder Jensen"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "dlg-hotel-001",
+  "title": "Indtjekning",
+  "description": "Tjek ind på hotellet.",
+  "startState": "start",
+  "states": {
+    "start": {
+      "prompt": "Dzień dobry, w czym mogę pomóc?",
+      "polish": "Dzień dobry, w czym mogę pomóc?",
+      "support": "Goddag, hvad kan jeg hjælpe med?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Dzień dobry. Mam rezerwację.",
+          "support": "Goddag. Jeg har en reservation.",
+          "target": "name"
+        }
+      ],
+      "terminal": false
+    },
+    "name": {
+      "prompt": "Na jakie nazwisko?",
+      "polish": "Na jakie nazwisko?",
+      "support": "Hvilket navn?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Na nazwisko Jensen.",
+          "support": "I navnet Jensen.",
+          "target": "nights"
+        }
+      ],
+      "terminal": false
+    },
+    "nights": {
+      "prompt": "Na ile nocy?",
+      "polish": "Na ile nocy?",
+      "support": "Hvor mange nætter?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Na dwie noce.",
+          "support": "To nætter.",
+          "target": "key"
+        },
+        {
+          "text": "Nie rozumiem.",
+          "support": "Jeg forstår ikke.",
+          "target": "slow"
+        }
+      ],
+      "terminal": false
+    },
+    "slow": {
+      "prompt": "Na dwie noce?",
+      "polish": "Na dwie noce?",
+      "support": "To nætter?",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Tak, na dwie noce.",
+          "support": "Ja, to nætter.",
+          "target": "key"
+        }
+      ],
+      "terminal": false
+    },
+    "key": {
+      "prompt": "Oto klucz. Śniadanie jest od siódmej.",
+      "polish": "Oto klucz. Śniadanie jest od siódmej.",
+      "support": "Her er nøglen. Morgenmad er fra klokken syv.",
+      "expectedPhrases": [],
+      "options": [
+        {
+          "text": "Dziękuję bardzo.",
+          "support": "Mange tak.",
+          "target": "done"
+        }
+      ],
+      "terminal": false
+    },
+    "done": {
+      "prompt": "Miłego pobytu!",
+      "polish": "Miłego pobytu!",
+      "support": "Godt ophold.",
+      "expectedPhrases": [],
+      "options": [],
+      "terminal": true
+    }
+  }
+}

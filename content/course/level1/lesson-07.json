@@ -1,1 +1,194 @@
-{ "id": "lesson-07", "moduleId": "level1", "title": "Familien", "order": 7, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-07",
+  "moduleId": "level1",
+  "title": "Hotel og overnatning",
+  "order": 7,
+  "released": true,
+  "notes": [
+    "Mam rezerwację siger, at du har en reservation. Bagefter spørger de Na jakie nazwisko?",
+    "Na jedną noc er én nat. Na dwie noce er to nætter.",
+    "Wymeldowanie er det tidspunkt, hvor du skal tjekke ud."
+  ],
+  "items": [
+    {
+      "id": "lesson-07-v01",
+      "type": "vocabulary",
+      "danish": "værelse",
+      "polish": "pokój",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-v02",
+      "type": "vocabulary",
+      "danish": "nøgle",
+      "polish": "klucz",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-v03",
+      "type": "vocabulary",
+      "danish": "morgenmad",
+      "polish": "śniadanie",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-v04",
+      "type": "vocabulary",
+      "danish": "bagage",
+      "polish": "bagaż",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p01",
+      "type": "phrase",
+      "danish": "Jeg har en reservation.",
+      "polish": "Mam rezerwację.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p02",
+      "type": "phrase",
+      "danish": "I navnet Jensen.",
+      "polish": "Na nazwisko Jensen.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p03",
+      "type": "phrase",
+      "danish": "Et enkeltværelse, tak.",
+      "polish": "Pokój dla jednej osoby, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p04",
+      "type": "phrase",
+      "danish": "Én nat.",
+      "polish": "Na jedną noc.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p05",
+      "type": "phrase",
+      "danish": "To nætter.",
+      "polish": "Na dwie noce.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p06",
+      "type": "phrase",
+      "danish": "Hvornår er der morgenmad?",
+      "polish": "O której jest śniadanie?",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p07",
+      "type": "phrase",
+      "danish": "Hvor er elevatoren?",
+      "polish": "Gdzie jest winda?",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p08",
+      "type": "phrase",
+      "danish": "Koden til wi-fi, tak.",
+      "polish": "Hasło do Wi-Fi, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p09",
+      "type": "phrase",
+      "danish": "Hvornår skal man tjekke ud?",
+      "polish": "O której jest wymeldowanie?",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p10",
+      "type": "phrase",
+      "danish": "Må jeg stille bagagen?",
+      "polish": "Czy mogę zostawić bagaż?",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p11",
+      "type": "phrase",
+      "danish": "Må jeg blive vækket klokken syv?",
+      "polish": "Poproszę o budzenie na siódmą.",
+      "hint": null
+    },
+    {
+      "id": "lesson-07-p12",
+      "type": "phrase",
+      "danish": "Nøglen, tak.",
+      "polish": "Klucz, proszę.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-07-q01",
+      "question": "Hvad siger man ved skranken, hvis man har booket?",
+      "options": [
+        "Klucz, proszę",
+        "Mam rezerwację",
+        "Na dwie noce",
+        "Gdzie jest winda?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-07-q02",
+      "question": "Hvad betyder 'Na dwie noce'?",
+      "options": [
+        "Én nat",
+        "To nætter",
+        "Morgenmad",
+        "Nøglen"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-07-q03",
+      "question": "Hvordan spørger man om morgenmaden?",
+      "options": [
+        "O której jest śniadanie?",
+        "Hasło do Wi-Fi, proszę",
+        "Klucz, proszę",
+        "Na nazwisko Jensen"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-07-q04",
+      "question": "Hvad betyder 'O której jest wymeldowanie?'",
+      "options": [
+        "Hvor er elevatoren?",
+        "Hvornår skal man tjekke ud?",
+        "Må jeg stille bagagen?",
+        "Én nat?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-07-q05",
+      "question": "Hvad beder man om med 'Poproszę o budzenie na siódmą'?",
+      "options": [
+        "Wi-fi-koden",
+        "Et vækkeopkald klokken syv",
+        "To nætter",
+        "Nøglen"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-07-q06",
+      "question": "Hvad er 'bagaż'?",
+      "options": [
+        "Værelset",
+        "Nøglen",
+        "Bagagen",
+        "Morgenmaden"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

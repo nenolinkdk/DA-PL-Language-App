@@ -1,1 +1,201 @@
-{ "id": "lesson-04", "moduleId": "level1", "title": "Hvordan har du det?", "order": 4, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-04",
+  "moduleId": "level1",
+  "title": "På café",
+  "order": 4,
+  "released": true,
+  "notes": [
+    "Sig Poproszę og det, du vil have. Kawa bliver kawę, herbata bliver herbatę, og woda bliver wodę.",
+    "Na miejscu betyder, at du bliver. Na wynos betyder, at du tager det med.",
+    "Smacznego siger man, før nogen begynder at spise eller drikke."
+  ],
+  "items": [
+    {
+      "id": "lesson-04-v01",
+      "type": "vocabulary",
+      "danish": "kaffe",
+      "polish": "kawa",
+      "hint": "kawa → kawę i en bestilling"
+    },
+    {
+      "id": "lesson-04-v02",
+      "type": "vocabulary",
+      "danish": "te",
+      "polish": "herbata",
+      "hint": "herbata → herbatę"
+    },
+    {
+      "id": "lesson-04-v03",
+      "type": "vocabulary",
+      "danish": "vand",
+      "polish": "woda",
+      "hint": "woda → wodę"
+    },
+    {
+      "id": "lesson-04-v04",
+      "type": "vocabulary",
+      "danish": "mælk",
+      "polish": "mleko",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-v05",
+      "type": "vocabulary",
+      "danish": "sukker",
+      "polish": "cukier",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p01",
+      "type": "phrase",
+      "danish": "En kaffe, tak.",
+      "polish": "Poproszę kawę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p02",
+      "type": "phrase",
+      "danish": "En te, tak.",
+      "polish": "Poproszę herbatę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p03",
+      "type": "phrase",
+      "danish": "En kaffe med mælk, tak.",
+      "polish": "Poproszę kawę z mlekiem.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p04",
+      "type": "phrase",
+      "danish": "Vand uden brus, tak.",
+      "polish": "Poproszę wodę niegazowaną.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p05",
+      "type": "phrase",
+      "danish": "Uden sukker, tak.",
+      "polish": "Bez cukru, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p06",
+      "type": "phrase",
+      "danish": "Jeg bliver her.",
+      "polish": "Na miejscu, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p07",
+      "type": "phrase",
+      "danish": "Jeg tager det med.",
+      "polish": "Na wynos, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p08",
+      "type": "phrase",
+      "danish": "En lille kaffe, tak.",
+      "polish": "Małą kawę, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p09",
+      "type": "phrase",
+      "danish": "En kaffe til, tak.",
+      "polish": "Jeszcze jedną kawę, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p10",
+      "type": "phrase",
+      "danish": "Regningen, tak.",
+      "polish": "Rachunek, proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p11",
+      "type": "phrase",
+      "danish": "Velbekomme!",
+      "polish": "Smacznego!",
+      "hint": null
+    },
+    {
+      "id": "lesson-04-p12",
+      "type": "phrase",
+      "danish": "Tak, det var lækkert.",
+      "polish": "Dziękuję, było pyszne.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-04-q01",
+      "question": "Hvad siger man for at bestille en kaffe?",
+      "options": [
+        "Poproszę kawę",
+        "Na wynos",
+        "Smacznego",
+        "Bez cukru"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-04-q02",
+      "question": "Hvad betyder 'Na wynos'?",
+      "options": [
+        "Uden sukker",
+        "Jeg tager det med",
+        "En kaffe til",
+        "Regningen"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-04-q03",
+      "question": "Hvilken form bruger man, når man bestiller te?",
+      "options": [
+        "Herbata",
+        "Herbatę",
+        "Herbatą",
+        "Herbaty"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-04-q04",
+      "question": "Hvad betyder 'Smacznego'?",
+      "options": [
+        "Regningen",
+        "Med mælk",
+        "Velbekomme",
+        "En lille kaffe"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-04-q05",
+      "question": "Hvordan siger man, at man bliver og drikker den her?",
+      "options": [
+        "Na wynos, proszę",
+        "Na miejscu, proszę",
+        "Bez cukru, proszę",
+        "Rachunek, proszę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-04-q06",
+      "question": "Hvad betyder 'Jeszcze jedną kawę, proszę'?",
+      "options": [
+        "Uden sukker",
+        "En kaffe til, tak",
+        "Vand uden brus",
+        "Det var lækkert"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

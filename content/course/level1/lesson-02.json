@@ -1,1 +1,194 @@
-{ "id": "lesson-02", "moduleId": "level1", "title": "Præsentationer", "order": 2, "released": false, "notes": ["Struktur klar - indhold følger."], "items": [], "quiz": [] }
+{
+  "id": "lesson-02",
+  "moduleId": "level1",
+  "title": "Ja, nej, tak og undskyld",
+  "order": 2,
+  "released": true,
+  "notes": [
+    "Tak er ja. Nie er nej. Dziękuję er tak, når du er taknemmelig.",
+    "Proszę betyder både vær så venlig og værsgo.",
+    "Nie ma za co er det almindelige svar på tak."
+  ],
+  "items": [
+    {
+      "id": "lesson-02-v01",
+      "type": "vocabulary",
+      "danish": "ja",
+      "polish": "tak",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-v02",
+      "type": "vocabulary",
+      "danish": "nej",
+      "polish": "nie",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-v03",
+      "type": "vocabulary",
+      "danish": "meget",
+      "polish": "bardzo",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-v04",
+      "type": "vocabulary",
+      "danish": "en gang til",
+      "polish": "jeszcze raz",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p01",
+      "type": "phrase",
+      "danish": "Ja",
+      "polish": "Tak",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p02",
+      "type": "phrase",
+      "danish": "Nej",
+      "polish": "Nie",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p03",
+      "type": "phrase",
+      "danish": "Tak",
+      "polish": "Dziękuję",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p04",
+      "type": "phrase",
+      "danish": "Mange tak",
+      "polish": "Dziękuję bardzo",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p05",
+      "type": "phrase",
+      "danish": "Nej tak",
+      "polish": "Nie, dziękuję",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p06",
+      "type": "phrase",
+      "danish": "Vær så venlig",
+      "polish": "Proszę",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p07",
+      "type": "phrase",
+      "danish": "Det var så lidt",
+      "polish": "Nie ma za co",
+      "hint": "svar på tak"
+    },
+    {
+      "id": "lesson-02-p08",
+      "type": "phrase",
+      "danish": "Undskyld",
+      "polish": "Przepraszam",
+      "hint": "også når du vil tiltale nogen"
+    },
+    {
+      "id": "lesson-02-p09",
+      "type": "phrase",
+      "danish": "Undskyld meget",
+      "polish": "Przepraszam bardzo",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p10",
+      "type": "phrase",
+      "danish": "Det gør ikke noget",
+      "polish": "Nic nie szkodzi",
+      "hint": "svar på undskyld"
+    },
+    {
+      "id": "lesson-02-p11",
+      "type": "phrase",
+      "danish": "Jeg forstår ikke",
+      "polish": "Nie rozumiem",
+      "hint": null
+    },
+    {
+      "id": "lesson-02-p12",
+      "type": "phrase",
+      "danish": "En gang til, tak",
+      "polish": "Jeszcze raz, proszę",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-02-q01",
+      "question": "Hvad betyder 'tak'?",
+      "options": [
+        "Tak",
+        "Ja",
+        "Nej",
+        "Undskyld"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-02-q02",
+      "question": "Hvad svarer man på 'Dziękuję'?",
+      "options": [
+        "Przepraszam",
+        "Nie ma za co",
+        "Dobranoc",
+        "Cześć"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-02-q03",
+      "question": "Hvad betyder 'Przepraszam'?",
+      "options": [
+        "Tak",
+        "Ja",
+        "Undskyld",
+        "Farvel"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-02-q04",
+      "question": "Hvordan siger man 'jeg forstår ikke'?",
+      "options": [
+        "Nie, dziękuję",
+        "Nie rozumiem",
+        "Nic nie szkodzi",
+        "Proszę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-02-q05",
+      "question": "Hvad betyder 'Nie, dziękuję'?",
+      "options": [
+        "Ja tak",
+        "Nej tak",
+        "Mange tak",
+        "Det var så lidt"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-02-q06",
+      "question": "Hvad betyder 'Jeszcze raz, proszę'?",
+      "options": [
+        "Farvel",
+        "En gang til, tak",
+        "Godnat",
+        "Kontant, tak"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

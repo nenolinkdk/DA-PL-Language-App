@@ -58,6 +58,10 @@ fun LessonScreen(
             lesson.items.forEach { item ->
                 ElevatedCard(modifier = Modifier.fillMaxWidth()) {
                     Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(
+                            if (item.type == "vocabulary") "Ord" else "Sætning",
+                            style = MaterialTheme.typography.labelSmall
+                        )
                         Text(item.danish, style = MaterialTheme.typography.titleMedium)
                         Text(item.polish, style = MaterialTheme.typography.bodyLarge)
                         item.hint?.let { Text(it, style = MaterialTheme.typography.bodySmall) }

@@ -43,9 +43,9 @@ See:
 
 ## Status
 
-Phase 1B reconciliation is on branch `vibe/phase1b-reconcile`.
+Phase 1C is on branch `vibe/phase1c-levels`.
 
-The app keeps the eight-route menu and `AppNavigator`. Niveau 1 opens the imported lessons: lesson 1 is playable, with Danish and Polish speech buttons and a quiz. Lessons 2–10 stay unavailable. Samtaletræning opens two imported scenarios through `DialogueMachine`. Grammatik shows the two imported sheets. Niveau 2, Niveau 3, Børn and the top-level Quiz route stay empty. Speech never starts by itself.
+The app keeps the eight-route menu and `AppNavigator`. Niveau 1 and Niveau 2 each open ten released lessons, with Danish and Polish speech buttons and a quiz. Samtaletræning opens six deterministic scenarios. Danish in a scenario stays hidden until the learner taps. Grammatik shows the two sheets. Niveau 3, Børn and the top-level Quiz route stay empty. Speech never starts by itself. The Polish and Danish course text still needs linguistic review.
 
 Open the project in Android Studio and run the `app` configuration. From the repository root:
 
