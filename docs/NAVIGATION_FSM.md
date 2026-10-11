@@ -41,8 +41,8 @@ stateDiagram-v2
 | Current | Event | Guard | Next | Action |
 |---|---|---|---|---|
 | HOME | tap Niveau 1 | module available | LEVEL1 | show lesson list |
-| HOME | tap Niveau 2 | structure exists | LEVEL2 | show available/not-yet-filled state |
-| HOME | tap Niveau 3 | structure exists | LEVEL3 | show available/not-yet-filled state |
+| HOME | tap Niveau 2 | lessons exist | LEVEL2 | show the lesson list |
+| HOME | tap Niveau 3 | structure exists | LEVEL3 | show not-yet-filled state |
 | HOME | tap Samtaletræning | module available | CONVERSATION | show scenario list |
 | LEVELx | select lesson | lesson is released | LESSON | load the imported lesson document |
 | LEVELx | select lesson | lesson is not released | LESSON_UNAVAILABLE | show not-yet-available screen, do not crash |
@@ -55,7 +55,7 @@ stateDiagram-v2
 
 ## Empty module rule
 
-The complete structure is built before all content exists. Therefore empty Level 2/3 modules must not crash or expose placeholder nonsense. Show a clear not-yet-available state.
+The complete structure is built before all content exists. Level 3 and Children stay not-yet-filled and must not crash. Level 1 and Level 2 list their released lessons.
 
 ## Separate FSMs
 

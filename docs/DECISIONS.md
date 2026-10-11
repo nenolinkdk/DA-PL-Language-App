@@ -60,9 +60,22 @@ The canonical app is the Phase 1A codebase plus the lesson, grammar and dialogue
 | Empty modules | Level 2, Level 3, Children and the top-level Quiz route stay unavailable. Lessons 02–10 stay unreleased. | V1 |
 | Preserved manifest | `content/config/manifest.json` is kept and is not the menu source. | V1 |
 
+## 2026-10-11 — Phase 1C levels 1 and 2
+
+Level 1 follows the course-plan titles. Level 2 is released as ten everyday lessons. Café and ticket remain, and four travel scenarios were added. Polish in this phase is draft text and still needs linguistic review.
+
+| Area | Decision | Status |
+|---|---|---|
+| Level 1 | `lesson-01` through `lesson-10` are released. Each has 12 phrases, a short word list, Danish notes and six quiz questions. | V1 content, linguistic review required |
+| Level 2 | `lesson-l2-01-routine` through `lesson-l2-10-plans` are released. Grammar appears in examples: pronouns, present tense, gender, accusative, `do`/`na`/`w`, requests, and a few past and future phrases. | V1 content, linguistic review required |
+| File module id | Lesson files use `level1` or `level2`. Catalog module ids stay `module-level1` and `module-level2`. | V1 |
+| Empty modules | Level 3, Children and the top-level Quiz route stay unavailable. | V1 |
+| Dialogue | Six deterministic scenarios. No weights. `polish` is the spoken line. `support` is Danish and stays hidden until the learner taps. The choice lasts for that visit and is dropped on exit. | V1 |
+| Ticket closing line | The imported terminal `Udowa życzenia!` is replaced by `Miłej podróży!`. | V1 content, linguistic review required |
+| Progress | A passed lesson quiz stores the lesson id. `Gem og luk` stores the scenario id. An unfinished turn is not stored. | V1 |
+
 ## Still open
-- exact Level 2 case sequence;
+- exact Level 2 case sequence after linguistic review;
 - final scope of Children for first public release;
 - final Level 3 content scope;
-- exact number/length of FSM scenarios for first release;
-- whether Danish support reveal is per turn or remembered during the current scenario.
+- whether later releases add more FSM scenarios.

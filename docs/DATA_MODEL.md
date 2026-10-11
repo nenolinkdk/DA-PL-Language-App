@@ -38,7 +38,9 @@ Support = Danish. Target = Polish.
 - Lesson entries carry stable ids, Danish titles and `released: false` until real Polish content exists. Target text stays empty while unreleased.
 - `scenarios` stays empty until a dialogue phase adds scenario documents. The index does not store states, choices or weights.
 
-The lesson and dialogue minimum models below still apply when new documents are written. The files imported in Phase 1B keep their original field names: lessons use `danish` and `polish`, and dialogues use `startState` plus a single `prompt`. Those files were not rewritten to `support`/`target`. The catalog index stores the Danish title in `title.support`.
+The lesson files use `danish` and `polish`. Dialogue files use `startState`. Each state has a Polish `prompt` and an optional `polish` line; when `polish` is blank, the prompt is spoken. `support` is the Danish gloss and is not shown until the learner asks. The catalog index stores the Danish title in `title.support`.
+
+Released lessons in Level 1 and Level 2 carry phrases, vocabulary, notes and a quiz. Level 3 and Children stay `NOT_YET_FILLED`. All Polish and Danish course text in Phase 1C is draft and needs linguistic review.
 
 ## Course skeleton
 
