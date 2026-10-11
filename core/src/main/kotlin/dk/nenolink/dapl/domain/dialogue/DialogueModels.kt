@@ -18,13 +18,19 @@ data class DialogueScenario(
 @Serializable
 data class DialogueState(
     val prompt: String,
+    val polish: String = "",
+    val support: String = "",
     val expectedPhrases: List<String> = emptyList(),
     val options: List<DialogueOption> = emptyList(),
     val terminal: Boolean = false
-)
+) {
+    /** Polish line shown and spoken. Older files store that line in [prompt]. */
+    fun spokenPolish(): String = polish.ifBlank { prompt }
+}
 
 @Serializable
 data class DialogueOption(
     val text: String,
-    val target: String
+    val target: String,
+    val support: String = ""
 )

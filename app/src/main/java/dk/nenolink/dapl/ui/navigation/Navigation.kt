@@ -143,11 +143,14 @@ fun DaplApp(
                     lesson = document,
                     speech = speech,
                     onQuiz = {
+                        val parent = catalog.modules.firstOrNull { module ->
+                            module.lessons.any { it.id == lessonId }
+                        }?.route?.toDestination() ?: Destination.Level1
                         openIfAllowed(
                             navController = navController,
                             catalog = catalog,
                             from = NavigationState.home()
-                                .push(Destination.Level1)
+                                .push(parent)
                                 .push(Destination.Lesson(lessonId)),
                             event = NavEvent.OpenQuiz(lessonId),
                             route = NavRoutes.lessonQuiz(lessonId)

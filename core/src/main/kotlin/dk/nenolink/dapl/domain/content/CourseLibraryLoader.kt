@@ -28,17 +28,22 @@ object CourseLibraryLoader {
     private val json = Json { ignoreUnknownKeys = false }
 
     fun loadBundled(): CourseLibrary {
-        val lessons = (1..10).map { index -> read("course/level1/lesson-${index.toString().padStart(2, '0')}.json") }
+        val catalogJson = read(CatalogLoader.RESOURCE_PATH)
+        val catalog = CatalogLoader.load(catalogJson)
+        val lessons = catalog.modules.flatMap { module ->
+            module.lessons.map { lesson ->
+                read("course/${module.route.wire}/${lesson.id}.json")
+            }
+        }
+        val dialogues = catalog.scenarios.map { scenario ->
+            read("dialogues/${scenario.id}.json")
+        }
         val grammar = listOf(
             "course/grammar/grammar-hello-politeness.json",
             "course/grammar/grammar-you-formal.json"
         ).map { read(it) }
-        val dialogues = listOf(
-            "dialogues/dlg-cafe-001.json",
-            "dialogues/dlg-ticket-001.json"
-        ).map { read(it) }
         return load(
-            catalogJson = read(CatalogLoader.RESOURCE_PATH),
+            catalogJson = catalogJson,
             lessonJson = lessons,
             grammarJson = grammar,
             dialogueJson = dialogues
@@ -109,10 +114,9 @@ object CourseLibraryLoader {
         entry: LessonIndexEntry,
         document: LessonDocument
     ): LessonIndexEntry {
-        require(document.moduleId == LEVEL1_FILE_MODULE) {
-            "Lesson ${document.id} uses module '${document.moduleId}', expected $LEVEL1_FILE_MODULE"
+        require(document.moduleId == module.route.wire) {
+            "Lesson ${document.id} uses module '${document.moduleId}', expected ${module.route.wire}"
         }
-        require(module.route.wire == LEVEL1_FILE_MODULE || document.moduleId == LEVEL1_FILE_MODULE)
         require(document.title == entry.title.support) {
             "Lesson ${document.id} title does not match the catalog"
         }
@@ -135,6 +139,4 @@ object CourseLibraryLoader {
             ?: error("Missing classpath resource $path")
         return stream.bufferedReader(Charsets.UTF_8).use { it.readText() }
     }
-
-    private const val LEVEL1_FILE_MODULE = "level1"
 }
