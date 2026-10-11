@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-05-activities",
+  "moduleId": "level2",
+  "title": "Hvad laver du?",
+  "order": 5,
+  "released": true,
+  "notes": [
+    "Mieszkam, mieszkasz, mieszka betyder jeg bor, du bor, han eller hun bor.",
+    "Pracuję, pracujesz, pracuje er et andet almindeligt mønster.",
+    "Co pan robi? er høfligt. Co robisz? er uformelt."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-05-activities-v01",
+      "type": "vocabulary",
+      "danish": "at arbejde",
+      "polish": "pracować",
+      "hint": "pracuję"
+    },
+    {
+      "id": "lesson-l2-05-activities-v02",
+      "type": "vocabulary",
+      "danish": "at bo",
+      "polish": "mieszkać",
+      "hint": "mieszkam"
+    },
+    {
+      "id": "lesson-l2-05-activities-v03",
+      "type": "vocabulary",
+      "danish": "at lave",
+      "polish": "robić",
+      "hint": "co robisz?"
+    },
+    {
+      "id": "lesson-l2-05-activities-v04",
+      "type": "vocabulary",
+      "danish": "at læse",
+      "polish": "czytać",
+      "hint": "czytam"
+    },
+    {
+      "id": "lesson-l2-05-activities-p01",
+      "type": "phrase",
+      "danish": "Hvad laver De?",
+      "polish": "Co pan robi?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-05-activities-p02",
+      "type": "phrase",
+      "danish": "Hvad laver De?",
+      "polish": "Co pani robi?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-05-activities-p03",
+      "type": "phrase",
+      "danish": "Jeg arbejder på et kontor.",
+      "polish": "Pracuję w biurze.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p04",
+      "type": "phrase",
+      "danish": "Jeg bor på hotellet.",
+      "polish": "Mieszkam w hotelu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p05",
+      "type": "phrase",
+      "danish": "Jeg læser på polsk.",
+      "polish": "Czytam po polsku.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p06",
+      "type": "phrase",
+      "danish": "Han arbejder i en butik.",
+      "polish": "On pracuje w sklepie.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p07",
+      "type": "phrase",
+      "danish": "Hun bor i Kraków.",
+      "polish": "Ona mieszka w Krakowie.",
+      "hint": "Kraków bliver w Krakowie"
+    },
+    {
+      "id": "lesson-l2-05-activities-p08",
+      "type": "phrase",
+      "danish": "Hvad laver du om aftenen?",
+      "polish": "Co robisz wieczorem?",
+      "hint": "uformelt"
+    },
+    {
+      "id": "lesson-l2-05-activities-p09",
+      "type": "phrase",
+      "danish": "Jeg ser en film.",
+      "polish": "Oglądam film.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p10",
+      "type": "phrase",
+      "danish": "Jeg laver mad.",
+      "polish": "Gotuję obiad.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p11",
+      "type": "phrase",
+      "danish": "Jeg arbejder ikke om lørdagen.",
+      "polish": "Nie pracuję w sobotę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-05-activities-p12",
+      "type": "phrase",
+      "danish": "Vi lærer polsk.",
+      "polish": "Uczymy się polskiego.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-05-activities-q01",
+      "question": "Hvilken form betyder 'jeg arbejder'?",
+      "options": [
+        "Pracujesz",
+        "Pracuje",
+        "Pracuję",
+        "Pracować"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-l2-05-activities-q02",
+      "question": "Hvad betyder 'Ona mieszka w Krakowie'?",
+      "options": [
+        "Han arbejder i en butik",
+        "Hun bor i Kraków",
+        "Jeg bor på hotellet",
+        "Jeg læser på polsk"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-05-activities-q03",
+      "question": "Hvad er den uformelle måde at spørge hvad du laver om aftenen?",
+      "options": [
+        "Co pan robi?",
+        "Co pani robi?",
+        "Co robisz wieczorem?",
+        "Nie pracuję w sobotę"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-l2-05-activities-q04",
+      "question": "Hvad betyder 'Gotuję obiad'?",
+      "options": [
+        "Jeg ser en film",
+        "Jeg laver mad",
+        "Vi lærer polsk",
+        "Jeg arbejder ikke"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-05-activities-q05",
+      "question": "Hvad betyder 'Uczymy się polskiego'?",
+      "options": [
+        "Vi lærer polsk",
+        "Jeg læser på polsk",
+        "Hun bor i Kraków",
+        "Hvad laver De?"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-05-activities-q06",
+      "question": "Hvilken form betyder 'han arbejder'?",
+      "options": [
+        "Pracuję",
+        "Pracujesz",
+        "Pracuje",
+        "Mieszkam"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

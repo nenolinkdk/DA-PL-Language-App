@@ -5,37 +5,88 @@
   "startState": "start",
   "states": {
     "start": {
-      "prompt": "Bartenderen nikker til dig. Han siger: 'Dzień dobry! Co podać?'",
-      "expectedPhrases": ["Dzień dobry", "Proszę"],
+      "prompt": "Dzień dobry! Co podać?",
+      "polish": "Dzień dobry! Co podać?",
+      "support": "Goddag! Hvad må det være?",
+      "expectedPhrases": [
+        "Dzień dobry",
+        "Poproszę"
+      ],
       "options": [
-        { "text": "Dzień dobry! Proszę kawę.", "target": "order-confirmed" },
-        { "text": "Cześć! Kawę, szybko!", "target": "rude-retry" }
-      ]
+        {
+          "text": "Dzień dobry! Poproszę kawę.",
+          "support": "Goddag! En kaffe, tak.",
+          "target": "order-confirmed"
+        },
+        {
+          "text": "Cześć! Kawę, szybko!",
+          "support": "Hej! En kaffe, hurtigt!",
+          "target": "rude-retry"
+        }
+      ],
+      "terminal": false
     },
     "rude-retry": {
-      "prompt": "Bartenderen rækker øjenbrynene. Øjeblikket er lidt akavet - prøv en høfligere hilsen.",
-      "expectedPhrases": ["Dzień dobry", "Proszę"],
+      "prompt": "Przepraszam?",
+      "polish": "Przepraszam?",
+      "support": "Undskyld? Prøv en høfligere bestilling.",
+      "expectedPhrases": [
+        "Przepraszam",
+        "Poproszę"
+      ],
       "options": [
-        { "text": "Przepraszam. Dzień dobry, proszę kawę.", "target": "order-confirmed" }
-      ]
+        {
+          "text": "Przepraszam. Poproszę kawę.",
+          "support": "Undskyld. En kaffe, tak.",
+          "target": "order-confirmed"
+        }
+      ],
+      "terminal": false
     },
     "order-confirmed": {
-      "prompt": "'Proszę pana - kawa gotowa.' Kaffen står på disken. Hvad siger du?",
-      "expectedPhrases": ["Dziękuję"],
+      "prompt": "Proszę, kawa gotowa.",
+      "polish": "Proszę, kawa gotowa.",
+      "support": "Værsgo, kaffen er klar.",
+      "expectedPhrases": [
+        "Dziękuję"
+      ],
       "options": [
-        { "text": "Dziękuję bardzo!", "target": "pay" },
-        { "text": "(tager kaffen uden et ord)", "target": "rude-retry" }
-      ]
+        {
+          "text": "Dziękuję bardzo!",
+          "support": "Mange tak!",
+          "target": "pay"
+        },
+        {
+          "text": "Biorę bez słowa.",
+          "support": "Jeg tager den uden at sige noget.",
+          "target": "rude-retry"
+        }
+      ],
+      "terminal": false
     },
     "pay": {
-      "prompt": "Du skal betale 15 zł. Bartenderen siger: 'Piętnaście złotych.'",
-      "expectedPhrases": ["Proszę", "Dziękuję"],
+      "prompt": "Piętnaście złotych.",
+      "polish": "Piętnaście złotych.",
+      "support": "Femten zloty.",
+      "expectedPhrases": [
+        "Proszę",
+        "Dziękuję"
+      ],
       "options": [
-        { "text": "Proszę. Dziękuję!", "target": "done" }
-      ]
+        {
+          "text": "Proszę. Dziękuję!",
+          "support": "Værsgo. Tak!",
+          "target": "done"
+        }
+      ],
+      "terminal": false
     },
     "done": {
-      "prompt": "Smacznego! Samtalen er gennemført høfligt fra start til slut.",
+      "prompt": "Smacznego!",
+      "polish": "Smacznego!",
+      "support": "Velbekomme.",
+      "expectedPhrases": [],
+      "options": [],
       "terminal": true
     }
   }

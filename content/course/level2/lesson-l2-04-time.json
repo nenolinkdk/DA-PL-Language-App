@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-04-time",
+  "moduleId": "level2",
+  "title": "Tid og aftaler",
+  "order": 4,
+  "released": true,
+  "notes": [
+    "Która godzina? spørger hvad klokken er. Jest druga betyder, at klokken er to.",
+    "O której? spørger hvornår. O trzeciej betyder klokken tre.",
+    "Wpół do ósmej er halv otte, altså 7.30, ligesom på dansk."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-04-time-v01",
+      "type": "vocabulary",
+      "danish": "time",
+      "polish": "godzina",
+      "hint": "która godzina?"
+    },
+    {
+      "id": "lesson-l2-04-time-v02",
+      "type": "vocabulary",
+      "danish": "i dag",
+      "polish": "dzisiaj",
+      "hint": "også: dziś"
+    },
+    {
+      "id": "lesson-l2-04-time-v03",
+      "type": "vocabulary",
+      "danish": "i morgen",
+      "polish": "jutro",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-v04",
+      "type": "vocabulary",
+      "danish": "i går",
+      "polish": "wczoraj",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p01",
+      "type": "phrase",
+      "danish": "Hvad er klokken?",
+      "polish": "Która godzina?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p02",
+      "type": "phrase",
+      "danish": "Klokken er to.",
+      "polish": "Jest druga.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p03",
+      "type": "phrase",
+      "danish": "Klokken er halv otte.",
+      "polish": "Jest wpół do ósmej.",
+      "hint": "7.30"
+    },
+    {
+      "id": "lesson-l2-04-time-p04",
+      "type": "phrase",
+      "danish": "Hvornår?",
+      "polish": "O której?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p05",
+      "type": "phrase",
+      "danish": "Klokken tre.",
+      "polish": "O trzeciej.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p06",
+      "type": "phrase",
+      "danish": "I eftermiddag.",
+      "polish": "Dziś po południu.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p07",
+      "type": "phrase",
+      "danish": "I morgen tidlig.",
+      "polish": "Jutro rano.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p08",
+      "type": "phrase",
+      "danish": "I går aftes.",
+      "polish": "Wczoraj wieczorem.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p09",
+      "type": "phrase",
+      "danish": "Har De tid?",
+      "polish": "Czy ma pan czas?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-04-time-p10",
+      "type": "phrase",
+      "danish": "Kan vi mødes klokken fem?",
+      "polish": "Możemy się spotkać o piątej?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p11",
+      "type": "phrase",
+      "danish": "Desværre, jeg kan ikke.",
+      "polish": "Przykro mi, nie mogę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-04-time-p12",
+      "type": "phrase",
+      "danish": "Fint, vi ses.",
+      "polish": "Dobrze, do zobaczenia.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-04-time-q01",
+      "question": "Hvad betyder 'Która godzina?'",
+      "options": [
+        "Hvornår?",
+        "Hvad er klokken?",
+        "I morgen tidlig",
+        "Jeg kan ikke"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-04-time-q02",
+      "question": "Hvad er klokken i 'Jest wpół do ósmej'?",
+      "options": [
+        "8.30",
+        "7.30",
+        "8.00",
+        "6.30"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-04-time-q03",
+      "question": "Hvad betyder 'O trzeciej'?",
+      "options": [
+        "Klokken to",
+        "Klokken tre",
+        "I går aftes",
+        "I eftermiddag"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-04-time-q04",
+      "question": "Hvad betyder 'Jutro rano'?",
+      "options": [
+        "I går aftes",
+        "I morgen tidlig",
+        "Klokken fem",
+        "Vi ses"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-04-time-q05",
+      "question": "Hvilken frase afviser en aftale?",
+      "options": [
+        "Dobrze, do zobaczenia",
+        "Przykro mi, nie mogę",
+        "Czy ma pan czas?",
+        "O której?"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-04-time-q06",
+      "question": "Hvad betyder 'Możemy się spotkać o piątej?'",
+      "options": [
+        "Har De tid?",
+        "Kan vi mødes klokken fem?",
+        "Klokken er to",
+        "I eftermiddag"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

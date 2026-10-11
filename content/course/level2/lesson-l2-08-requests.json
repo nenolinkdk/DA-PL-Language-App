@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-08-requests",
+  "moduleId": "level2",
+  "title": "Høflige anmodninger",
+  "order": 8,
+  "released": true,
+  "notes": [
+    "Proszę plus navnemåde er en enkel anmodning: Proszę usiąść, Proszę chwilę poczekać.",
+    "Czy może pan ...? er til en mand. Czy może pani ...? er til en kvinde.",
+    "Chciałbym siger en mand. Chciałabym siger en kvinde. Begge betyder jeg vil gerne."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-08-requests-v01",
+      "type": "vocabulary",
+      "danish": "vær så venlig",
+      "polish": "proszę",
+      "hint": "proszę usiąść"
+    },
+    {
+      "id": "lesson-l2-08-requests-v02",
+      "type": "vocabulary",
+      "danish": "herre, De",
+      "polish": "pan",
+      "hint": "czy może pan"
+    },
+    {
+      "id": "lesson-l2-08-requests-v03",
+      "type": "vocabulary",
+      "danish": "frue, De",
+      "polish": "pani",
+      "hint": "czy może pani"
+    },
+    {
+      "id": "lesson-l2-08-requests-v04",
+      "type": "vocabulary",
+      "danish": "at ville",
+      "polish": "chcieć",
+      "hint": "chciałbym / chciałabym"
+    },
+    {
+      "id": "lesson-l2-08-requests-p01",
+      "type": "phrase",
+      "danish": "Vær venlig at sætte Dem.",
+      "polish": "Proszę usiąść.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-08-requests-p02",
+      "type": "phrase",
+      "danish": "Vil De vente et øjeblik?",
+      "polish": "Proszę chwilę poczekać.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-08-requests-p03",
+      "type": "phrase",
+      "danish": "Kan De gentage det?",
+      "polish": "Czy może pan powtórzyć?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-08-requests-p04",
+      "type": "phrase",
+      "danish": "Kan De hjælpe?",
+      "polish": "Czy może pani pomóc?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-08-requests-p05",
+      "type": "phrase",
+      "danish": "Jeg vil gerne have en kaffe.",
+      "polish": "Chciałbym kawę.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-l2-08-requests-p06",
+      "type": "phrase",
+      "danish": "Jeg vil gerne have en kaffe.",
+      "polish": "Chciałabym kawę.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-l2-08-requests-p07",
+      "type": "phrase",
+      "danish": "Jeg vil gerne betale.",
+      "polish": "Chciałbym zapłacić.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-l2-08-requests-p08",
+      "type": "phrase",
+      "danish": "Jeg vil gerne have regningen.",
+      "polish": "Chciałabym rachunek.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-l2-08-requests-p09",
+      "type": "phrase",
+      "danish": "Kunne De tale langsommere?",
+      "polish": "Czy mógłby pan mówić wolniej?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-08-requests-p10",
+      "type": "phrase",
+      "danish": "Kunne De skrive det ned?",
+      "polish": "Czy mogłaby pani to napisać?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-08-requests-p11",
+      "type": "phrase",
+      "danish": "Ja, meget gerne.",
+      "polish": "Bardzo proszę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-08-requests-p12",
+      "type": "phrase",
+      "danish": "Selvfølgelig.",
+      "polish": "Oczywiście.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-08-requests-q01",
+      "question": "Hvad siger en kvinde, der gerne vil have kaffe?",
+      "options": [
+        "Chciałbym kawę",
+        "Chciałabym kawę",
+        "Proszę usiąść",
+        "Oczywiście"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-08-requests-q02",
+      "question": "Hvad betyder 'Proszę chwilę poczekać'?",
+      "options": [
+        "Vil De vente et øjeblik?",
+        "Kan De hjælpe?",
+        "Selvfølgelig",
+        "Jeg vil gerne betale"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-08-requests-q03",
+      "question": "Hvilken frase beder en kvinde om at skrive noget ned?",
+      "options": [
+        "Czy może pan powtórzyć?",
+        "Czy mogłaby pani to napisać?",
+        "Chciałbym zapłacić",
+        "Bardzo proszę"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-08-requests-q04",
+      "question": "Hvad betyder 'Chciałbym zapłacić'?",
+      "options": [
+        "Jeg vil gerne betale",
+        "Jeg vil gerne have regningen",
+        "Kan De gentage det?",
+        "Sæt Dem"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-08-requests-q05",
+      "question": "Hvad betyder 'Oczywiście'?",
+      "options": [
+        "Meget gerne",
+        "Selvfølgelig",
+        "Vent et øjeblik",
+        "Tal langsommere"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-08-requests-q06",
+      "question": "Hvem siger 'Chciałbym'?",
+      "options": [
+        "En kvinde",
+        "En mand",
+        "En tjener kun",
+        "En by"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

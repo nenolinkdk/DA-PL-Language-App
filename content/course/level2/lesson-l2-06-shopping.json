@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-06-shopping",
+  "moduleId": "level2",
+  "title": "I butikken",
+  "order": 6,
+  "released": true,
+  "notes": [
+    "Chcę og poproszę efterfølges af den form, man køber. Kawa bliver kawę, og bułka bliver bułkę. Chleb ændrer sig ikke.",
+    "Tę står foran hunkøn: tę bułkę. Ten står foran hankøn: ten chleb. To står foran intetkøn: to ciasto.",
+    "Ile kosztuje ta bułka? bruger grundformen, fordi bollen er den, prisen handler om."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-06-shopping-v01",
+      "type": "vocabulary",
+      "danish": "brød",
+      "polish": "chleb",
+      "hint": "ten chleb"
+    },
+    {
+      "id": "lesson-l2-06-shopping-v02",
+      "type": "vocabulary",
+      "danish": "bolle",
+      "polish": "bułka",
+      "hint": "tę bułkę"
+    },
+    {
+      "id": "lesson-l2-06-shopping-v03",
+      "type": "vocabulary",
+      "danish": "ost",
+      "polish": "ser",
+      "hint": "kawałek sera"
+    },
+    {
+      "id": "lesson-l2-06-shopping-v04",
+      "type": "vocabulary",
+      "danish": "kage",
+      "polish": "ciasto",
+      "hint": "to ciasto"
+    },
+    {
+      "id": "lesson-l2-06-shopping-p01",
+      "type": "phrase",
+      "danish": "Jeg vil have en kaffe.",
+      "polish": "Chcę kawę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p02",
+      "type": "phrase",
+      "danish": "Jeg vil have en te.",
+      "polish": "Chcę herbatę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p03",
+      "type": "phrase",
+      "danish": "Den bolle, tak.",
+      "polish": "Poproszę tę bułkę.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p04",
+      "type": "phrase",
+      "danish": "Det brød, tak.",
+      "polish": "Poproszę ten chleb.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p05",
+      "type": "phrase",
+      "danish": "Den kage, tak.",
+      "polish": "Poproszę to ciasto.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p06",
+      "type": "phrase",
+      "danish": "Et stykke ost, tak.",
+      "polish": "Poproszę kawałek sera.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p07",
+      "type": "phrase",
+      "danish": "Hvad koster den bolle?",
+      "polish": "Ile kosztuje ta bułka?",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p08",
+      "type": "phrase",
+      "danish": "To æbler, tak.",
+      "polish": "Poproszę dwa jabłka.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p09",
+      "type": "phrase",
+      "danish": "Har De smør?",
+      "polish": "Czy ma pani masło?",
+      "hint": "til en kvinde"
+    },
+    {
+      "id": "lesson-l2-06-shopping-p10",
+      "type": "phrase",
+      "danish": "Nej tak. Kun det her.",
+      "polish": "Nie, dziękuję. Tylko to.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p11",
+      "type": "phrase",
+      "danish": "Jeg tager bollen og brødet.",
+      "polish": "Biorę tę bułkę i ten chleb.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-06-shopping-p12",
+      "type": "phrase",
+      "danish": "En pose, tak.",
+      "polish": "Poproszę torbę.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-06-shopping-q01",
+      "question": "Hvilken form bestiller en kaffe?",
+      "options": [
+        "Chcę kawa",
+        "Chcę kawę",
+        "Chcę kawy",
+        "Chcę kawą"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-06-shopping-q02",
+      "question": "Hvad betyder 'Poproszę tę bułkę'?",
+      "options": [
+        "Det brød, tak",
+        "Den bolle, tak",
+        "Den kage, tak",
+        "Et stykke ost"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-06-shopping-q03",
+      "question": "Hvilket ord passer foran 'chleb', når du bestiller det?",
+      "options": [
+        "Tę",
+        "Ta",
+        "Ten",
+        "To"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "lesson-l2-06-shopping-q04",
+      "question": "Hvad betyder 'Ile kosztuje ta bułka?'",
+      "options": [
+        "Hvad koster den bolle?",
+        "Jeg tager bollen",
+        "Har De smør?",
+        "To æbler, tak"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-06-shopping-q05",
+      "question": "Hvorfor hedder det 'sera' i 'kawałek sera'?",
+      "options": [
+        "Det er flertal",
+        "Det er formen efter kawałek",
+        "Det er en by",
+        "Det er nutid"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-06-shopping-q06",
+      "question": "Hvad betyder 'Biorę tę bułkę i ten chleb'?",
+      "options": [
+        "Kun det her",
+        "Jeg tager bollen og brødet",
+        "En pose, tak",
+        "Jeg vil have te"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

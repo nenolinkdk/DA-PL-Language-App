@@ -1,0 +1,194 @@
+{
+  "id": "lesson-l2-09-past-future",
+  "moduleId": "level2",
+  "title": "I går og i morgen",
+  "order": 9,
+  "released": true,
+  "notes": [
+    "Byłem siger en mand: jeg var. Byłam siger en kvinde.",
+    "Będę betyder jeg vil være. Jutro będę w Gdańsku.",
+    "En fast plan siger man ofte i nutid: Jutro jadę do Krakowa."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-09-past-future-v01",
+      "type": "vocabulary",
+      "danish": "i går",
+      "polish": "wczoraj",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-v02",
+      "type": "vocabulary",
+      "danish": "i morgen",
+      "polish": "jutro",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-v03",
+      "type": "vocabulary",
+      "danish": "jeg var (mand)",
+      "polish": "byłem",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-v04",
+      "type": "vocabulary",
+      "danish": "jeg vil være",
+      "polish": "będę",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p01",
+      "type": "phrase",
+      "danish": "I går var jeg på museet.",
+      "polish": "Wczoraj byłem w muzeum.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p02",
+      "type": "phrase",
+      "danish": "I går var jeg på museet.",
+      "polish": "Wczoraj byłam w muzeum.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p03",
+      "type": "phrase",
+      "danish": "I går spiste vi på en restaurant.",
+      "polish": "Wczoraj jedliśmy obiad w restauracji.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p04",
+      "type": "phrase",
+      "danish": "Det var meget godt.",
+      "polish": "Było bardzo dobre.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p05",
+      "type": "phrase",
+      "danish": "I morgen er jeg i Gdańsk.",
+      "polish": "Jutro będę w Gdańsku.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p06",
+      "type": "phrase",
+      "danish": "I morgen tager jeg til Kraków.",
+      "polish": "Jutro jadę do Krakowa.",
+      "hint": "nutid om en fast plan"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p07",
+      "type": "phrase",
+      "danish": "I morgen arbejder jeg ikke.",
+      "polish": "Jutro nie pracuję.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p08",
+      "type": "phrase",
+      "danish": "I går regnede det.",
+      "polish": "Wczoraj padał deszcz.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-09-past-future-p09",
+      "type": "phrase",
+      "danish": "Jeg var træt.",
+      "polish": "Byłem zmęczony.",
+      "hint": "en mand siger det"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p10",
+      "type": "phrase",
+      "danish": "Jeg var træt.",
+      "polish": "Byłam zmęczona.",
+      "hint": "en kvinde siger det"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p11",
+      "type": "phrase",
+      "danish": "Hvad lavede De i går?",
+      "polish": "Co pan robił wczoraj?",
+      "hint": "til en mand"
+    },
+    {
+      "id": "lesson-l2-09-past-future-p12",
+      "type": "phrase",
+      "danish": "Hvad lavede De i går?",
+      "polish": "Co pani robiła wczoraj?",
+      "hint": "til en kvinde"
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-09-past-future-q01",
+      "question": "Hvad siger en kvinde, der var på museet?",
+      "options": [
+        "Wczoraj byłem w muzeum",
+        "Wczoraj byłam w muzeum",
+        "Jutro będę w Gdańsku",
+        "Byłem zmęczony"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-09-past-future-q02",
+      "question": "Hvad betyder 'Jutro jadę do Krakowa'?",
+      "options": [
+        "I går var jeg i Kraków",
+        "I morgen tager jeg til Kraków",
+        "I morgen er jeg i Gdańsk",
+        "I går regnede det"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-09-past-future-q03",
+      "question": "Hvilken tid bruger 'Jutro jadę' om en fast plan?",
+      "options": [
+        "Datid",
+        "Nutid",
+        "En ordre",
+        "Et spørgsmål"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-09-past-future-q04",
+      "question": "Hvad betyder 'Wczoraj padał deszcz'?",
+      "options": [
+        "Det var meget godt",
+        "I går regnede det",
+        "Jeg var træt",
+        "Vi spiste ude"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-09-past-future-q05",
+      "question": "Hvad spørger man en kvinde om i går?",
+      "options": [
+        "Co pan robił wczoraj?",
+        "Co pani robiła wczoraj?",
+        "Jutro nie pracuję",
+        "Wczoraj byłem w muzeum"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-09-past-future-q06",
+      "question": "Hvad betyder 'Jutro będę w Gdańsku'?",
+      "options": [
+        "I morgen er jeg i Gdańsk",
+        "I går var jeg i Gdańsk",
+        "Jeg var træt",
+        "I morgen arbejder jeg ikke"
+      ],
+      "answerIndex": 0
+    }
+  ]
+}

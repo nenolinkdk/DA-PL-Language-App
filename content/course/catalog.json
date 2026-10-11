@@ -113,8 +113,109 @@
       "id": "module-level2",
       "route": "level2",
       "order": 2,
-      "availability": "NOT_YET_FILLED",
-      "lessons": []
+      "availability": "STRUCTURE_READY",
+      "lessons": [
+        {
+          "id": "lesson-l2-01-routine",
+          "moduleId": "module-level2",
+          "order": 1,
+          "title": {
+            "support": "En almindelig dag",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-02-meeting",
+          "moduleId": "module-level2",
+          "order": 2,
+          "title": {
+            "support": "At præsentere sig",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-03-family",
+          "moduleId": "module-level2",
+          "order": 3,
+          "title": {
+            "support": "Familien",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-04-time",
+          "moduleId": "module-level2",
+          "order": 4,
+          "title": {
+            "support": "Tid og aftaler",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-05-activities",
+          "moduleId": "module-level2",
+          "order": 5,
+          "title": {
+            "support": "Hvad laver du?",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-06-shopping",
+          "moduleId": "module-level2",
+          "order": 6,
+          "title": {
+            "support": "I butikken",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-07-travel",
+          "moduleId": "module-level2",
+          "order": 7,
+          "title": {
+            "support": "På farten",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-08-requests",
+          "moduleId": "module-level2",
+          "order": 8,
+          "title": {
+            "support": "Høflige anmodninger",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-09-past-future",
+          "moduleId": "module-level2",
+          "order": 9,
+          "title": {
+            "support": "I går og i morgen",
+            "target": ""
+          },
+          "released": true
+        },
+        {
+          "id": "lesson-l2-10-plans",
+          "moduleId": "module-level2",
+          "order": 10,
+          "title": {
+            "support": "Planer for weekenden",
+            "target": ""
+          },
+          "released": true
+        }
+      ]
     },
     {
       "id": "module-level3",
@@ -171,6 +272,34 @@
       "id": "dlg-ticket-001",
       "title": {
         "support": "Billet til toget",
+        "target": ""
+      }
+    },
+    {
+      "id": "dlg-way-001",
+      "title": {
+        "support": "Spørg om vej",
+        "target": ""
+      }
+    },
+    {
+      "id": "dlg-hotel-001",
+      "title": {
+        "support": "Indtjekning",
+        "target": ""
+      }
+    },
+    {
+      "id": "dlg-shop-001",
+      "title": {
+        "support": "I butikken",
+        "target": ""
+      }
+    },
+    {
+      "id": "dlg-help-001",
+      "title": {
+        "support": "Bed om at få det gentaget",
         "target": ""
       }
     }

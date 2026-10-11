@@ -1,0 +1,201 @@
+{
+  "id": "lesson-l2-03-family",
+  "moduleId": "level2",
+  "title": "Familien",
+  "order": 3,
+  "released": true,
+  "notes": [
+    "Mój står foran hankøn: mój brat. Moja står foran hunkøn: moja siostra. Moje står foran intetkøn: moje dziecko.",
+    "Efter nie mam ændres ordet, ligesom i nie mam czasu: nie mam rodzeństwa.",
+    "Oni betyder de, om en gruppe med mindst én mand. One er de, om en gruppe af kvinder."
+  ],
+  "items": [
+    {
+      "id": "lesson-l2-03-family-v01",
+      "type": "vocabulary",
+      "danish": "mor",
+      "polish": "mama",
+      "hint": "moja mama"
+    },
+    {
+      "id": "lesson-l2-03-family-v02",
+      "type": "vocabulary",
+      "danish": "far",
+      "polish": "tata",
+      "hint": "mój tata"
+    },
+    {
+      "id": "lesson-l2-03-family-v03",
+      "type": "vocabulary",
+      "danish": "søster",
+      "polish": "siostra",
+      "hint": "moja siostra"
+    },
+    {
+      "id": "lesson-l2-03-family-v04",
+      "type": "vocabulary",
+      "danish": "bror",
+      "polish": "brat",
+      "hint": "mój brat"
+    },
+    {
+      "id": "lesson-l2-03-family-v05",
+      "type": "vocabulary",
+      "danish": "barn",
+      "polish": "dziecko",
+      "hint": "moje dziecko"
+    },
+    {
+      "id": "lesson-l2-03-family-p01",
+      "type": "phrase",
+      "danish": "Det er min mor.",
+      "polish": "To jest moja mama.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p02",
+      "type": "phrase",
+      "danish": "Det er min far.",
+      "polish": "To jest mój tata.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p03",
+      "type": "phrase",
+      "danish": "Det er min søster.",
+      "polish": "To jest moja siostra.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p04",
+      "type": "phrase",
+      "danish": "Det er min bror.",
+      "polish": "To jest mój brat.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p05",
+      "type": "phrase",
+      "danish": "Det er mit barn.",
+      "polish": "To jest moje dziecko.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p06",
+      "type": "phrase",
+      "danish": "Jeg har to børn.",
+      "polish": "Mam dwójkę dzieci.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p07",
+      "type": "phrase",
+      "danish": "Min mand er i Danmark.",
+      "polish": "Mój mąż jest w Danii.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p08",
+      "type": "phrase",
+      "danish": "Min kone taler polsk.",
+      "polish": "Moja żona mówi po polsku.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p09",
+      "type": "phrase",
+      "danish": "Vi bor sammen.",
+      "polish": "Mieszkamy razem.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p10",
+      "type": "phrase",
+      "danish": "De bor i Polen.",
+      "polish": "Oni mieszkają w Polsce.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p11",
+      "type": "phrase",
+      "danish": "Jeg har ingen søskende.",
+      "polish": "Nie mam rodzeństwa.",
+      "hint": null
+    },
+    {
+      "id": "lesson-l2-03-family-p12",
+      "type": "phrase",
+      "danish": "Det er min familie.",
+      "polish": "To jest moja rodzina.",
+      "hint": null
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lesson-l2-03-family-q01",
+      "question": "Hvilket ord passer foran 'brat'?",
+      "options": [
+        "Moja",
+        "Mój",
+        "Moje",
+        "Oni"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-03-family-q02",
+      "question": "Hvad betyder 'To jest moje dziecko'?",
+      "options": [
+        "Det er min søster",
+        "Det er mit barn",
+        "Det er min far",
+        "Det er min familie"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-03-family-q03",
+      "question": "Hvad betyder 'Mam dwójkę dzieci'?",
+      "options": [
+        "Jeg har ingen søskende",
+        "Jeg har to børn",
+        "Vi bor sammen",
+        "De bor i Polen"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-03-family-q04",
+      "question": "Hvad betyder 'Nie mam rodzeństwa'?",
+      "options": [
+        "Jeg har ingen søskende",
+        "Min kone taler polsk",
+        "Det er min bror",
+        "Min mand er i Danmark"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "lesson-l2-03-family-q05",
+      "question": "Hvilken frase handler om en kone?",
+      "options": [
+        "Mój mąż jest w Danii",
+        "Moja żona mówi po polsku",
+        "To jest mój tata",
+        "Mieszkamy razem"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "id": "lesson-l2-03-family-q06",
+      "question": "Hvad betyder 'Oni mieszkają w Polsce'?",
+      "options": [
+        "Vi bor sammen",
+        "De bor i Polen",
+        "Det er min familie",
+        "Jeg har to børn"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

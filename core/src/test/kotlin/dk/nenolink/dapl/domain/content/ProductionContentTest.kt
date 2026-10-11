@@ -36,6 +36,14 @@ class ProductionContentTest {
                 library.screenFor(dk.nenolink.dapl.domain.navigation.Destination.Lesson(id)).kind
             )
         }
+        val level2 = library.catalog.module(dk.nenolink.dapl.domain.model.AppRoute.LEVEL2)!!
+        assertEquals(10, level2.lessons.size)
+        level2.lessons.forEach { entry ->
+            val lesson = library.lesson(entry.id)!!
+            assertEquals("level2", lesson.moduleId)
+            assertEquals(entry.title.support, lesson.title)
+            assertTrue(LessonRules.errors(lesson).isEmpty())
+        }
         assertEquals("Cześć", library.lesson("lesson-01")!!.items.first { it.type == "phrase" }.polish)
     }
 
@@ -49,16 +57,22 @@ class ProductionContentTest {
     }
 
     @Test
-    fun importedDialoguesValidateAndKeepTheirPrompts() {
+    fun dialoguesKeepPolishLinesAndHiddenDanishSupport() {
         val cafe = library.dialogue("dlg-cafe-001")!!
         val ticket = library.dialogue("dlg-ticket-001")!!
         assertTrue(DialogueValidator.validate(cafe).errors.isEmpty())
         assertTrue(DialogueValidator.validate(ticket).errors.isEmpty())
-        assertEquals(
-            "Bartenderen nikker til dig. Han siger: 'Dzień dobry! Co podać?'",
-            cafe.states.getValue("start").prompt
-        )
-        assertTrue(ticket.states.getValue("done").prompt.contains("Udowa życzenia!"))
+        val opening = cafe.states.getValue("start")
+        assertEquals("Dzień dobry! Co podać?", opening.spokenPolish())
+        assertEquals("Goddag! Hvad må det være?", opening.support)
+        assertEquals("Miłej podróży!", ticket.states.getValue("done").spokenPolish())
+        library.dialogues.values.forEach { scenario ->
+            scenario.states.values.forEach { state ->
+                assertTrue(state.spokenPolish().isNotBlank())
+                assertTrue(state.support.isNotBlank())
+                assertTrue(state.spokenPolish() != state.support)
+            }
+        }
         assertEquals(ScreenKind.DIALOGUE, library.screenFor(dk.nenolink.dapl.domain.navigation.Destination.Scenario("dlg-cafe-001")).kind)
     }
 
