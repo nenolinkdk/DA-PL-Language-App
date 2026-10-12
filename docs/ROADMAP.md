@@ -29,10 +29,13 @@ Status: IN PROGRESS
 
 Implemented on `vibe/phase1c-levels`, on top of the Phase 1B reconciliation. Niveau 1 and Niveau 2 each have ten released lessons with quizzes. Samtaletræning has six deterministic scenarios. Danish support in a dialogue stays hidden until the learner asks for it. Level 3, Children and the top-level Quiz route stay empty. There are no weighted transitions.
 
+Phase 1D, on `vibe/phase1d-ui`, restyles the existing screens to the Nenoling family: cream background, dark blue headings, large rounded light-blue actions, a lesson overview, and one Polish phrase at a time. Navigation, dialogue, JSON and progress storage are unchanged.
+
 Not done yet:
 
 - install and click-through on a device or emulator;
 - linguistic review of the Polish and Danish course text;
+- Polish lesson titles in the catalogue (the `target` field is still empty);
 - weighted transitions.
 
 Exit: app installs and every structural menu route is safe.

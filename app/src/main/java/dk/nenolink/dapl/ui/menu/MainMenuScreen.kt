@@ -1,59 +1,59 @@
 package dk.nenolink.dapl.ui.menu
 
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.ListItem
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import dk.nenolink.dapl.domain.content.MenuEntryModel
 import dk.nenolink.dapl.domain.model.AppRoute
+import dk.nenolink.dapl.ui.common.CenteredHeading
+import dk.nenolink.dapl.ui.common.FamilyScaffold
+import dk.nenolink.dapl.ui.common.ModuleButton
+import dk.nenolink.dapl.ui.theme.DaplSpace
+import dk.nenolink.dapl.ui.theme.NavyMuted
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainMenuScreen(
     entries: List<MenuEntryModel>,
     onOpen: (AppRoute) -> Unit
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(title = { Text("DA-PL") })
-        }
-    ) { innerPadding ->
-        LazyColumn(
+    FamilyScaffold { innerPadding ->
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = DaplSpace.screen, vertical = DaplSpace.section),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(DaplSpace.moduleGap)
         ) {
-            item {
-                Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
-                    Text(
-                        text = "Praktisk polsk for dansktalende",
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                    Text(
-                        text = "Dansk er støttesprog · polsk er målsprog",
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                }
-            }
-            items(entries, key = { it.route.wire }) { entry ->
-                ListItem(
-                    headlineContent = { Text(entry.label) },
-                    supportingContent = { Text(entry.detail) },
-                    modifier = Modifier.clickable { onOpen(entry.route) }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(DaplSpace.tight)
+            ) {
+                CenteredHeading("DA-PL")
+                CenteredHeading(
+                    text = "Praktisk polsk for dansktalende",
+                    style = MaterialTheme.typography.titleMedium
                 )
-                HorizontalDivider()
+                CenteredHeading(
+                    text = "Dansk er støttesprog · polsk er målsprog",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = NavyMuted
+                )
+            }
+            entries.forEach { entry ->
+                ModuleButton(
+                    label = entry.label,
+                    detail = entry.detail,
+                    onClick = { onOpen(entry.route) }
+                )
             }
         }
     }

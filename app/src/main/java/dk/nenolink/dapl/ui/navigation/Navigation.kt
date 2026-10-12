@@ -60,7 +60,7 @@ fun DaplApp(
     ) {
         composable(NavRoutes.HOME) {
             MainMenuScreen(
-                entries = library.menuEntries(),
+                entries = library.menuEntries(completed),
                 onOpen = { route ->
                     openIfAllowed(
                         navController = navController,
@@ -141,7 +141,13 @@ fun DaplApp(
             if (document != null && model.kind == ScreenKind.LESSON_PLAYER) {
                 LessonScreen(
                     lesson = document,
+                    targetTitle = catalog.lesson(lessonId)?.title?.target.orEmpty(),
+                    completed = lessonId in completed,
                     speech = speech,
+                    onMarkCompleted = {
+                        progress.setCompleted(lessonId)
+                        progressTick++
+                    },
                     onQuiz = {
                         val parent = catalog.modules.firstOrNull { module ->
                             module.lessons.any { it.id == lessonId }

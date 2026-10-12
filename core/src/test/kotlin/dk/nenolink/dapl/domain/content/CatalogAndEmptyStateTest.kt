@@ -29,6 +29,19 @@ class CatalogAndEmptyStateTest {
     }
 
     @Test
+    fun availableLevelsShowCompletionOnTheMenu() {
+        val fresh = library.menuEntries()
+        assertEquals("0/10 gennemført", fresh.first { it.route == AppRoute.LEVEL1 }.detail)
+        assertEquals("0/10 gennemført", fresh.first { it.route == AppRoute.LEVEL2 }.detail)
+        assertEquals("Strukturen findes · indhold er ikke klar", fresh.first { it.route == AppRoute.LEVEL3 }.detail)
+        assertEquals("Samtaletræning", fresh.first { it.route == AppRoute.CONVERSATION }.label)
+
+        val started = library.menuEntries(setOf("lesson-01", "lesson-l2-01-routine", "not-a-lesson"))
+        assertEquals("1/10 gennemført", started.first { it.route == AppRoute.LEVEL1 }.detail)
+        assertEquals("1/10 gennemført", started.first { it.route == AppRoute.LEVEL2 }.detail)
+    }
+
+    @Test
     fun level1ListsTenReleasedLessons() {
         val level1 = catalog.module(AppRoute.LEVEL1)!!
         assertEquals(ModuleAvailability.STRUCTURE_READY, level1.availability)

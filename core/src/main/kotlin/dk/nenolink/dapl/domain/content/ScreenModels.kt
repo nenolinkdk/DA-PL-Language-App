@@ -24,7 +24,8 @@ data class LessonRowModel(
     val id: String,
     val title: String,
     val released: Boolean,
-    val statusLabel: String
+    val statusLabel: String,
+    val completed: Boolean = false
 )
 
 data class ScenarioRowModel(
@@ -40,13 +41,14 @@ data class ScreenModel(
     val scenarios: List<ScenarioRowModel> = emptyList()
 )
 
-fun CourseLibrary.menuEntries(): List<MenuEntryModel> = AppRoute.menuOrder.map { route ->
-    MenuEntryModel(
-        route = route,
-        label = route.menuLabel,
-        detail = menuDetail(route)
-    )
-}
+fun CourseLibrary.menuEntries(completed: Set<String> = emptySet()): List<MenuEntryModel> =
+    AppRoute.menuOrder.map { route ->
+        MenuEntryModel(
+            route = route,
+            label = route.menuLabel,
+            detail = menuDetail(route, completed)
+        )
+    }
 
 fun CourseLibrary.screenFor(
     destination: Destination,
@@ -105,10 +107,9 @@ fun CourseLibrary.screenFor(
     is Destination.Scenario -> scenarioScreen(destination.scenarioId)
 }
 
-private fun CourseLibrary.menuDetail(route: AppRoute): String = when (route) {
-    AppRoute.LEVEL1, AppRoute.LEVEL2 -> lessonCountDetail(route)
-    AppRoute.LEVEL3, AppRoute.CHILDREN ->
-        "Strukturen findes · indhold er ikke klar"
+private fun CourseLibrary.menuDetail(route: AppRoute, completed: Set<String>): String = when (route) {
+    AppRoute.LEVEL1, AppRoute.LEVEL2, AppRoute.LEVEL3 -> lessonProgressDetail(route, completed)
+    AppRoute.CHILDREN -> "Strukturen findes · indhold er ikke klar"
     AppRoute.CONVERSATION ->
         if (catalog.scenarios.isEmpty()) "Ingen scenarier endnu" else "${catalog.scenarios.size} scenarier"
     AppRoute.QUIZ -> "Kommer sammen med lektionerne"
@@ -118,11 +119,11 @@ private fun CourseLibrary.menuDetail(route: AppRoute): String = when (route) {
     AppRoute.HOME -> ""
 }
 
-private fun CourseLibrary.lessonCountDetail(route: AppRoute): String {
-    val lessons = catalog.module(route)?.lessons.orEmpty()
-    if (lessons.isEmpty()) return "Strukturen findes · indhold er ikke klar"
-    val released = lessons.count { it.released }
-    return "${lessons.size} lektioner · $released udgivet"
+private fun CourseLibrary.lessonProgressDetail(route: AppRoute, completed: Set<String>): String {
+    val released = catalog.module(route)?.lessons.orEmpty().filter { it.released }
+    if (released.isEmpty()) return "Strukturen findes · indhold er ikke klar"
+    val done = released.count { it.id in completed }
+    return "$done/${released.size} gennemført"
 }
 
 private fun CourseLibrary.aboutProgress(): String {
@@ -145,10 +146,13 @@ private fun CourseLibrary.levelScreen(
 private fun CourseLibrary.lessonList(route: AppRoute, completed: Set<String>): ScreenModel {
     val lessons = catalog.module(route)?.lessons.orEmpty().sortedBy { it.order }
     val released = lessons.count { it.released }
-    val body = if (released == 0) {
-        "Lektionerne er planlagt. Ingen af dem er udgivet endnu, så der er ikke noget at læse eller høre."
-    } else {
-        "Udgivne lektioner kan åbnes. De øvrige er med i listen, men har ikke indhold endnu."
+    val body = when {
+        released == 0 ->
+            "Lektionerne er planlagt. Ingen af dem er udgivet endnu, så der er ikke noget at læse eller høre."
+        released == lessons.size ->
+            "Vælg en lektion."
+        else ->
+            "Udgivne lektioner kan åbnes. De øvrige er med i listen, men har ikke indhold endnu."
     }
     return ScreenModel(
         title = route.menuLabel,
@@ -159,6 +163,7 @@ private fun CourseLibrary.lessonList(route: AppRoute, completed: Set<String>): S
                 id = lesson.id,
                 title = lesson.title.support,
                 released = lesson.released,
+                completed = lesson.released && lesson.id in completed,
                 statusLabel = when {
                     !lesson.released -> "Ikke udgivet endnu"
                     lesson.id in completed -> "Gennemført"

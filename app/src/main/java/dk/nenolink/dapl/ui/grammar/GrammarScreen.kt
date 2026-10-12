@@ -7,55 +7,78 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.style.TextAlign
 import dk.nenolink.dapl.domain.content.ScreenModel
 import dk.nenolink.dapl.domain.model.GrammarSheet
+import dk.nenolink.dapl.ui.common.CenteredHeading
+import dk.nenolink.dapl.ui.common.FamilyScaffold
+import dk.nenolink.dapl.ui.common.WhitePanel
+import dk.nenolink.dapl.ui.theme.DaplSpace
+import dk.nenolink.dapl.ui.theme.Navy
+import dk.nenolink.dapl.ui.theme.NavyMuted
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GrammarScreen(
     model: ScreenModel,
     sheets: List<GrammarSheet>,
     onBack: () -> Unit
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(model.title) },
-                navigationIcon = { TextButton(onClick = onBack) { Text("Tilbage") } }
-            )
-        }
-    ) { padding ->
+    FamilyScaffold(onBack = onBack) { padding ->
         Column(
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(horizontal = DaplSpace.screen, vertical = DaplSpace.section),
+            verticalArrangement = Arrangement.spacedBy(DaplSpace.moduleGap)
         ) {
+            CenteredHeading(model.title)
             if (model.body.isNotBlank()) {
-                Text(model.body, style = MaterialTheme.typography.bodyLarge)
+                WhitePanel {
+                    Text(
+                        text = model.body,
+                        color = Navy,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
             sheets.forEach { sheet ->
-                ElevatedCard(modifier = Modifier.fillMaxWidth()) {
-                    Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text(sheet.title, style = MaterialTheme.typography.titleMedium)
-                        sheet.sections.forEach { section ->
-                            Text(section.heading, style = MaterialTheme.typography.titleSmall)
-                            Text(section.body)
-                            section.examples.forEach { example ->
-                                Text("${example.danish}  ->  ${example.polish}")
-                            }
+                WhitePanel {
+                    Text(
+                        text = sheet.title,
+                        color = Navy,
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                    sheet.sections.forEach { section ->
+                        Text(
+                            text = section.heading,
+                            color = Navy,
+                            style = MaterialTheme.typography.titleSmall
+                        )
+                        Text(
+                            text = section.body,
+                            color = Navy,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        section.examples.forEach { example ->
+                            Text(
+                                text = example.polish,
+                                color = Navy,
+                                textAlign = TextAlign.Center,
+                                style = MaterialTheme.typography.titleMedium,
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            Text(
+                                text = example.danish,
+                                color = NavyMuted,
+                                textAlign = TextAlign.Center,
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.fillMaxWidth()
+                            )
                         }
                     }
                 }

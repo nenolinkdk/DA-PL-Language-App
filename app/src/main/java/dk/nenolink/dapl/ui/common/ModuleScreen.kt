@@ -1,27 +1,20 @@
 package dk.nenolink.dapl.ui.common
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import dk.nenolink.dapl.domain.content.ScreenModel
+import dk.nenolink.dapl.ui.theme.DaplSpace
+import dk.nenolink.dapl.ui.theme.Navy
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ModuleScreen(
     model: ScreenModel,
@@ -29,47 +22,47 @@ fun ModuleScreen(
     onLesson: (String) -> Unit = {},
     onScenario: (String) -> Unit = {}
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(model.title) },
-                navigationIcon = {
-                    TextButton(onClick = onBack) { Text("Tilbage") }
-                }
-            )
-        }
-    ) { innerPadding ->
+    val released = model.lessons.filter { it.released }
+    val done = released.count { it.completed }
+    FamilyScaffold(onBack = onBack) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(horizontal = DaplSpace.screen, vertical = DaplSpace.section),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(DaplSpace.moduleGap)
         ) {
-            if (model.body.isNotBlank()) {
-                Text(text = model.body, style = MaterialTheme.typography.bodyLarge)
+            CenteredHeading(model.title)
+            if (released.isNotEmpty()) {
+                ProgressReadout(
+                    label = "$done/${released.size} gennemført",
+                    fraction = done.toFloat() / released.size.toFloat()
+                )
             }
-            model.lessons.forEach { lesson ->
-                ElevatedCard(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onLesson(lesson.id) }
-                ) {
-                    ListItem(
-                        headlineContent = { Text(lesson.title) },
-                        supportingContent = { Text(lesson.statusLabel) }
+            if (model.body.isNotBlank()) {
+                WhitePanel {
+                    Text(
+                        text = model.body,
+                        color = Navy,
+                        style = MaterialTheme.typography.bodyLarge
                     )
                 }
             }
+            model.lessons.forEach { lesson ->
+                ModuleButton(
+                    label = lesson.title,
+                    detail = lesson.statusLabel,
+                    onClick = { onLesson(lesson.id) }
+                )
+            }
             model.scenarios.forEach { scenario ->
-                ElevatedCard(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onScenario(scenario.id) }
-                ) {
-                    ListItem(headlineContent = { Text(scenario.title) })
-                }
+                ModuleButton(
+                    label = scenario.title,
+                    detail = "Samtale",
+                    onClick = { onScenario(scenario.id) }
+                )
             }
         }
     }

@@ -2,21 +2,13 @@ package dk.nenolink.dapl.ui.dialogue
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -24,14 +16,21 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.style.TextAlign
 import dk.nenolink.dapl.domain.dialogue.DialogueMachine
 import dk.nenolink.dapl.domain.dialogue.DialogueScenario
 import dk.nenolink.dapl.tts.SpeechLocale
 import dk.nenolink.dapl.tts.SpeechRequest
 import dk.nenolink.dapl.tts.TextToSpeechGateway
+import dk.nenolink.dapl.ui.common.CenteredHeading
+import dk.nenolink.dapl.ui.common.FamilyActionButton
+import dk.nenolink.dapl.ui.common.FamilyScaffold
+import dk.nenolink.dapl.ui.common.WhitePanel
+import dk.nenolink.dapl.ui.theme.ButtonBlue
+import dk.nenolink.dapl.ui.theme.DaplSpace
+import dk.nenolink.dapl.ui.theme.Navy
+import dk.nenolink.dapl.ui.theme.NavyMuted
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DialogueScreen(
     scenario: DialogueScenario,
@@ -45,84 +44,117 @@ fun DialogueScreen(
     val state = machine.state.also { revision }
     val polishLine = state.spokenPolish()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(scenario.title) },
-                navigationIcon = { TextButton(onClick = onExit) { Text("Tilbage") } }
-            )
-        }
-    ) { padding ->
+    FamilyScaffold(onBack = onExit) { padding ->
         Column(
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(horizontal = DaplSpace.screen, vertical = DaplSpace.section),
+            verticalArrangement = Arrangement.spacedBy(DaplSpace.moduleGap)
         ) {
+            CenteredHeading(scenario.title)
             if (scenario.description.isNotBlank()) {
-                Text(scenario.description, style = MaterialTheme.typography.bodyMedium)
-            }
-            ElevatedCard(modifier = Modifier.fillMaxWidth()) {
-                Column(modifier = Modifier.padding(12.dp)) {
-                    Text(polishLine)
-                    if (showSupport && state.support.isNotBlank()) {
-                        Text(state.support, style = MaterialTheme.typography.bodyMedium)
-                    }
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        TextButton(onClick = {
-                            speech.speak(
-                                SpeechRequest(
-                                    text = polishLine,
-                                    locale = SpeechLocale.POLISH,
-                                    requestedByUser = true
-                                )
-                            )
-                        }) { Text("Hør") }
-                        if (state.support.isNotBlank()) {
-                            TextButton(onClick = { showSupport = !showSupport }) {
-                                Text(if (showSupport) "Skjul dansk" else "Vis dansk")
-                            }
-                        }
-                        if (showSupport && state.support.isNotBlank()) {
-                            TextButton(onClick = {
-                                speech.speak(
-                                    SpeechRequest(
-                                        text = state.support,
-                                        locale = SpeechLocale.DANISH,
-                                        requestedByUser = true
-                                    )
-                                )
-                            }) { Text("Hør dansk") }
-                        }
-                    }
+                WhitePanel {
+                    Text(
+                        text = scenario.description,
+                        color = Navy,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
                 }
+            }
+            WhitePanel {
+                Text(
+                    text = polishLine,
+                    color = Navy,
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                if (showSupport && state.support.isNotBlank()) {
+                    Text(
+                        text = state.support,
+                        color = NavyMuted,
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.bodyLarge,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            }
+            FamilyActionButton(
+                text = "Hør polsk",
+                container = ButtonBlue,
+                onClick = {
+                    speech.speak(
+                        SpeechRequest(
+                            text = polishLine,
+                            locale = SpeechLocale.POLISH,
+                            requestedByUser = true
+                        )
+                    )
+                }
+            )
+            if (state.support.isNotBlank()) {
+                FamilyActionButton(
+                    text = if (showSupport) "Skjul dansk" else "Vis dansk",
+                    container = ButtonBlue,
+                    onClick = { showSupport = !showSupport }
+                )
+            }
+            if (showSupport && state.support.isNotBlank()) {
+                FamilyActionButton(
+                    text = "Hør dansk",
+                    container = ButtonBlue,
+                    onClick = {
+                        speech.speak(
+                            SpeechRequest(
+                                text = state.support,
+                                locale = SpeechLocale.DANISH,
+                                requestedByUser = true
+                            )
+                        )
+                    }
+                )
             }
             if (machine.isTerminal) {
-                Text("Samtalen er færdig.", style = MaterialTheme.typography.titleMedium)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(onClick = {
+                Text(
+                    text = "Samtalen er færdig.",
+                    color = Navy,
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                FamilyActionButton(
+                    text = "Kør igen",
+                    container = ButtonBlue,
+                    onClick = {
                         machine.reset()
                         revision++
-                    }) { Text("Kør igen") }
-                    Button(onClick = onCompleted) { Text("Gem og luk") }
-                }
+                    }
+                )
+                FamilyActionButton(
+                    text = "Gem og luk",
+                    container = ButtonBlue,
+                    onClick = onCompleted
+                )
             } else {
                 state.options.forEachIndexed { index, option ->
-                    OutlinedButton(
+                    FamilyActionButton(
+                        text = option.text,
+                        container = ButtonBlue,
                         onClick = {
                             machine.chooseOption(index)
                             revision++
-                        },
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Column {
-                            Text(option.text)
-                            if (showSupport && option.support.isNotBlank()) {
-                                Text(option.support, style = MaterialTheme.typography.bodySmall)
-                            }
                         }
+                    )
+                    if (showSupport && option.support.isNotBlank()) {
+                        Text(
+                            text = option.support,
+                            color = NavyMuted,
+                            textAlign = TextAlign.Center,
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
