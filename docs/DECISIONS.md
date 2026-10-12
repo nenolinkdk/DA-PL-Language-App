@@ -74,6 +74,18 @@ Level 1 follows the course-plan titles. Level 2 is released as ten everyday less
 | Ticket closing line | The imported terminal `Udowa życzenia!` is replaced by `Miłej podróży!`. | V1 content, linguistic review required |
 | Progress | A passed lesson quiz stores the lesson id. `Gem og luk` stores the scenario id. An unfinished turn is not stored. | V1 |
 
+## 2026-10-12 — Phase 1D visual alignment
+
+The screens follow the Learn FR-DA layout: cream background, dark blue headings, large rounded light-blue actions, and a muted red quiz action. Colours, type and spacing live in `ui/theme`. Shared controls live in `FamilyUi`.
+
+| Area | Decision | Status |
+|---|---|---|
+| Navigation | `AppNavigator` is unchanged. The lesson overview and the one-phrase player are two states of the existing lesson route. | V1 |
+| Progress | Level 1 and Level 2 show `done/total` from the existing completion flags. Marking a lesson complete stores the same lesson id as a passed quiz. | V1 |
+| Lesson text | Polish is the large line. Danish sits under it. Catalogue target titles are still empty, so the overview title stays the Danish lesson title. | V1 |
+| Dialogue | Danish support stays hidden until the learner taps. Speech still requires a tap. | V1 |
+| Palette | The family palette stays on the cream theme, including when the device is in dark mode, so the screens match the reference. | V1 |
+
 ## Still open
 - exact Level 2 case sequence after linguistic review;
 - final scope of Children for first public release;
